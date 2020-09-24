@@ -1,0 +1,63 @@
+* {
+    font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#curtain {
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    background: #CB0000;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+    justify-content: center;
+}
+
+.long-button {
+    height: 5vh;
+    width: 80vw;
+    align-self: flex-end;
+    margin-bottom: 2%;
+    cursor: pointer;
+    background-color: #FFFAFA;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+}
+
+.long-button-text {
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.animate {
+    animation-name: slide-down;
+    animation-duration: 1s;
+    /* Preserve the effect of the animation at ending */
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes slide-down {
+
+    from {
+      transform: translate3d(0,0,0);
+      height: 20vh;
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        height: 95vh;
+    }
+  }
+
+#cover-image {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
