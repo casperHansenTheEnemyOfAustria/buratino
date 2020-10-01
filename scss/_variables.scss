@@ -1,0 +1,25 @@
+$tileSize: 30vmin;
+$buratinoRed: #CB0000;
+$offWhite: #FFFAFA;
+$tileWhite: #FFFFFF;
+$curtainShadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+$itemShadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin reset-mp {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin tile-name {
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 22px;
+}

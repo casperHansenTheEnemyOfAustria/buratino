@@ -1,0 +1,216 @@
+/*These import the various components that make up the entire webpage.*/
+#curtain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 15vh;
+  background: #CB0000;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.long-button {
+  position: relative;
+  bottom: 3vh;
+  height: 5vh;
+  width: 80vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+  background-color: #FFFAFA;
+  -webkit-box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+          box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+  border: none;
+  outline: inherit;
+}
+
+#long-button-text {
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+/*Tiles using this class are left-bound on the grid.*/
+.tile-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #FFFFFF;
+  -webkit-box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+          box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+  width: 30vmin;
+  height: 30vmin;
+  justify-self: start;
+}
+
+/*Tiles using this class are right-bound on the grid.*/
+.tile-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #FFFFFF;
+  -webkit-box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+          box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+  width: 30vmin;
+  height: 30vmin;
+  justify-self: end;
+}
+
+#curtain-grid {
+  -ms-grid-row-align: center;
+      align-self: center;
+  width: 80vw;
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  opacity: 0%;
+}
+
+#cover-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+}
+
+.tile-icon {
+  width: 75%;
+}
+
+.tile-subtitle {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+/*This animates the slide-down of the home curtain.*/
+.roll-down {
+  -webkit-animation-name: slide-down;
+          animation-name: slide-down;
+  -webkit-animation-duration: 750ms;
+          animation-duration: 750ms;
+  /* Preserve the effect of the animation at ending.*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    height: 15vh;
+  }
+  to {
+    height: 95vh;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    height: 15vh;
+  }
+  to {
+    height: 95vh;
+  }
+}
+
+/*This animates the fade-in for the tiles.*/
+.tile-transition {
+  -webkit-animation-name: tile-fade;
+          animation-name: tile-fade;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  /* Preserve the effect of the animation at ending.*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  /*This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping.*/
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+
+@-webkit-keyframes tile-fade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes tile-fade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+/*This applies Helvetica font to entire webpage.*/
+* {
+  font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */

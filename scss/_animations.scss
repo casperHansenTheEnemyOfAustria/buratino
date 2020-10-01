@@ -1,0 +1,39 @@
+/*This animates the slide-down of the home curtain.*/
+.roll-down {
+    animation-name: slide-down;
+    animation-duration: 750ms;
+    /* Preserve the effect of the animation at ending.*/
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes slide-down {
+
+    from {
+      height: 15vh;
+    }
+
+    to {
+        height: 95vh;
+    }
+  }
+
+/*This animates the fade-in for the tiles.*/
+.tile-transition {
+    animation-name: tile-fade;
+    animation-duration: 500ms;
+    /* Preserve the effect of the animation at ending.*/
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+     /*This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping.*/ 
+    animation-delay: 750ms;
+}
+
+@keyframes tile-fade {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}

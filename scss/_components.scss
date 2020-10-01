@@ -1,0 +1,77 @@
+#curtain {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 15vh;
+    background: $buratinoRed;
+    box-shadow: $curtainShadow;
+    justify-content: center;
+}
+
+.long-button {
+    position: relative;
+    bottom: 3vh;
+    height: 5vh;
+    width: 80vw;
+    align-self: center;
+    cursor: pointer;
+    background-color: $offWhite;
+    box-shadow: $itemShadow;
+    border: none;
+    outline: inherit;
+}
+
+#long-button-text {
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 22px;
+    @include reset-mp;
+}
+/*Tiles using this class are left-bound on the grid.*/
+.tile-1 {
+    @include center;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $tileWhite;
+    box-shadow: $itemShadow;
+    width: $tileSize;
+    height: $tileSize;
+    justify-self: start;
+}
+/*Tiles using this class are right-bound on the grid.*/
+.tile-2 {
+    @include center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: $tileWhite;
+    box-shadow: $itemShadow;
+    width: $tileSize;
+    height: $tileSize;
+    justify-self: end;
+}
+
+#curtain-grid {
+    align-self: center;
+    width: 80vw;
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-content: space-evenly;
+    opacity: 0%;
+}
+
+#cover-image {
+    @include center;
+    height: 80vh;
+}
+
+.tile-icon {
+    width: 75%;
+}
+
+.tile-subtitle {
+    @include reset-mp;
+    @include tile-name;
+}
