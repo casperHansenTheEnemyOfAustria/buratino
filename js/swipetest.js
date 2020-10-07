@@ -51,7 +51,7 @@ var y2 = 0
 // for phones
     curtain.addEventListener("touchstart", function(e) {
         y1 = e.touches[0].pageY
-        console.log(y1);
+        
         
     });
 
@@ -62,7 +62,7 @@ var y2 = 0
     
     curtain.addEventListener("touchend", function(e) {
         y2 = endCoord.pageY;
-        console.log(e);
+        
         if(y2-y1 > sens){
             curtainDown();
             wifiSwitch()   

@@ -76,6 +76,7 @@
     @include tile-name;
 }
 
-#buttons{
-    display: none;
+.pages{
+    position: absolute; 
+    left: 5000vw;
 }

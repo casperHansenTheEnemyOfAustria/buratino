@@ -138,6 +138,11 @@
   line-height: 22px;
 }
 
+.pages {
+  position: absolute;
+  left: 5000vw;
+}
+
 /*This animates the slide-down of the home curtain.*/
 .roll-down {
   -webkit-animation-name: slide-down;
@@ -201,6 +206,14 @@
   to {
     opacity: 100%;
   }
+}
+
+.show {
+  right: 5000vw;
+}
+
+.hide {
+  display: left 5000vw;
 }
 
 /*This applies Helvetica font to entire webpage.*/

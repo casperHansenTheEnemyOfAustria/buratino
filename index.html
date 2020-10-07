@@ -18,9 +18,9 @@
                 <img src="img/sound-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">LJUD</h6>
             </div>
-            <div class="tile-1">
-                <!-- added light id for use with js -->
-                <img src="img/light-icon.svg" class="tile-icon" id="light">
+            <div class="tile-1 buttons lightButton">
+                <!-- added light class for use with js -->
+                <img src="img/light-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">LJUS</h6>
             </div>
             <div class="tile-2">
@@ -47,17 +47,18 @@
         <!--When clicking this button, the curtain rolls down-->
         <button type="button" onclick="curtainDown();wifiSwitch();" class="long-button"><p id="long-button-text">START</p></button>
     </div>
-    <div  id="cover-image start">
+    <div  id="cover-image" class="start">
         <img src="img/intro-image.svg">
     </div>
 
     <!-- exempwel på light sidans innehåll -->
-    <div id="light">
+    <div class="pages light">
         <p>this is where the lights are</p>
     </div>
 </body>
 <script src="js/swipetest.js" type="text/javascript"></script>
 <script src="js/curtain.js" type="text/javascript"></script>
+<script src="js/buttons.js" type="text/javascrip"></script>
 </html>
 
 <!-- Don't forget to comment your code smh-->
