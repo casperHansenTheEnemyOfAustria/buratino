@@ -1,8 +1,9 @@
 var start = document.getElementsByClassName("start");
 var light = document.getElementsByClassName("light");
 var lightButton = document.getElementsByClassName("lightButton")
-var buttons = document.getElementsByClassName("buttons")
-var pages = document.getElementsByClassName("pages")
+
+
+
 var otherSite = false;
 var lightSite = false;
 var soundSite = false;

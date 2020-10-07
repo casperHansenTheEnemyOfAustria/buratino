@@ -76,6 +76,8 @@
     @include tile-name;
 }
 
+
+// for keeping pages out of the way
 .pages{
     position: absolute; 
     left: 5000vw;
