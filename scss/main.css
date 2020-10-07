@@ -33,6 +33,10 @@
   outline: inherit;
 }
 
+.longButtonTopmargin {
+  margin-top: 10vh;
+}
+
 #long-button-text {
   font-style: normal;
   font-weight: bold;
@@ -139,8 +143,7 @@
 }
 
 .pages {
-  position: absolute;
-  left: 5000vw;
+  display: none;
 }
 
 /*This animates the slide-down of the home curtain.*/
@@ -171,6 +174,37 @@
   }
   to {
     height: 95vh;
+  }
+}
+
+/*This animates the slide-up of the home curtain.*/
+.roll-up {
+  -webkit-animation-name: slide-up;
+          animation-name: slide-up;
+  -webkit-animation-duration: 750ms;
+          animation-duration: 750ms;
+  /* Preserve the effect of the animation at ending.*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    height: 95vh;
+  }
+  to {
+    height: 15vh;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    height: 95vh;
+  }
+  to {
+    height: 15vh;
   }
 }
 
@@ -208,12 +242,42 @@
   }
 }
 
-.show {
-  right: 5000vw;
+/*This animates the fade-out for the tiles.*/
+.tile-detransition {
+  -webkit-animation-name: tile-fadeout;
+          animation-name: tile-fadeout;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  /* Preserve the effect of the animation at ending.*/
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  /*This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping.*/
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
+}
+
+@-webkit-keyframes tile-fadeout {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+@keyframes tile-fadeout {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
 }
 
 .hide {
-  display: left 5000vw;
+  display: none !important;
 }
 
 /*This applies Helvetica font to entire webpage.*/

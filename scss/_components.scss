@@ -21,6 +21,12 @@
     outline: inherit;
 }
 
+// margin when needed
+.longButtonTopmargin{
+    margin-top: 10vh;
+}
+
+
 #long-button-text {
     font-style: normal;
     font-weight: bold;
@@ -77,8 +83,3 @@
 }
 
 
-// for keeping pages out of the way
-.pages{
-    position: absolute; 
-    left: 5000vw;
-}

@@ -7,17 +7,36 @@
     animation-timing-function: ease-in-out;
   }
 
-  @keyframes slide-down {
+@keyframes slide-down {
 
-    from {
-      height: 15vh;
-    }
+  from {
+    height: 15vh;
+  }
+  
+  to {
+      height: 95vh;
+  }
+}
 
-    to {
-        height: 95vh;
-    }
+/*This animates the slide-up of the home curtain.*/
+.roll-up {
+  animation-name: slide-up;
+  animation-duration: 750ms;
+  /* Preserve the effect of the animation at ending.*/
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slide-up {
+
+  from {
+    height: 95vh;
   }
 
+  to {
+      height: 15vh;
+  }
+}
 /*This animates the fade-in for the tiles.*/
 .tile-transition {
     animation-name: tile-fade;
@@ -38,10 +57,28 @@
     }
 }
 
-// for showing and hiding different pages
-.show{
-  right: 5000vw
+/*This animates the fade-out for the tiles.*/
+.tile-detransition {
+  animation-name: tile-fadeout;
+  animation-duration: 500ms;
+  /* Preserve the effect of the animation at ending.*/
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+   /*This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping.*/ 
+  animation-delay: 0ms;
 }
+
+@keyframes tile-fadeout {
+  from {
+      opacity: 100%;
+  }
+  to {
+      opacity: 0%;
+  }
+}
+
+// for showing and hiding different pages
+
 .hide{
-  display: left 5000vw;
+  display: none !important
 }

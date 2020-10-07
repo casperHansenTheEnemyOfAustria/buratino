@@ -10,36 +10,36 @@
     <div id="curtain">
         <!--This is the grid-wrapper for the main-menu tiles-->
         <div id="curtain-grid">
-            <div class="tile-1">
+            <div class="tile-1"type="button" onclick="buttonAction('security')">
                 <img src="img/security-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">LÅS & LARM</h6>
             </div>
-            <div class="tile-2">
+            <div class="tile-2"type="button" onclick="buttonAction('sound')">
                 <img src="img/sound-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">LJUD</h6>
             </div>
-            <div class="tile-1 buttons lightButton">
-                <!-- added light class for use with js -->
+            <div class="tile-1" type="button" onclick="buttonAction('light')">
+                <!-- added light class for use with js had to use fkn onclick so now im mad-->
                 <img src="img/light-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">LJUS</h6>
             </div>
-            <div class="tile-2">
+            <div class="tile-2" type="button" onclick="buttonAction('furniture')">
                 <img src="img/table-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">MÖBLER</h6>
             </div>
-            <div class="tile-1">
+            <div class="tile-1" type="button" onclick="buttonAction('cleaning')">
                 <img src="img/broom-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">STÄDNING</h6>
             </div>
-            <div class="tile-2">
+            <div class="tile-2" type="button" onclick="buttonAction('breakers')">
                 <img src="img/bolt-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">SÄKRINGAR</h6>
             </div>
-            <div class="tile-1">
+            <div class="tile-1" type="button" onclick="buttonAction('addons')">
                 <img src="img/add-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">TILLÄGG</h6>
             </div>
-            <div class="tile-2">
+            <div class="tile-2" type="button" onclick="buttonAction('contact')">
                 <img src="img/support-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">KONTAKT</h6>
             </div>
@@ -47,18 +47,39 @@
         <!--When clicking this button, the curtain rolls down-->
         <button type="button" onclick="curtainDown();wifiSwitch();" class="long-button"><p id="long-button-text">START</p></button>
     </div>
+
+    <!-- different non curtain pages -->
     <div  id="cover-image" class="start">
         <img src="img/intro-image.svg">
     </div>
-
-    <!-- exempwel på light sidans innehåll -->
-    <div class="pages light">
+    <div class="hide security">
+        so secure
+    </div>
+    <div class="hide sound">
+        makes noise
+    </div>
+    <div class="hide light">
         <p>this is where the lights are</p>
     </div>
+    <div class="hide furniture">
+        superkool karta
+    </div>
+    <div class="hide cleaning">
+        so clean
+    </div>
+    <div class="hide breakers">
+        dont electricute yourself
+    </div>
+    <div class="hide addons">
+        + or - or something idk
+    </div>
+    <div class="hide contact">
+        ring ring, bara du slog en signal
+    </div>
 </body>
-<script src="js/swipetest.js" type="text/javascript"></script>
+<!-- unified these into one -->
+<script src="js/buttonsAndCurtain.js" type="text/javascript"></script>
 <script src="js/curtain.js" type="text/javascript"></script>
-<script src="js/buttons.js" type="text/javascrip"></script>
 </html>
 
 <!-- Don't forget to comment your code smh-->
