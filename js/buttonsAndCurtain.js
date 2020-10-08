@@ -4,7 +4,7 @@
 
 // sets dead zone in css-pixels for the swipe
 // hides curtain grid because of bug where items were clickable even though they were invisible
-var sens = 0
+var sens = 10
 // initial hide of later items top items due to bug
 document.getElementById("curtain-grid").classList.add("hide")
 
@@ -26,6 +26,7 @@ function curtainDown() {
     var targetElement = document.getElementById("curtain-grid");
     targetElement.className = "tile-transition";   
     targetElement.classList.remove("hide")
+    console.log("showing")
   }
 
 function wifiSwitch() {
@@ -64,29 +65,42 @@ var y2 = 0
     // });
 
 // for phones
-curtain.addEventListener("touchstart", function(e) {
-    y1 = e.touches[0].pageY
-        
-        
-});
+function phoneTouch(){
+    i = 0
+    curtain.addEventListener("touchstart", function(e) {
+        y1 = e.touches[0].pageY
+        console.log("pressbegin")
+        console.log(y1)   
+            
+            
+    });
 
-var endCoord = {}
-curtain.addEventListener("touchmove", function(e) {
-    endCoord = e.targetTouches[0];
-});
-    
-curtain.addEventListener("touchend", function(e) {
-    y2 = endCoord.pageY;
-        
-    if(y2-y1 > sens){ 
-        // removes margin
-        longButtonTopMarginRemove()
-        curtainDown();
-        wifiSwitch();
-    }
-});
+    var endCoord = {}
+    curtain.addEventListener("touchmove", function(e) {
+        endCoord = e.targetTouches[0];
+    });
+    y2 = 0  
+    curtain.addEventListener("touchend", function(e) {
+        y2 = endCoord.pageY;
+        console.log(y2)    
+        if(y2-y1 > sens){ 
+            // removes margin
+            longButtonTopMarginRemove()
+            document.getElementById("curtain-grid").classList.remove("tile-detransition")
+            console.log("pressend")
+            document.getElementById("curtain").classList.remove("roll-up")
+            curtainDown();
+            wifiSwitch();
+            // i had to make y zer0 a bunch of times but it works now donw worry about it :D
+            y2 = 0
+            endCoord = 0
+        }
+    });
+    endCoord = 0
+    i += 1
+}
 
-
+phoneTouch()
 
 
 // Here comes the functionality for buttons and different pages
@@ -102,6 +116,13 @@ curtain.addEventListener("touchend", function(e) {
             document.querySelector(".breakers").classList.add("hide")
             document.querySelector(".addons").classList.add("hide")
             document.querySelector(".contact").classList.add("hide")
+            
+            // removes roll down when curtain is rolled up
+            var targetElement = document.getElementById("curtain");
+            targetElement.classList.remove("roll-down")
+            var targetElement = document.getElementById("curtain-grid");
+            targetElement.classList.remove("tile-transition")
+            console.log("transit")
         }
 
         function anyText(word) {
@@ -121,6 +142,7 @@ curtain.addEventListener("touchend", function(e) {
                 document.querySelector(".security").classList.remove("hide")
                 // destransitions grid so that it become gone
                 document.getElementById("curtain-grid").classList.add("tile-detransition")
+                console.log("detran")
                 // same with curtain
                 document.getElementById("curtain").classList.add("roll-up")
                 // hides curtain grid because of bug where items were clickable even though they were invisible
@@ -219,6 +241,7 @@ curtain.addEventListener("touchend", function(e) {
                 longButtonTopMarginAdd()
                 anyText("KONTAKT")    
             }
+            phoneTouch()
         };
 // this was the only solution my brain could come up with but i mean it works
 // play with different orders of the different sub-functions to maybe make the animation smoother
