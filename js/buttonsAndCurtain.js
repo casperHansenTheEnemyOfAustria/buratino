@@ -1,5 +1,6 @@
 // this program is used to detect a downward swipe on the curtain and to then 
 // activate the curtain animation
+// might need to add event listener for a string to the curtain at some point
 
 // sets dead zone in css-pixels for the swipe
 // hides curtain grid because of bug where items were clickable even though they were invisible
@@ -63,33 +64,35 @@ var y2 = 0
     // });
 
 // for phones
-    curtain.addEventListener("touchstart", function(e) {
-        y1 = e.touches[0].pageY
+curtain.addEventListener("touchstart", function(e) {
+    y1 = e.touches[0].pageY
         
         
-    });
+});
 
-    var endCoord = {}
-    curtain.addEventListener("touchmove", function(e) {
-        endCoord = e.targetTouches[0];
-    });
+var endCoord = {}
+curtain.addEventListener("touchmove", function(e) {
+    endCoord = e.targetTouches[0];
+});
     
-    curtain.addEventListener("touchend", function(e) {
-        y2 = endCoord.pageY;
+curtain.addEventListener("touchend", function(e) {
+    y2 = endCoord.pageY;
         
-        if(y2-y1 > sens){ 
-            // removes margin
-            longButtonTopMarginRemove()
-            curtainDown();
-            wifiSwitch();
-        }
-    });
+    if(y2-y1 > sens){ 
+        // removes margin
+        longButtonTopMarginRemove()
+        curtainDown();
+        wifiSwitch();
+    }
+});
 
 
 
 
-
-        // resets all to their og state
+// Here comes the functionality for buttons and different pages
+// its pretty straight forward and basically just hides every element and thne shows one for each different input from buttons
+// id recommend using ctrl + h for any changes as the document is pretty expansive
+        // resets all buttons to their og state
         function reset(){
             document.querySelector(".security").classList.add("hide")
             document.querySelector(".sound").classList.add("hide")
@@ -106,8 +109,9 @@ var y2 = 0
             document.getElementById("long-button-text").innerHTML = word;
         }
 
-
+        // runs a reset before everything begins
         reset()
+
         function buttonAction(button){
             if(button == 'security'){
                 reset();
@@ -216,5 +220,5 @@ var y2 = 0
                 anyText("KONTAKT")    
             }
         };
-
-
+// this was the only solution my brain could come up with but i mean it works
+// play with different orders of the different sub-functions to maybe make the animation smoother
