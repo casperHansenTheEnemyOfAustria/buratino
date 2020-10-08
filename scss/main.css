@@ -10,11 +10,10 @@
   width: 100vw;
   height: 15vh;
   background: #CB0000;
-  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
-          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: -2;
 }
 
 .long-button {
@@ -31,7 +30,7 @@
 }
 
 .longButtonTopmargin {
-  margin-top: 10vh;
+  margin-top: 7vh;
 }
 
 #long-button-text {
@@ -149,6 +148,15 @@ button {
   line-height: 22px;
 }
 
+.curtainEdge {
+  position: relative;
+  width: 100vw;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+  top: -3.5vh;
+  z-index: -1;
+}
+
 /*This animates the slide-down of the home curtain.*/
 .roll-down {
   -webkit-animation-name: slide-down;
@@ -164,19 +172,19 @@ button {
 
 @-webkit-keyframes slide-down {
   from {
-    height: 15vh;
+    height: 12vh;
   }
   to {
-    height: 95vh;
+    height: 92vh;
   }
 }
 
 @keyframes slide-down {
   from {
-    height: 15vh;
+    height: 12vh;
   }
   to {
-    height: 95vh;
+    height: 92vh;
   }
 }
 
@@ -195,19 +203,19 @@ button {
 
 @-webkit-keyframes slide-up {
   from {
-    height: 95vh;
+    height: 92vh;
   }
   to {
-    height: 15vh;
+    height: 12vh;
   }
 }
 
 @keyframes slide-up {
   from {
-    height: 95vh;
+    height: 92vh;
   }
   to {
-    height: 15vh;
+    height: 12vh;
   }
 }
 

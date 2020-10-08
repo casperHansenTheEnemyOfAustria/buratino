@@ -4,8 +4,8 @@
     width: 100vw;
     height: 15vh;
     background: $buratinoRed;
-    box-shadow: $curtainShadow;
     justify-content: center;
+    z-index: -2;
 }
 
 .long-button {
@@ -20,7 +20,7 @@
 
 // margin when needed
 .longButtonTopmargin{
-    margin-top: 10vh;
+    margin-top: 7vh;
 }
 
 
@@ -90,4 +90,11 @@ button {
     @include tile-name;
 }
 
-
+// adds a curtain ends for that snazzy look
+.curtainEdge{
+    position: relative;
+    width: 100vw;
+    box-shadow: $curtainShadow;
+    top: -3.5vh;
+    z-index: -1;
+}
