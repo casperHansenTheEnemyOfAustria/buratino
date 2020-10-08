@@ -25,12 +25,9 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  cursor: pointer;
   background-color: #FFFAFA;
   -webkit-box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
           box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
-  border: none;
-  outline: inherit;
 }
 
 .longButtonTopmargin {
@@ -43,6 +40,13 @@
   letter-spacing: 1px;
   line-height: 22px;
   margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
   padding: 0;
 }
 
@@ -96,6 +100,9 @@
   width: 30vmin;
   height: 30vmin;
   justify-self: end;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 #curtain-grid {
@@ -140,10 +147,6 @@
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 22px;
-}
-
-.pages {
-  display: none;
 }
 
 /*This animates the slide-down of the home curtain.*/
@@ -210,8 +213,8 @@
 
 /*This animates the fade-in for the tiles.*/
 .tile-transition {
-  -webkit-animation-name: tile-fade;
-          animation-name: tile-fade;
+  -webkit-animation-name: tile-fadein;
+          animation-name: tile-fadein;
   -webkit-animation-duration: 500ms;
           animation-duration: 500ms;
   /* Preserve the effect of the animation at ending.*/
@@ -224,7 +227,7 @@
           animation-delay: 750ms;
 }
 
-@-webkit-keyframes tile-fade {
+@-webkit-keyframes tile-fadein {
   from {
     opacity: 0%;
   }
@@ -233,7 +236,7 @@
   }
 }
 
-@keyframes tile-fade {
+@keyframes tile-fadein {
   from {
     opacity: 0%;
   }

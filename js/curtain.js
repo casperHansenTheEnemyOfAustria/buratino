@@ -1,3 +1,4 @@
+// This function is responsible for triggering the animation for the curtain rolling down, and the animation for how the tiles fade in.
 function curtainDown() {
     var targetElement = document.getElementById("curtain");
     targetElement.className = "roll-down";
@@ -6,6 +7,7 @@ function curtainDown() {
     
   }
 
+// This function is responsible for changing the text of the long button, from "START" to "TRYCK HÄR FÖR WIFI".
 function wifiSwitch() {
   document.getElementById("long-button-text").innerHTML = "TRYCK HÄR FÖR WIFI";
 }

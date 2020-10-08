@@ -39,7 +39,7 @@
 }
 /*This animates the fade-in for the tiles.*/
 .tile-transition {
-    animation-name: tile-fade;
+    animation-name: tile-fadein;
     animation-duration: 500ms;
     /* Preserve the effect of the animation at ending.*/
     animation-fill-mode: forwards;
@@ -48,7 +48,7 @@
     animation-delay: 750ms;
 }
 
-@keyframes tile-fade {
+@keyframes tile-fadein {
     from {
         opacity: 0%;
     }

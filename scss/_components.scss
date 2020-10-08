@@ -14,11 +14,8 @@
     height: 5vh;
     width: 80vw;
     align-self: center;
-    cursor: pointer;
     background-color: $offWhite;
     box-shadow: $itemShadow;
-    border: none;
-    outline: inherit;
 }
 
 // margin when needed
@@ -34,6 +31,14 @@
     line-height: 22px;
     @include reset-mp;
 }
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
 /*Tiles using this class are left-bound on the grid.*/
 .tile-1 {
     @include center;
@@ -55,6 +60,9 @@
     width: $tileSize;
     height: $tileSize;
     justify-self: end;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 #curtain-grid {
