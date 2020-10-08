@@ -5,14 +5,14 @@
     height: 15vh;
     background: $buratinoRed;
     justify-content: center;
-    z-index: -2;
+    overflow: visible;
+    position: absolute;
 }
 
 .long-button {
     position: relative;
-    bottom: 3vh;
     height: 5vh;
-    width: 80vw;
+    width: (100vw - (414 / 32));
     align-self: center;
     background-color: $offWhite;
     box-shadow: $itemShadow;
@@ -27,10 +27,21 @@
 #long-button-text {
     font-style: normal;
     font-weight: bold;
+    font-size: 18px;
     letter-spacing: 1px;
     line-height: 22px;
     @include reset-mp;
 }
+  @media screen and (min-width: 320px) {
+    #long-button-text {
+      font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    #long-button-text {
+      font-size: 22px;
+    }
+  } 
 
 button {
     cursor: pointer;
@@ -39,35 +50,41 @@ button {
     padding: 0;
 }
 
-/*Tiles using this class are left-bound on the grid.*/
+// Tiles using this class are left-bound on the grid.
 .tile-1 {
-    @include center;
-    flex-direction: column;
-    justify-content: space-between;
-    background: $tileWhite;
-    box-shadow: $itemShadow;
-    width: $tileSize;
-    height: $tileSize;
+    @include tile-properties;
     justify-self: start;
 }
-/*Tiles using this class are right-bound on the grid.*/
+    @media screen and (min-width: 320px) {
+        .tile-1 {
+        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        .tile-1 {
+        font-size: 22px;
+        }
+    } 
+
+// Tiles using this class are right-bound on the grid.
 .tile-2 {
-    @include center;
-    justify-content: space-between;
-    flex-direction: column;
-    background: $tileWhite;
-    box-shadow: $itemShadow;
-    width: $tileSize;
-    height: $tileSize;
+    @include tile-properties;
     justify-self: end;
-    cursor: pointer;
-    border: none;
-    outline: none;
 }
+    @media screen and (min-width: 320px) {
+        .tile- {
+        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        #long-button-text {
+        font-size: 22px;
+        }
+    } 
 
 #curtain-grid {
     align-self: center;
-    width: 80vw;
+    width: (100vw - (414 / 32));
     height: inherit;
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -77,8 +94,17 @@ button {
 }
 
 #cover-image {
+    padding-top: $nonCurtainPadding;
     @include center;
-    height: 80vh;
+    height: 75vh;
+    flex-direction: column;
+    gap: 5vmin;
+    z-index: -20;
+
+    img {
+        max-width: 80vw;
+        z-index: -20;
+    }
 }
 
 .tile-icon {
@@ -90,11 +116,18 @@ button {
     @include tile-name;
 }
 
-// adds a curtain ends for that snazzy look
+// Adds a curtain ends for that snazzy look
 .curtainEdge{
-    position: relative;
+    position: absolute;
     width: 100vw;
-    box-shadow: $curtainShadow;
-    top: -3.5vh;
-    z-index: -1;
+    filter: drop-shadow($curtainShadow);
+    bottom: -3.5vh;
+    z-index: -4;
+}
+
+// Here lies all the pages for the separate tiles. The content in the sub-pages have a padding to them, as well as a lower z-index, so they'll be covered by the main curtain.
+.security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
+    padding-top:$nonCurtainPadding;
+    z-index: -20;
+    position: relative;
 }

@@ -13,14 +13,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: -2;
+  overflow: visible;
+  position: absolute;
 }
 
 .long-button {
   position: relative;
-  bottom: 3vh;
   height: 5vh;
-  width: 80vw;
+  width: 87.0625vw;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -36,10 +36,23 @@
 #long-button-text {
   font-style: normal;
   font-weight: bold;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 22px;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 320px) {
+  #long-button-text {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #long-button-text {
+    font-size: 22px;
+  }
 }
 
 button {
@@ -49,7 +62,6 @@ button {
   padding: 0;
 }
 
-/*Tiles using this class are left-bound on the grid.*/
 .tile-1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,22 +72,36 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   background: #FFFFFF;
   -webkit-box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
           box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
-  width: 30vmin;
-  height: 30vmin;
+  width: 35vmin;
+  height: 35vmin;
+  cursor: pointer;
+  border: none;
+  outline: none;
   justify-self: start;
 }
 
-/*Tiles using this class are right-bound on the grid.*/
+@media screen and (min-width: 320px) {
+  .tile-1 {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .tile-1 {
+    font-size: 22px;
+  }
+}
+
 .tile-2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,18 +122,30 @@ button {
   background: #FFFFFF;
   -webkit-box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
           box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
-  width: 30vmin;
-  height: 30vmin;
-  justify-self: end;
+  width: 35vmin;
+  height: 35vmin;
   cursor: pointer;
   border: none;
   outline: none;
+  justify-self: end;
+}
+
+@media screen and (min-width: 320px) {
+  .tile- {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #long-button-text {
+    font-size: 22px;
+  }
 }
 
 #curtain-grid {
   -ms-grid-row-align: center;
       align-self: center;
-  width: 80vw;
+  width: 87.0625vw;
   height: inherit;
   display: -ms-grid;
   display: grid;
@@ -122,6 +160,7 @@ button {
 }
 
 #cover-image {
+  padding-top: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,7 +170,18 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80vh;
+  height: 75vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5vmin;
+  z-index: -20;
+}
+
+#cover-image img {
+  max-width: 80vw;
+  z-index: -20;
 }
 
 .tile-icon {
@@ -149,21 +199,25 @@ button {
 }
 
 .curtainEdge {
-  position: relative;
+  position: absolute;
   width: 100vw;
-  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
-          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
-  top: -3.5vh;
-  z-index: -1;
+  -webkit-filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35));
+  bottom: -3.5vh;
+  z-index: -4;
 }
 
-/*This animates the slide-down of the home curtain.*/
+.security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
+  padding-top: 20vh;
+  z-index: -20;
+  position: relative;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;
-  -webkit-animation-duration: 750ms;
-          animation-duration: 750ms;
-  /* Preserve the effect of the animation at ending.*/
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
@@ -175,7 +229,7 @@ button {
     height: 12vh;
   }
   to {
-    height: 92vh;
+    height: 95vh;
   }
 }
 
@@ -184,17 +238,15 @@ button {
     height: 12vh;
   }
   to {
-    height: 92vh;
+    height: 95vh;
   }
 }
 
-/*This animates the slide-up of the home curtain.*/
 .roll-up {
   -webkit-animation-name: slide-up;
           animation-name: slide-up;
-  -webkit-animation-duration: 750ms;
-          animation-duration: 750ms;
-  /* Preserve the effect of the animation at ending.*/
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
@@ -203,7 +255,7 @@ button {
 
 @-webkit-keyframes slide-up {
   from {
-    height: 92vh;
+    height: 95vh;
   }
   to {
     height: 12vh;
@@ -212,27 +264,24 @@ button {
 
 @keyframes slide-up {
   from {
-    height: 92vh;
+    height: 95vh;
   }
   to {
     height: 12vh;
   }
 }
 
-/*This animates the fade-in for the tiles.*/
 .tile-transition {
   -webkit-animation-name: tile-fadein;
           animation-name: tile-fadein;
   -webkit-animation-duration: 500ms;
           animation-duration: 500ms;
-  /* Preserve the effect of the animation at ending.*/
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  /*This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping.*/
-  -webkit-animation-delay: 750ms;
-          animation-delay: 750ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 @-webkit-keyframes tile-fadein {
@@ -253,18 +302,15 @@ button {
   }
 }
 
-/*This animates the fade-out for the tiles.*/
 .tile-detransition {
   -webkit-animation-name: tile-fadeout;
           animation-name: tile-fadeout;
   -webkit-animation-duration: 500ms;
           animation-duration: 500ms;
-  /* Preserve the effect of the animation at ending.*/
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  /*This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping.*/
   -webkit-animation-delay: 0ms;
           animation-delay: 0ms;
 }

@@ -148,7 +148,7 @@ phoneTouch()
                 // hides curtain grid because of bug where items were clickable even though they were invisible
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
-                anyText("STÄD")      
+                anyText("LÅS & LARM")      
             }
             if(button == 'sound'){
                 reset();

@@ -1,8 +1,8 @@
-/*This animates the slide-down of the home curtain.*/
+// This animates the slide-down of the home curtain.
 .roll-down {
     animation-name: slide-down;
-    animation-duration: 750ms;
-    /* Preserve the effect of the animation at ending.*/
+    animation-duration: 500ms;
+    // Preserve the effect of the animation at ending.
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
   }
@@ -14,15 +14,15 @@
   }
   
   to {
-      height: 92vh;
+      height: 95vh;
   }
 }
 
-/*This animates the slide-up of the home curtain.*/
+// This animates the slide-up of the home curtain.
 .roll-up {
   animation-name: slide-up;
-  animation-duration: 750ms;
-  /* Preserve the effect of the animation at ending.*/
+  animation-duration: 500ms;
+  // Preserve the effect of the animation at ending.
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
@@ -30,22 +30,22 @@
 @keyframes slide-up {
 
   from {
-    height: 92vh;
+    height: 95vh;
   }
 
   to {
       height: 12vh;
   }
 }
-/*This animates the fade-in for the tiles.*/
+// This animates the fade-in for the tiles.
 .tile-transition {
     animation-name: tile-fadein;
     animation-duration: 500ms;
-    /* Preserve the effect of the animation at ending.*/
+    // Preserve the effect of the animation at ending.
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
-     /*This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping.*/ 
-    animation-delay: 750ms;
+     // This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping. 
+    animation-delay: 500ms;
 }
 
 @keyframes tile-fadein {
@@ -57,14 +57,14 @@
     }
 }
 
-/*This animates the fade-out for the tiles.*/
+// This animates the fade-out for the tiles.
 .tile-detransition {
   animation-name: tile-fadeout;
   animation-duration: 500ms;
-  /* Preserve the effect of the animation at ending.*/
+  // Preserve the effect of the animation at ending.
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
-   /*This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping.*/ 
+   // This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping. 
   animation-delay: 0ms;
 }
 
@@ -77,8 +77,8 @@
   }
 }
 
-// for showing and hiding different pages
+// For showing and hiding different pages
 
-.hide{
+.hide {
   display: none !important
 }
