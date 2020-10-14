@@ -135,7 +135,7 @@ button {
 
 .curtain-string{
     position: absolute;
-    bottom: -18vh;
+    bottom: -20vh;
     width: 16vw;
     margin-left:50 - 8vw;
     z-index: -14;
@@ -144,9 +144,9 @@ button {
 
 #slide-box{
     z-index: 2;
-    height:32vh;
+    height:36vh;
     position:fixed;
     width:100vw;
-    background-color: rgba($color: #a73f3f, $alpha: 0.5);
+    // background-color: rgba($color: #a73d3d, $alpha: .5);
 }
 

@@ -215,7 +215,7 @@ button {
 
 .curtain-string {
   position: absolute;
-  bottom: -18vh;
+  bottom: -20vh;
   width: 16vw;
   margin-left: 42vw;
   z-index: -14;
@@ -223,10 +223,9 @@ button {
 
 #slide-box {
   z-index: 2;
-  height: 32vh;
+  height: 36vh;
   position: fixed;
   width: 100vw;
-  background-color: rgba(167, 63, 63, 0.5);
 }
 
 .roll-down {
