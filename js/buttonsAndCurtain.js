@@ -7,6 +7,7 @@
 var sens = 10
 // initial hide of later items top items due to bug
 document.getElementById("slide-box").classList.remove("hide")
+// resets the hitbox to show
 document.getElementById("curtain-grid").classList.add("hide")
 
 // defines addin a margin to long button for consistency
@@ -132,7 +133,7 @@ phoneTouch()
         function anyText(word) {
             // adds title text for every different site
             document.getElementById("long-button-text").innerHTML = word;
-            // here im also showing the slid ebox cause i needed it to run for every button click in the grid
+            // here im also showing the slide box cause i needed it to run for every button click in the grid dont judge
             document.getElementById("slide-box").classList.remove("hide")
         }
 
