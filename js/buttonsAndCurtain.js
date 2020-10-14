@@ -132,6 +132,7 @@ phoneTouch()
         function anyText(word) {
             // adds title text for every different site
             document.getElementById("long-button-text").innerHTML = word;
+            // here im also showing the slid ebox cause i needed it to run for every button click in the grid
             document.getElementById("slide-box").classList.remove("hide")
         }
 
