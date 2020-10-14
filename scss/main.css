@@ -213,6 +213,22 @@ button {
   position: relative;
 }
 
+.curtain-string {
+  position: absolute;
+  bottom: -18vh;
+  width: 16vw;
+  margin-left: 42vw;
+  z-index: -14;
+}
+
+#slide-box {
+  z-index: 2;
+  height: 32vh;
+  position: fixed;
+  width: 100vw;
+  background-color: rgba(167, 63, 63, 0.5);
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;
@@ -226,7 +242,7 @@ button {
 
 @-webkit-keyframes slide-down {
   from {
-    height: 12vh;
+    height: 15vh;
   }
   to {
     height: 95vh;
@@ -235,7 +251,7 @@ button {
 
 @keyframes slide-down {
   from {
-    height: 12vh;
+    height: 15vh;
   }
   to {
     height: 95vh;
@@ -258,7 +274,7 @@ button {
     height: 95vh;
   }
   to {
-    height: 12vh;
+    height: 15vh;
   }
 }
 
@@ -267,7 +283,7 @@ button {
     height: 95vh;
   }
   to {
-    height: 12vh;
+    height: 15vh;
   }
 }
 

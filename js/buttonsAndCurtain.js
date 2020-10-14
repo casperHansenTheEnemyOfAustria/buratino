@@ -6,6 +6,7 @@
 // hides curtain grid because of bug where items were clickable even though they were invisible
 var sens = 10
 // initial hide of later items top items due to bug
+document.getElementById("slide-box").classList.remove("hide")
 document.getElementById("curtain-grid").classList.add("hide")
 
 // defines addin a margin to long button for consistency
@@ -33,12 +34,14 @@ function wifiSwitch() {
   document.getElementById("long-button-text").innerHTML = "TRYCK HÄR FÖR WIFI";
 }
 
-
-var curtain = document.getElementById("curtain");
+// i called this curtain but its actually the hitbox for the curtain
+var curtain = document.getElementById("slide-box");
 
 var curtainGrid = document.getElementById("curtain-grid");
 
+var curtainEdge = document.querySelector(".curtainEdge")
 
+var curtainString = document.querySelector(".curtain-string")
 
 
 // looks for y coord of cursor at click and compares to cursor coord at release
@@ -89,6 +92,7 @@ function phoneTouch(){
             document.getElementById("curtain-grid").classList.remove("tile-detransition")
             console.log("pressend")
             document.getElementById("curtain").classList.remove("roll-up")
+            document.getElementById("slide-box").classList.add("hide")
             curtainDown();
             wifiSwitch();
             // i had to make y zer0 a bunch of times but it works now donw worry about it :D
@@ -128,6 +132,7 @@ phoneTouch()
         function anyText(word) {
             // adds title text for every different site
             document.getElementById("long-button-text").innerHTML = word;
+            document.getElementById("slide-box").classList.remove("hide")
         }
 
         // runs a reset before everything begins
