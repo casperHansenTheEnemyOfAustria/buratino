@@ -5,7 +5,9 @@ $offWhite: #FFFAFA;
 $tileWhite: #FFFFFF;
 $curtainShadow: 4px 4px 2px rgba(0, 0, 0, 0.35);
 $itemShadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+$boxShadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
 $nonCurtainPadding: 20vh;
+
 
 // This mixin is used for when an element needs to be horizontally and vertically centered, using Flexbox.
 @mixin center {
@@ -41,4 +43,11 @@ $nonCurtainPadding: 20vh;
     cursor: pointer;
     border: none;
     outline: none;
+}
+
+@mixin subtitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    @include reset-mp;
 }
