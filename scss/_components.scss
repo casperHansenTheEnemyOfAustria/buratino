@@ -227,6 +227,7 @@ button {
   width: 16vw;
   margin-left:50 - 8vw;
   z-index: -14;
+  filter: drop-shadow($curtainShadow);
 }
 
 #slide-box {
@@ -246,7 +247,7 @@ button {
   height: 50vh;
   width: 90vw;
   background-color: white;
-  filter: drop-shadow($boxShadow);
+  filter: drop-shadow($itemShadow);
 }
 
 // thing to make pages work as intended
