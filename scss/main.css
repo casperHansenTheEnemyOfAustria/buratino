@@ -376,6 +376,12 @@ button {
   width: 100vw;
 }
 
+.overlay {
+  height: 90vh;
+  width: 90vw;
+  background-color: white;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;

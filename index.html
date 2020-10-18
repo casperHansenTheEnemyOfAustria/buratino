@@ -14,11 +14,11 @@
 
         <!--This is the grid-wrapper for the main-menu tiles-->
         <div id="curtain-grid">
-            <button class="tile-1"type="button" onclick="buttonAction('security')">
+            <button class="tile-1" type="button" onclick="buttonAction('security')">
                 <img src="img/security-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">LÅS & LARM</h6>
             </button>
-            <button class="tile-2"type="button" onclick="buttonAction('sound')">
+            <button class="tile-2" type="button" onclick="buttonAction('sound')">
                 <img src="img/sound-icon.svg" class="tile-icon">
                 <h6 class="tile-subtitle">LJUD</h6>
             </button>
@@ -62,8 +62,13 @@
         <img src="img/mask-logo.png">
     </div>
     <div class="hide security">
+
+        <!-- overlay div for descriptions -->
+        <div class="overlay larmDesc hide">
+            <!-- this is where the descriptions go -->
+        </div>
         <img src="img/double-mask-logo.png">
-        <button class="redbox">
+        <button class="redbox larmBtn1">
             <h6>Så här sköter du lås & larm</h6>
         </button>
         <button class="redbox">
@@ -144,6 +149,7 @@
 </body>
 <!-- unified these into one -->
 <script src="js/buttonsAndCurtain.js" type="text/javascript"></script>
+<script src="js/overlays.js"></script>
 <!-- <script src="js/curtain.js" type="text/javascript"></script> -->
 </html>
 

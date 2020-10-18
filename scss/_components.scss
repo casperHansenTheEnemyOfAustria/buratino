@@ -169,6 +169,7 @@ button {
         filter: drop-shadow($boxShadow);
         @include center;
         flex-direction: column;
+
     
         h6 {
             @include subtitle;
@@ -234,4 +235,11 @@ button {
   position:fixed;
   width:100vw;
   // background-color: rgba($color: #a73d3d, $alpha: .5);
+}
+
+// random box for debugging
+.overlay{
+  height: 90vh;
+  width: 90vw;
+  background-color: white;
 }
