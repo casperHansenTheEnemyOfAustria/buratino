@@ -7,144 +7,180 @@
     <link rel="stylesheet" href="scss/main.css">
 </head>
 <body>
-    <div id="slide-box">
-
-    </div>
-    <div id="curtain">
-
-        <!--This is the grid-wrapper for the main-menu tiles-->
-        <div id="curtain-grid">
-            <button class="tile-1" type="button" onclick="buttonAction('security')">
-                <img src="img/security-icon.svg" class="tile-icon">
-                <h6 class="tile-subtitle">LÅS & LARM</h6>
-            </button>
-            <button class="tile-2" type="button" onclick="buttonAction('sound')">
-                <img src="img/sound-icon.svg" class="tile-icon">
-                <h6 class="tile-subtitle">LJUD</h6>
-            </button>
-            <button class="tile-1" type="button" onclick="buttonAction('light')">
-                <!-- added light class for use with js had to use fkn onclick so now im mad-->
-                <img src="img/light-icon.svg" class="tile-icon">
-                <h6 class="tile-subtitle">LJUS</h6>
-            </button>
-            <button class="tile-2" type="button" onclick="buttonAction('furniture')">
-                <img src="img/table-icon.svg" class="tile-icon">
-                <h6 class="tile-subtitle">MÖBLER</h6>
-            </button>
-            <button class="tile-1" type="button" onclick="buttonAction('cleaning')">
-                <img src="img/broom-icon.svg" class="tile-icon">
-                <h6 class="tile-subtitle">STÄDNING</h6>
-            </button>
-            <button class="tile-2" type="button" onclick="buttonAction('breakers')">
-                <img src="img/bolt-icon.svg" class="tile-icon">
-                <h6 class="tile-subtitle">SÄKRINGAR</h6>
-            </button>
-            <button class="tile-1" type="button" onclick="buttonAction('addons')">
-                <img src="img/add-icon.svg" class="tile-icon">
-                <h6 class="tile-subtitle">TILLÄGG</h6>
-            </button>
-            <button class="tile-2" type="button" onclick="buttonAction('contact')">
-                <img src="img/support-icon.svg" class="tile-icon">
-                <h6 class="tile-subtitle">KONTAKT</h6>
-            </button>
-        </div>
-        <img src="img/halfCurtain.svg" alt="curtain edge" class="curtainEdge ">
-        <button  class="long-button"><p id="long-button-text">START</p></button>
-        <img src="img/bruh-string.svg" alt="curtain string" class="curtain-string">
-        
-        <!--When clicking this button, the curtain rolls down-->
-        
-    </div>
     
-    <!-- different non curtain pages -->
-    <div  id="cover-image" class="start">
-        <img src="img/company-logo.png">
-        <img src="img/mask-logo.png">
-    </div>
-    <div class="hide security">
+    <div class="everything"> 
+        <div id="slide-box">
 
-        <!-- overlay div for descriptions -->
-        <div class="overlay larmDesc hide">
-            <!-- this is where the descriptions go -->
         </div>
-        <img src="img/double-mask-logo.png">
-        <button class="redbox larmBtn1">
-            <h6>Så här sköter du lås & larm</h6>
-        </button>
-        <button class="redbox">
-            <h6>Hjälp med tekniken? Tryck här!</h6>
-        </button>
-    </div>
-    <div class="hide sound">
-        <img src="img/double-mask-logo.png">
-        <button class="redbox">
-            <h6>Så här sköter du ljudet</h6>
-        </button>
-        <button class="redbox-mixer">
-            <h6>MIXERBORD</h6>
-           <img src="img/mixer.png" alt="mixerbord">
-        </button>
-        <button class="redbox">
-            <h6>Hjälp med tekniken? Tryck här!</h6>
-        </button>
-    </div>
-    <div class="hide light">
-        <img src="img/double-mask-logo.png">
-        <button class="redbox">
-            <h6>Så här sköter du belysningen</h6>
-        </button>
-        <button class="redbox">
-            <h6>Hjälp med tekniken? Tryck här!</h6>
-        </button>
-    </div>
-    <div class="hide furniture">
-        superkool karta
-    </div>
-    <div class="hide cleaning">
-        <img src="img/double-mask-logo.png">
-        <h5>STÄDNING PÅ BURATINO</h5>
-        <button class="redbox">
-            <h6>STÄDRUTINER</h6>
-        </button>
-        <button class="redbox">
-            <h6>DISKMASKIN</h6>
-        </button>
-        <button class="redbox">
-            <h6>SOPOR</h6>
-        </button>
-    </div>
-    <div class="hide breakers">
-        <img src="img/double-mask-logo.png">
-        <button class="redbox">
-            <h6>Så här sköter du säkringarna</h6>
-        </button>
-        <button class="redbox">
-            <h6>Hjälp med tekniken? Tryck här!</h6>
-        </button>
-    </div>
-    <div class="hide addons">
-        <img src="img/double-mask-logo.png">
-        <button class="redbox">
-            <h6>BURATINO SILVER</h6>
-        </button>
-        <button class="redbox">
-            <h6>BURATINO GULD</h6>
-        </button>
-        <button class="redbox">
-            <h6>BURATINO PREMIUM</h6>
-        </button>
-    </div>
-    <div class="hide contact">
-        <img src="img/double-mask-logo.png">
-        <button class="redbox">
-            <h6>TELEFON</h6>
-        </button>
-        <button class="redbox">
-            <h6>E-MAIL</h6>
-        </button>
-        <button class="redbox">
-            <h6>LARMKONTAKTER</h6>
-        </button>
+        <div id="curtain">
+
+            <!--This is the grid-wrapper for the main-menu tiles-->
+            <div id="curtain-grid">
+                <button class="tile-1" type="button" onclick="buttonAction('security')">
+                    <img src="img/security-icon.svg" class="tile-icon">
+                    <h6 class="tile-subtitle">LÅS & LARM</h6>
+                </button>
+                <button class="tile-2" type="button" onclick="buttonAction('sound')">
+                    <img src="img/sound-icon.svg" class="tile-icon">
+                    <h6 class="tile-subtitle">LJUD</h6>
+                </button>
+                <button class="tile-1" type="button" onclick="buttonAction('light')">
+                    <!-- added light class for use with js had to use fkn onclick so now im mad-->
+                    <img src="img/light-icon.svg" class="tile-icon">
+                    <h6 class="tile-subtitle">LJUS</h6>
+                </button>
+                <button class="tile-2" type="button" onclick="buttonAction('furniture')">
+                    <img src="img/table-icon.svg" class="tile-icon">
+                    <h6 class="tile-subtitle">MÖBLER</h6>
+                </button>
+                <button class="tile-1" type="button" onclick="buttonAction('cleaning')">
+                    <img src="img/broom-icon.svg" class="tile-icon">
+                    <h6 class="tile-subtitle">STÄDNING</h6>
+                </button>
+                <button class="tile-2" type="button" onclick="buttonAction('breakers')">
+                    <img src="img/bolt-icon.svg" class="tile-icon">
+                    <h6 class="tile-subtitle">SÄKRINGAR</h6>
+                </button>
+                <button class="tile-1" type="button" onclick="buttonAction('addons')">
+                    <img src="img/add-icon.svg" class="tile-icon">
+                    <h6 class="tile-subtitle">TILLÄGG</h6>
+                </button>
+                <button class="tile-2" type="button" onclick="buttonAction('contact')">
+                    <img src="img/support-icon.svg" class="tile-icon">
+                    <h6 class="tile-subtitle">KONTAKT</h6>
+                </button>
+            </div>
+            <img src="img/halfCurtain.svg" alt="curtain edge" class="curtainEdge ">
+            <button  class="long-button"><p id="long-button-text">START</p></button>
+            <img src="img/bruh-string.svg" alt="curtain string" class="curtain-string">
+            
+            <!--When clicking this button, the curtain rolls down-->
+            
+        </div>
+        
+        <!-- different non curtain pages -->
+        <div  id="cover-image" class="start">
+            <img src="img/company-logo.png">
+            <img src="img/mask-logo.png">
+        </div>
+        <div class="hide security">
+            <div class="ovlBackground">
+
+            </div>
+            <!-- overlay div for descriptions -->
+            <div class="overlay one hide">
+                <!-- this is where the descriptions go -->
+                exempel ett
+            </div>
+            <div class="overlay two hide">
+                <!-- this is where the descriptions go -->
+                exempel två
+            </div>
+            <div class="overlay three hide">
+                <!-- this is where the descriptions go -->
+                exempel tre
+            </div>
+            
+            <img src="img/double-mask-logo.png">
+            <button class="redbox btn1">
+                <h6>Så här sköter du lås & larm</h6>
+            </button>
+            <button class="redbox btn2">
+                <h6>Hjälp med tekniken? Tryck här!</h6>
+            </button>
+        </div>
+        <div class="hide sound">
+            <div class="ovlBackground hide">
+
+            </div>
+            <img src="img/double-mask-logo.png">
+            <button class="redbox btn1">
+                <h6>Så här sköter du ljudet</h6>
+            </button>
+            <button class="redbox-mixer">
+                <h6>MIXERBORD</h6>
+            <img src="img/mixer.png" alt="mixerbord">
+            </button>
+            <button class="redbox btn2">
+                <h6>Hjälp med tekniken? Tryck här!</h6>
+            </button>
+        </div>
+        <div class="hide light">
+            <div class="ovlBackground">
+
+            </div>
+            <img src="img/double-mask-logo.png">
+            <button class="redbox btn1">
+                <h6>Så här sköter du belysningen</h6>
+            </button>
+            <button class="redbox btn2">
+                <h6>Hjälp med tekniken? Tryck här!</h6>
+            </button>
+        </div>
+        <div class="hide furniture">
+            <div class="ovlBackground hide">
+
+            </div>
+            superkool karta
+        </div>
+        <div class="hide cleaning">
+            <div class="ovlBackground hide">
+
+            </div>
+            <img src="img/double-mask-logo.png">
+            <h5>STÄDNING PÅ BURATINO</h5>
+            <button class="redbox btn1">
+                <h6>STÄDRUTINER</h6>
+            </button>
+            <button class="redbox btn2">
+                <h6>DISKMASKIN</h6>
+            </button>
+            <button class="redbox btn3">
+                <h6>SOPOR</h6>
+            </button>
+        </div>
+        <div class="hide breakers">
+            <div class="ovlBackground hide">
+
+            </div>
+            <img src="img/double-mask-logo.png">
+            <button class="redbox btn1">
+                <h6>Så här sköter du säkringarna</h6>
+            </button>
+            <button class="redbox btn2">
+                <h6>Hjälp med tekniken? Tryck här!</h6>
+            </button>
+        </div>
+        <div class="hide addons">
+            <div class="ovlBackground hide">
+
+            </div>
+            <img src="img/double-mask-logo.png">
+            <button class="redbox btn1">
+                <h6>BURATINO SILVER</h6>
+            </button>
+            <button class="redbox btn2">
+                <h6>BURATINO GULD</h6>
+            </button>
+            <button class="redbox btn3">
+                <h6>BURATINO PREMIUM</h6>
+            </button>
+        </div>
+        <div class="hide contact">
+            <div class="ovlBackground hide">
+
+            </div>
+            <img src="img/double-mask-logo.png">
+            <button class="redbox btn1">
+                <h6>TELEFON</h6>
+            </button>
+            <button class="redbox btn2">
+                <h6>E-MAIL</h6>
+            </button>
+            <button class="redbox btn3">
+                <h6>LARMKONTAKTER</h6>
+            </button>
+        </div>
     </div>
 </body>
 <!-- unified these into one -->

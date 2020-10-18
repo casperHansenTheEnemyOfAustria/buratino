@@ -5,6 +5,7 @@
 // sets dead zone in css-pixels for the swipe
 // hides curtain grid because of bug where items were clickable even though they were invisible
 var sens = 10
+var ovlBackgroundArray = document.querySelectorAll(".ovlBackground")
 // initial hide of later items top items due to bug
 document.getElementById("slide-box").classList.remove("hide")
 // resets the hitbox to show
@@ -35,16 +36,48 @@ function wifiSwitch() {
   document.getElementById("long-button-text").innerHTML = "TRYCK HÄR FÖR WIFI";
 }
 
+// makes a reset for everything at every curtain draw :D
+function hidebg(){
+    ovlBackgroundArray.forEach(element => {
+        element.classList.add("hide")
+    });
+}
+function resetOvls(){
+    // hides all overlays
+    var everyOvl = document.querySelector(".overlay");
+    everyOvl.classList.add("hide");
+    console.log("hiding OVL")
+    hidebg()
+};
+
+// brings elements to foreground to make the buttons work
+function bringForward(){
+    document.querySelector(".security").classList.add("bring-forward")
+    document.querySelector(".sound").classList.add("bring-forward")
+    document.querySelector(".light").classList.add("bring-forward")
+    document.querySelector(".furniture").classList.add("bring-forward")
+    document.querySelector(".cleaning").classList.add("bring-forward")
+    document.querySelector(".breakers").classList.add("bring-forward")
+    document.querySelector(".addons").classList.add("bring-forward")
+    document.querySelector(".contact").classList.add("bring-forward")
+}
+// brings elements to background to make it not look ugly
+function bringBack(){
+    document.querySelector(".security").classList.remove("bring-forward")
+    document.querySelector(".sound").classList.remove("bring-forward")
+    document.querySelector(".light").classList.remove("bring-forward")
+    document.querySelector(".furniture").classList.remove("bring-forward")
+    document.querySelector(".cleaning").classList.remove("bring-forward")
+    document.querySelector(".breakers").classList.remove("bring-forward")
+    document.querySelector(".addons").classList.remove("bring-forward")
+    document.querySelector(".contact").classList.remove("bring-forward")
+}
+
 // i called this curtain but its actually the hitbox for the curtain
 var curtain = document.getElementById("slide-box");
-
 var curtainGrid = document.getElementById("curtain-grid");
-
 var curtainEdge = document.querySelector(".curtainEdge")
-
 var curtainString = document.querySelector(".curtain-string")
-
-
 // looks for y coord of cursor at click and compares to cursor coord at release
 
 var y1 = 0
@@ -94,6 +127,7 @@ function phoneTouch(){
             console.log("pressend")
             document.getElementById("curtain").classList.remove("roll-up")
             document.getElementById("slide-box").classList.add("hide")
+            bringBack()
             curtainDown();
             wifiSwitch();
             // i had to make y zer0 a bunch of times but it works now donw worry about it :D
@@ -128,6 +162,7 @@ phoneTouch()
             var targetElement = document.getElementById("curtain-grid");
             targetElement.classList.remove("tile-transition")
             console.log("transit")
+            resetOvls()
         }
 
         function anyText(word) {
@@ -135,6 +170,7 @@ phoneTouch()
             document.getElementById("long-button-text").innerHTML = word;
             // here im also showing the slide box cause i needed it to run for every button click in the grid dont judge
             document.getElementById("slide-box").classList.remove("hide")
+            
         }
 
         // runs a reset before everything begins
@@ -249,6 +285,10 @@ phoneTouch()
                 anyText("KONTAKT")    
             }
             phoneTouch()
+            setTimeout(function(){
+                // brings element into z axis foreground after 500 msto make it work with event listeners :D
+                bringForward()
+            }, 500); 
         };
 // this was the only solution my brain could come up with but i mean it works
 // play with different orders of the different sub-functions to maybe make the animation smoother

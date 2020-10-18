@@ -238,8 +238,28 @@ button {
 }
 
 // random box for debugging
+// well eventually have to overwrite the sizes of these boxes for different amounts of text but 
+// itd be cool ot have it like scale with the amount of text maybe....
 .overlay{
-  height: 90vh;
+  position:absolute;
+  z-index: 4 !important;
+  height: 50vh;
   width: 90vw;
   background-color: white;
+  filter: drop-shadow($boxShadow);
+}
+
+// thing to make pages work as intended
+.bring-forward{
+  z-index: 1 ; 
+}
+
+// settings for the backrounf fade layer
+.ovlBackground{
+  backdrop-filter: blur(25px);
+  background-color: rgba($color: #000000, $alpha: .25);
+  width: 100vw;
+  height: 200vh;
+  position: absolute;
+  z-index: 3 !important;
 }

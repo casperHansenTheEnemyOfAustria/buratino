@@ -377,9 +377,27 @@ button {
 }
 
 .overlay {
-  height: 90vh;
+  position: absolute;
+  z-index: 4 !important;
+  height: 50vh;
   width: 90vw;
   background-color: white;
+  -webkit-filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.25));
+}
+
+.bring-forward {
+  z-index: 1;
+}
+
+.ovlBackground {
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100vw;
+  height: 200vh;
+  position: absolute;
+  z-index: 3 !important;
 }
 
 .roll-down {
