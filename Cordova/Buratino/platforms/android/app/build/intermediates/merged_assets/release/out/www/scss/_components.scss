@@ -1,0 +1,267 @@
+#curtain {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 15vh;
+    background: $buratinoRed;
+    justify-content: center;
+    overflow: visible;
+    position: absolute;
+}
+
+.long-button {
+    position: relative;
+    height: 5vh;
+    width: (100vw - (414 / 32));
+    align-self: center;
+    background-color: $offWhite;
+    box-shadow: $itemShadow;
+}
+
+// margin when needed
+.longButtonTopmargin{
+    margin-top: 7vh;
+}
+
+
+#long-button-text {
+    @include subtitle;
+    font-size: 18px;
+}
+  @media screen and (min-width: 320px) {
+    #long-button-text {
+      font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    #long-button-text {
+      font-size: 22px;
+    }
+  } 
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+// Tiles using this class are left-bound on the grid.
+.tile-1 {
+    @include tile-properties;
+    justify-self: start;
+}
+    @media screen and (min-width: 320px) {
+        .tile-1 {
+        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        .tile-1 {
+        font-size: 22px;
+        }
+    } 
+
+// Tiles using this class are right-bound on the grid.
+.tile-2 {
+    @include tile-properties;
+    justify-self: end;
+}
+    @media screen and (min-width: 320px) {
+        .tile-2 {
+        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        .tile-2 {
+        font-size: 22px;
+        }
+    } 
+
+#curtain-grid {
+    align-self: center;
+    width: (100vw - (414 / 32));
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-content: space-evenly;
+    opacity: 0%;
+}
+
+#cover-image {
+    padding-top: calc(#{$nonCurtainPadding} + 7vh);
+    @include center;
+    height: 75vh;
+    flex-direction: column;
+    gap: 5vmin;
+    z-index: -20;
+
+    img {
+        max-width: 80vw;
+        z-index: -20;
+    }
+}
+
+.tile-icon {
+    width: 75%;
+}
+
+.tile-subtitle {
+    @include reset-mp;
+    @include tile-name;
+}
+    @media screen and (min-width: 320px) {
+        .tile-subtitle {
+        font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+        }
+    }
+    @media screen and (min-width: 1000px) {
+        .tile-subtitle {
+        font-size: 18px;
+        }
+    } 
+
+// Adds a curtain ends for that snazzy look
+.curtainEdge{
+    position: absolute;
+    width: 100vw;
+    filter: drop-shadow($curtainShadow);
+    bottom: -3.5vh;
+    z-index: -4;
+}
+
+// Here lies all the pages for the separate tiles. The content in the sub-pages have a padding to them, as well as a lower z-index, so they'll be covered by the main curtain.
+.security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
+    padding-top:$nonCurtainPadding;
+    z-index: -20;
+    position: relative;
+    @include center;
+    flex-direction: column;
+    grid-gap: 5vh;
+
+    img {
+        object-fit: contain;
+        max-width: 80vw;
+    }
+
+    h5 {
+        @include subtitle;
+        font-size: 20px;
+        max-width: (100vw - (414 / 32));
+        text-align: center;
+    }
+      @media screen and (min-width: 320px) {
+        h5 {
+          font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        h5 {
+          font-size: 24px;
+        }
+      } 
+    
+    .redbox {
+        margin: auto;
+        background-color: $buratinoRed;
+        width: (100vw - (414 / 32));
+        height: (37vw - (414 / 32));
+        filter: drop-shadow($boxShadow);
+        @include center;
+        flex-direction: column;
+
+    
+        h6 {
+            @include subtitle;
+            color: #FFFFFF;
+            font-size: 20px;
+            text-align: center;
+        }
+          @media screen and (min-width: 320px) {
+            h6 {
+              font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+            }
+          }
+          @media screen and (min-width: 1000px) {
+            h6 {
+              font-size: 24px;
+            }
+          } 
+        }
+        .redbox-mixer {
+            background-color: $buratinoRed;
+            width: (100vw - (414 / 32));
+            height: (65vw - (414 / 32));
+            filter: drop-shadow($boxShadow);
+            @include center;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            img {
+                max-width: 45vw;
+            }
+
+            h6 {
+                @include subtitle;
+                color: #FFFFFF;
+                font-size: 18px;
+                text-align: center;
+            }
+              @media screen and (min-width: 320px) {
+                h6 {
+                  font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+                }
+              }
+              @media screen and (min-width: 1000px) {
+                h6 {
+                  font-size: 22px;
+                }
+              } 
+        }
+        
+}
+
+.curtain-string {
+  position: absolute;
+  bottom: -20vh;
+  width: 16vw;
+  margin-left:50 - 8vw;
+  z-index: -14;
+  filter: drop-shadow($curtainShadow);
+}
+
+#slide-box {
+  z-index: 2;
+  height:36vh;
+  position:fixed;
+  width:100vw;
+  // background-color: rgba($color: #a73d3d, $alpha: .5);
+}
+
+// random box for debugging
+// well eventually have to overwrite the sizes of these boxes for different amounts of text but 
+// itd be cool ot have it like scale with the amount of text maybe....
+.overlay{
+  position:absolute;
+  z-index: 4 !important;
+  height: 50vh;
+  width: 90vw;
+  background-color: white;
+  filter: drop-shadow($itemShadow);
+}
+
+// thing to make pages work as intended
+.bring-forward{
+  z-index: 1 ; 
+}
+
+// settings for the backrounf fade layer
+.ovlBackground{
+  backdrop-filter: blur(25px);
+  background-color: rgba($color: #000000, $alpha: .25);
+  width: 100vw;
+  height: 200vh;
+  position: absolute;
+  z-index: 3 !important;
+}

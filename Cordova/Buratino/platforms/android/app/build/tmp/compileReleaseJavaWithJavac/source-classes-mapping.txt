@@ -1,0 +1,8 @@
+se/buratino/buratinoinstruktino/BuildConfig.java
+ se.buratino.buratinoinstruktino.BuildConfig
+org/apache/cordova/whitelist/WhitelistPlugin.java
+ org.apache.cordova.whitelist.WhitelistPlugin
+ org.apache.cordova.whitelist.WhitelistPlugin$1
+ org.apache.cordova.whitelist.WhitelistPlugin$CustomConfigXmlParser
+se/buratino/buratinoinstruktino/MainActivity.java
+ se.buratino.buratinoinstruktino.MainActivity

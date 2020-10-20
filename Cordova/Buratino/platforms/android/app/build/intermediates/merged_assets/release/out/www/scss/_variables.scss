@@ -1,0 +1,53 @@
+// These are the SASS variables that are used in other .scss files.
+$tileSize: 35vmin;
+$buratinoRed: #CB0000;
+$offWhite: #FFFAFA;
+$tileWhite: #FFFFFF;
+$curtainShadow: 4px 4px 2px rgba(0, 0, 0, 0.35);
+$itemShadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
+$boxShadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
+$nonCurtainPadding: 20vh;
+
+
+// This mixin is used for when an element needs to be horizontally and vertically centered, using Flexbox.
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//This mixin is used for resetting all default margins and paddings in an element.
+@mixin reset-mp {
+    margin: 0;
+    padding: 0;
+}
+
+// This mixin is used for the subtitles inside of the main navigation tiles.
+@mixin tile-name {
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+// These are the standard properties that each main navigation tile uses.
+@mixin tile-properties {
+    @include center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: $tileWhite;
+    box-shadow: $itemShadow;
+    width: $tileSize;
+    height: $tileSize;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+@mixin subtitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    @include reset-mp;
+}

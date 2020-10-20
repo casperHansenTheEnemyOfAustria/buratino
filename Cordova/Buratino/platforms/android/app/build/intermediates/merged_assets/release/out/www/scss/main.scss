@@ -1,0 +1,17 @@
+/*These import the various components that make up the entire webpage.*/
+@import 'variables';
+@import 'components';
+@import 'animations';
+
+/*This applies Helvetica font to entire webpage.*/
+* {
+    font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    // check this one. It might not be needed anymore actually cause then 
+    // making things scrollable when they need to be will be a bit easier!
+    overflow: hidden;
+}
