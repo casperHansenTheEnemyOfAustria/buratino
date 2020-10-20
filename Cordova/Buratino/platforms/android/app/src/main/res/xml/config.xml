@@ -21,5 +21,10 @@
     <allow-intent href="geo:*" />
     <allow-navigation href="*" />
     <allow-intent href="market:*" />
+    <icon density="mdpi" src="assets/4.png" />
+    <icon density="ldpi" src="assets/4.png" />
+    <icon density="hdpi" src="assets/4.png" />
+    <icon density="xhdpi" src="assets/4.png" />
+    <icon density="xxhdpi" src="assets/4.png" />
     <preference name="loglevel" value="DEBUG" />
 </widget>
