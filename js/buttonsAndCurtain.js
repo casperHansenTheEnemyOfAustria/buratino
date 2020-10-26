@@ -32,8 +32,13 @@ function curtainDown() {
     console.log("showing")
   }
 
+// Changes the text in the long-button, as well as giving it
+// the btn1 class for the purpose of an overlay.
 function wifiSwitch() {
-  document.getElementById("long-button-text").innerHTML = "TRYCK HÄR FÖR WIFI";
+  var targetElement = document.getElementById("long-button-text");
+  targetElement.innerHTML = "TRYCK HÄR FÖR WIFI";
+  var targetElement = document.querySelector(".long-button");
+  targetElement.classList.add("btn1")
 }
 
 // makes a reset for everything at every curtain draw :D
