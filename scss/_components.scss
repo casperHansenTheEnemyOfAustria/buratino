@@ -89,6 +89,7 @@ button {
     opacity: 0%;
 }
 
+
 #cover-image {
     padding-top: calc(#{$nonCurtainPadding} + 7vh);
     @include center;
@@ -288,4 +289,8 @@ button {
   height: 300vh;
   position: absolute;
   z-index: 3 !important;
+}
+.wifi-ovl{
+  margin-left: 6vw;
+  margin-top:30vh;
 }

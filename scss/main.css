@@ -159,7 +159,7 @@ button {
 }
 
 #cover-image {
-  padding-top: calc(20vh + 7vh);
+  padding-top: calc(20vmax + 7vh);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,7 +219,7 @@ button {
 }
 
 .security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
-  padding-top: 20vh;
+  padding-top: 20vmax;
   z-index: -20;
   position: relative;
   display: -webkit-box;
@@ -431,6 +431,11 @@ button {
   height: 300vh;
   position: absolute;
   z-index: 3 !important;
+}
+
+.wifi-ovl {
+  margin-left: 6vw;
+  margin-top: 30vh;
 }
 
 .roll-down {
