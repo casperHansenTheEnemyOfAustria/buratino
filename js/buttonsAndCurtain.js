@@ -6,6 +6,7 @@
 // hides curtain grid because of bug where items were clickable even though they were invisible
 var sens = 10
 var ovlBackgroundArray = document.querySelectorAll(".ovlBackground")
+var wifiOvl = document.querySelector(".wifi")
 // initial hide of later items top items due to bug
 document.getElementById("slide-box").classList.remove("hide")
 // resets the hitbox to show
@@ -132,6 +133,8 @@ function phoneTouch(){
             console.log("pressend")
             document.getElementById("curtain").classList.remove("roll-up")
             document.getElementById("slide-box").classList.add("hide")
+            // added to show the wifi overlay when it nmeeds to be able to show
+            wifiOvl.classList.remove("hide")
             bringBack()
             curtainDown();
             wifiSwitch();
@@ -160,6 +163,7 @@ phoneTouch()
             document.querySelector(".breakers").classList.add("hide")
             document.querySelector(".addons").classList.add("hide")
             document.querySelector(".contact").classList.add("hide")
+            wifiOvl.classList.add("hide")
             
             // removes roll down when curtain is rolled up
             var targetElement = document.getElementById("curtain");
@@ -175,7 +179,8 @@ phoneTouch()
             document.getElementById("long-button-text").innerHTML = word;
             // here im also showing the slide box cause i needed it to run for every button click in the grid dont judge
             document.getElementById("slide-box").classList.remove("hide")
-            
+            // added to hide the wifi overlay when it shouldnt show
+            wifiOvl.classList.add("hide")
         }
 
         // runs a reset before everything begins

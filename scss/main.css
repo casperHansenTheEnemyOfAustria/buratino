@@ -438,6 +438,12 @@ button {
   margin-top: 30vh;
 }
 
+.wifi {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;
