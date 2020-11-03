@@ -242,7 +242,9 @@ button {
 // Used by all overlays in the app.
 .overlay{
   position:absolute;
+  flex-direction: column;
   z-index: 4 !important;
+  display: flex;
   width: 80vmin;
   background-color: white;
   filter: drop-shadow($itemShadow);
@@ -298,4 +300,8 @@ button {
   position: absolute;
   z-index: 3;
   top:0;
+}
+
+.xclose{
+  margin-left:auto;
 }
