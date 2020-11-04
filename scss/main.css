@@ -455,6 +455,10 @@ button {
   margin-left: auto;
 }
 
+.map-ovl {
+  height: 87vh;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;
