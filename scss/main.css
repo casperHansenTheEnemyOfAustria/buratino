@@ -459,6 +459,13 @@ button {
   height: 87vh;
 }
 
+.table {
+  position: absolute;
+  background-color: blue;
+  width: 2vh;
+  height: 4vh;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;
