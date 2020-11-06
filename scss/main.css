@@ -590,6 +590,10 @@ button {
   display: none !important;
 }
 
+.selected {
+  background-color: salmon;
+}
+
 /*This applies Helvetica font to entire webpage.*/
 * {
   font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
