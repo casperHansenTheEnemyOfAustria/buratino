@@ -1,10 +1,23 @@
+var table = document.querySelector(".table")
+
+
+
+
 function tables(number){
   console.log("running on" + number)
   var dragItem = document.querySelector(".table" + number);
   var containers = document.querySelectorAll(".table" + number)
 
-
+  
+  var tables = document.querySelectorAll(".table")
+  tables.forEach( table => {
+    table.classList.remove("selected")
+  }
+  );
+// makes the selected item look selected
+  
   dragItem.classList.add("selected")
+
       var active = false;
       var currentX;
       var currentY;
@@ -12,7 +25,7 @@ function tables(number){
       var initialY;
       var xOffset = 0;
       var yOffset = 0;
-  // add a function around this with the container sumber as a var for later use with multiple tables
+  
   containers.forEach( container => {
       container.addEventListener("touchstart", dragStart, false);
       container.addEventListener("touchend", dragEnd, false);
