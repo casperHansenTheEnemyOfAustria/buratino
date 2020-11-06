@@ -1,6 +1,20 @@
 var table = document.querySelector(".table")
 
-
+tables("1")
+tables("2")
+tables("3")
+tables("4")
+tables("5")
+tables("6")
+tables("7")
+tables("8")
+tables("9")
+tables("10")
+tables("11")
+tables("12")
+tables("13")
+tables("14")
+tables("15")
 
 
 function tables(number){
@@ -8,12 +22,12 @@ function tables(number){
   var dragItem = document.querySelector(".table" + number);
   var containers = document.querySelectorAll(".table" + number)
 
-  
-  var tables = document.querySelectorAll(".table")
-  tables.forEach( table => {
-    table.classList.remove("selected")
-  }
-  );
+  // soon to be added for coloring
+  // var tables = document.querySelectorAll(".table")
+  // tables.forEach( table => {
+  //   table.classList.remove("selected")
+  // }
+  // );
 // makes the selected item look selected
   
   dragItem.classList.add("selected")
