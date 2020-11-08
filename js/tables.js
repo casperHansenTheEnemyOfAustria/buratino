@@ -1,5 +1,6 @@
 var table = document.querySelector(".table")
 
+document.querySelector(".table15").classList.add("selected")
 tables("1")
 tables("2")
 tables("3")
@@ -23,14 +24,17 @@ function tables(number){
   var containers = document.querySelectorAll(".table" + number)
 
   // soon to be added for coloring
-  // var tables = document.querySelectorAll(".table")
-  // tables.forEach( table => {
-  //   table.classList.remove("selected")
-  // }
-  // );
+  function resetColors(){
+    var tables = document.querySelectorAll(".table")
+    tables.forEach( table => {
+    table.classList.remove("selected")
+    }
+    );
+  }
+  
 // makes the selected item look selected
   
-  dragItem.classList.add("selected")
+  
 
       var active = false;
       var currentX;
@@ -53,6 +57,8 @@ function tables(number){
 
 
       function dragStart(e) {
+        resetColors()
+        dragItem.classList.add("selected")
         // check pos at start
         if (e.type === "touchstart") {
           initialX = e.touches[0].clientX - xOffset;
@@ -103,7 +109,17 @@ function tables(number){
       }
     }
 
-    function selected() {
-
+    // functions for rotating the tables
+    var horizontal = document.querySelector(".horizontal")
+    var vertical = document.querySelector(".vertical")
+    function rotationAdd(){
+      var rotatable = document.querySelector(".selected")
+      rotatable.classList.add("rotated-table")
     }
-    function rotation(){}
+    function rotationRemove(){
+      var rotatable = document.querySelector(".selected")
+      rotatable.classList.remove("rotated-table")
+    }
+
+    horizontal.addEventListener("click", rotationAdd())
+    vertical.addEventListener("click", rotationRemove())

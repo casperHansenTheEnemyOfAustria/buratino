@@ -461,9 +461,47 @@ button {
 
 .table {
   position: absolute;
+  margin-top: 80vh;
+  margin-left: 70vw;
   background-color: blue;
   width: 2vh;
   height: 4vh;
+}
+
+.rotated-table {
+  width: 4vh;
+  height: 2vh;
+}
+
+.rotators {
+  width: 40vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.horizontal {
+  background-color: #cb0000;
+  background-image: url("../img/table-horizontal.svg");
+  background-repeat: no-repeat;
+  width: 15vw;
+  height: 15vw;
+}
+
+.vertical {
+  background-color: #cb0000;
+  background-image: url("../img/table-vertical.svg");
+  background-repeat: no-repeat;
+  width: 15vw;
+  height: 15vw;
 }
 
 .roll-down {

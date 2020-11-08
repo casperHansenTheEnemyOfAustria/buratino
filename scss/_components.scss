@@ -312,7 +312,39 @@ button {
 
 .table{
   position: absolute;
+  margin-top: 80vh;
+  margin-left: 70vw;
   background-color: blue;
   width: 2vh;
   height: 4vh;
+}
+
+// this is my stupid solution for rotating tables as i cannot use the tranform porperty
+// if you change the height/width of the table make sure to change these to that but reversed
+.rotated-table{
+  width: 4vh;
+  height: 2vh;
+}
+
+// these are for the buttons that rotate the tables around
+.rotators{
+  width: 40vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.horizontal{
+  background-color: rgba($color: #CB0000, $alpha: 1);
+  background-image: url("../img/table-horizontal.svg");
+  background-repeat: no-repeat;
+  width:15vw;
+  height: 15vw;
+}
+.vertical{
+  background-color: rgba($color: #CB0000, $alpha: 1);
+  background-image: url("../img/table-vertical.svg");
+  background-repeat: no-repeat;
+  width:15vw;
+  height: 15vw;
 }
