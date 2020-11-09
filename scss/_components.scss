@@ -312,24 +312,25 @@ button {
 
 .table{
   position: absolute;
-  margin-top: 80vh;
+  margin-top: 75vh;
   margin-left: 70vw;
   background-color: blue;
-  width: 2vh;
-  height: 4vh;
+  width: 6.666vw;
+  height: 15.79vw;
 }
 
 // this is my stupid solution for rotating tables as i cannot use the tranform porperty
 // if you change the height/width of the table make sure to change these to that but reversed
 .rotated-table{
-  width: 4vh;
-  height: 2vh;
+  width: 15.789vw;
+  height: 6.666vw;
 }
 
 // these are for the buttons that rotate the tables around
 .rotation-wrapper{
   position: relative;
   margin-top: 15vh;
+  z-index:-2;
 }
 .rotators{
   position: relative;
@@ -358,7 +359,10 @@ button {
   filter: drop-shadow($itemShadow);
 }
 
-// .rotator-caption{
-//   position: relative;
-//   top:12vh;
-// }
+.map{
+  position: relative;
+  z-index: -2;
+  width:78vw;
+  margin-left: auto;
+  margin-right: auto;
+}
