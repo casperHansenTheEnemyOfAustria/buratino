@@ -464,13 +464,13 @@ button {
   margin-top: 75vh;
   margin-left: 70vw;
   background-color: blue;
-  width: 6.666vw;
-  height: 15.79vw;
+  width: 7.5vw;
+  height: 16.579vw;
 }
 
 .rotated-table {
-  width: 15.789vw;
-  height: 6.666vw;
+  width: 16.579vw;
+  height: 7.5vw;
 }
 
 .rotation-wrapper {
@@ -482,7 +482,7 @@ button {
 .rotators {
   position: relative;
   width: 30vw;
-  height: 10vw;
+  height: 7vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -500,7 +500,7 @@ button {
   background-image: url("../img/table-horizontal.svg");
   background-repeat: no-repeat;
   width: 10vw;
-  height: 10vw;
+  height: 7vh;
 }
 
 .vertical {
@@ -508,7 +508,7 @@ button {
   background-image: url("../img/table-vertical.svg");
   background-repeat: no-repeat;
   width: 10vw;
-  height: 10vw;
+  height: 7vh;
 }
 
 .vertical, .horizontal {
