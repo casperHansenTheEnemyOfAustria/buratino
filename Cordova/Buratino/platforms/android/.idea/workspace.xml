@@ -38,12 +38,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ApkExportedModule" value="app" />
-    <property name="ExportApk.ApkPath" value="C:\Users\casha\Desktop\lorris" />
+    <property name="ExportApk.ApkPath" value="C:\Users\casha\Desktop" />
     <property name="ExportApk.BuildVariants" value="debug" />
     <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="C:/AndySDK" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../.." />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RunManager">
@@ -128,10 +128,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1233" y="369" key="#app/0.0.2560.1400@0.0.2560.1400" timestamp="1603220276209" />
-    <state x="1293" y="481" key="FileChooserDialogImpl" timestamp="1603218393769">
+    <state x="1293" y="481" key="FileChooserDialogImpl" timestamp="1604931996317">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1293" y="481" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603218393769" />
+    <state x="1293" y="481" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604931996317" />
     <state width="1695" height="245" key="GridCell.Tab.0.bottom" timestamp="1603218234447">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -148,9 +148,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1695" height="245" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603218234447" />
-    <state x="1210" y="549" key="com.intellij.ide.util.TipDialog" timestamp="1603222193349">
+    <state x="1210" y="549" key="com.intellij.ide.util.TipDialog" timestamp="1604931644733">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1210" y="549" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603222193349" />
+    <state x="1210" y="549" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1604931644733" />
   </component>
 </project>

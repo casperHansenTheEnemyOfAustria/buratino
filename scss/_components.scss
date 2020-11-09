@@ -335,7 +335,7 @@ button {
 .rotators{
   position: relative;
   width: 30vw;
-  height: 10vw;
+  height: 7vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -345,14 +345,14 @@ button {
   background-image: url("../img/table-horizontal.svg");
   background-repeat: no-repeat;
   width:10vw;
-  height: 10vw;
+  height: 7vh;
 }
 .vertical{
   background-color: rgba($color: #CB0000, $alpha: 1);
   background-image: url("../img/table-vertical.svg");
   background-repeat: no-repeat;
   width:10vw;
-  height: 10vw;
+  height: 7vh;
 }
 
 .vertical, .horizontal{
