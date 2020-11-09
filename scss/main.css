@@ -473,9 +473,15 @@ button {
   height: 2vh;
 }
 
+.rotation-wrapper {
+  position: relative;
+  margin-top: 15vh;
+}
+
 .rotators {
-  width: 40vw;
-  height: 10vh;
+  position: relative;
+  width: 30vw;
+  height: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,16 +498,21 @@ button {
   background-color: #cb0000;
   background-image: url("../img/table-horizontal.svg");
   background-repeat: no-repeat;
-  width: 15vw;
-  height: 15vw;
+  width: 10vw;
+  height: 10vw;
 }
 
 .vertical {
   background-color: #cb0000;
   background-image: url("../img/table-vertical.svg");
   background-repeat: no-repeat;
-  width: 15vw;
-  height: 15vw;
+  width: 10vw;
+  height: 10vw;
+}
+
+.vertical, .horizontal {
+  -webkit-filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.35));
 }
 
 .roll-down {

@@ -327,9 +327,14 @@ button {
 }
 
 // these are for the buttons that rotate the tables around
+.rotation-wrapper{
+  position: relative;
+  margin-top: 15vh;
+}
 .rotators{
-  width: 40vw;
-  height: 10vh;
+  position: relative;
+  width: 30vw;
+  height: 10vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -338,13 +343,22 @@ button {
   background-color: rgba($color: #CB0000, $alpha: 1);
   background-image: url("../img/table-horizontal.svg");
   background-repeat: no-repeat;
-  width:15vw;
-  height: 15vw;
+  width:10vw;
+  height: 10vw;
 }
 .vertical{
   background-color: rgba($color: #CB0000, $alpha: 1);
   background-image: url("../img/table-vertical.svg");
   background-repeat: no-repeat;
-  width:15vw;
-  height: 15vw;
+  width:10vw;
+  height: 10vw;
 }
+
+.vertical, .horizontal{
+  filter: drop-shadow($itemShadow);
+}
+
+// .rotator-caption{
+//   position: relative;
+//   top:12vh;
+// }
