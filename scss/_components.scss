@@ -364,6 +364,8 @@ button {
   filter: drop-shadow($itemShadow);
 }
 
+
+// defining the size of the map to make relative sizing of tables correct
 .map{
   position: relative;
   z-index: -2;
