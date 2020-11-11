@@ -307,7 +307,7 @@ button {
 }
 
 .map-ovl{
-  height: 87vh;
+  // height: 87vh;
 }
 
 
@@ -317,9 +317,11 @@ button {
 // maybe add an image or something with illusrtations of the margin
 .table{
   position: absolute;
-  margin-top: 75vh;
+  margin-top: 60vh;
   margin-left: 70vw;
-  background-color: blue;
+  background-image: url(../img/unselected-table.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 7.5vw;
   height: 16.579vw;
 }
@@ -329,7 +331,14 @@ button {
 .rotated-table{
   width: 16.579vw;
   height: 7.5vw;
+  background-image: url(../img/unselected-table-rotated.svg);
 }
+
+.selected.rotated-table{
+  background-image: url(../img/selected-table-rot.svg);
+}
+
+
 
 // these are for the buttons that rotate the tables around
 .rotation-wrapper{
@@ -339,8 +348,8 @@ button {
 }
 .rotators{
   position: relative;
-  width: 30vw;
-  height: 7vh;
+  width: 35vw;
+  height: 3em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -349,15 +358,15 @@ button {
   background-color: rgba($color: #CB0000, $alpha: 1);
   background-image: url("../img/table-horizontal.svg");
   background-repeat: no-repeat;
-  width:10vw;
-  height: 7vh;
+  width:3em;
+  height: 3em;
 }
 .vertical{
   background-color: rgba($color: #CB0000, $alpha: 1);
   background-image: url("../img/table-vertical.svg");
   background-repeat: no-repeat;
-  width:10vw;
-  height: 7vh;
+  width:3em;
+  height: 3em;
 }
 
 .vertical, .horizontal{

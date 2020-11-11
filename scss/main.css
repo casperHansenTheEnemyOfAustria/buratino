@@ -455,15 +455,13 @@ button {
   margin-left: auto;
 }
 
-.map-ovl {
-  height: 87vh;
-}
-
 .table {
   position: absolute;
-  margin-top: 75vh;
+  margin-top: 60vh;
   margin-left: 70vw;
-  background-color: blue;
+  background-image: url(../img/unselected-table.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 7.5vw;
   height: 16.579vw;
 }
@@ -471,6 +469,11 @@ button {
 .rotated-table {
   width: 16.579vw;
   height: 7.5vw;
+  background-image: url(../img/unselected-table-rotated.svg);
+}
+
+.selected.rotated-table {
+  background-image: url(../img/selected-table-rot.svg);
 }
 
 .rotation-wrapper {
@@ -481,8 +484,8 @@ button {
 
 .rotators {
   position: relative;
-  width: 30vw;
-  height: 7vh;
+  width: 35vw;
+  height: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,16 +502,16 @@ button {
   background-color: #cb0000;
   background-image: url("../img/table-horizontal.svg");
   background-repeat: no-repeat;
-  width: 10vw;
-  height: 7vh;
+  width: 3em;
+  height: 3em;
 }
 
 .vertical {
   background-color: #cb0000;
   background-image: url("../img/table-vertical.svg");
   background-repeat: no-repeat;
-  width: 10vw;
-  height: 7vh;
+  width: 3em;
+  height: 3em;
 }
 
 .vertical, .horizontal {
@@ -649,7 +652,8 @@ button {
 }
 
 .selected {
-  background-color: salmon;
+  background-image: url(../img/selected-table.svg);
+  background-repeat: no-repeat;
 }
 
 /*This applies Helvetica font to entire webpage.*/
