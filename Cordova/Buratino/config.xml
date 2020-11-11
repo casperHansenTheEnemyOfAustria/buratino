@@ -28,10 +28,10 @@
     </feature>
 <allow-navigation href="*" />
 <platform name="android">    
-    <icon src="assets/4.png" density="mdpi" />
-    <icon src="assets/4.png" density="ldpi" />
-    <icon src="assets/4.png" density="hdpi" />
-    <icon src="assets/4.png" density="xhdpi" />
-    <icon src="assets/4.png" density="xxhdpi" />
+    <icon src="assets/2e8syk.jpg" density="mdpi" />
+    <icon src="assets/2e8syk.jpg" density="ldpi" />
+    <icon src="assets/2e8syk.jpg" density="hdpi" />
+    <icon src="assets/2e8syk.jpg" density="xhdpi" />
+    <icon src="assets/2e8syk.jpg" density="xxhdpi" />
 </platform>
 </widget>

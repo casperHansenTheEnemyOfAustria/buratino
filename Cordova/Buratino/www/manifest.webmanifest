@@ -1,0 +1,33 @@
+{
+    "short_name": "Buratino",
+    "name": "Buratino: Instruktionsapp",
+    "description": "Få tillgång till Buratinos instruktionsbok genom denna applikationen!",
+    "icons": [
+      {
+        "src": "/img/mask-logo.png",
+        "type": "img/png",
+        "sizes": "301x228"
+      }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#CB0000",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#CB0000",
+    "shortcuts": [
+      {
+        "name": "How's weather today?",
+        "short_name": "Today",
+        "description": "View weather information for today",
+        "url": "/today?source=pwa",
+        "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+      },
+      {
+        "name": "How's weather tomorrow?",
+        "short_name": "Tomorrow",
+        "description": "View weather information for tomorrow",
+        "url": "/tomorrow?source=pwa",
+        "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
+      }
+    ]
+  }

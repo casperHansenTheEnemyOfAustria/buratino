@@ -288,7 +288,7 @@ button {
   // The height causes a bug where you can
   // scroll to the bottom of the overlay,
   // even if there is no content.
-  height: 300vh;
+  height: 100vh;
   position: absolute;
   z-index: 3 !important;
 }
@@ -310,9 +310,66 @@ button {
   height: 87vh;
 }
 
+
+// table dimesons are currently WITH the margin wanted by mattias
+// relative dimensions without margin: w:0.8m L: 2m
+// margin: 0.1m
+// maybe add an image or something with illusrtations of the margin
 .table{
   position: absolute;
+  margin-top: 75vh;
+  margin-left: 70vw;
   background-color: blue;
-  width: 2vh;
-  height: 4vh;
+  width: 7.5vw;
+  height: 16.579vw;
+}
+
+// this is my stupid solution for rotating tables as i cannot use the tranform porperty
+// if you change the height/width of the table make sure to change these to that but reversed
+.rotated-table{
+  width: 16.579vw;
+  height: 7.5vw;
+}
+
+// these are for the buttons that rotate the tables around
+.rotation-wrapper{
+  position: relative;
+  margin-top: 15vh;
+  z-index:-2;
+}
+.rotators{
+  position: relative;
+  width: 30vw;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.horizontal{
+  background-color: rgba($color: #CB0000, $alpha: 1);
+  background-image: url("../img/table-horizontal.svg");
+  background-repeat: no-repeat;
+  width:10vw;
+  height: 7vh;
+}
+.vertical{
+  background-color: rgba($color: #CB0000, $alpha: 1);
+  background-image: url("../img/table-vertical.svg");
+  background-repeat: no-repeat;
+  width:10vw;
+  height: 7vh;
+}
+
+.vertical, .horizontal{
+  filter: drop-shadow($itemShadow);
+}
+
+
+// defining the size of the map to make relative sizing of tables correct
+.map{
+  position: relative;
+  z-index: -2;
+  width:78vw;
+  margin-left: auto;
+  margin-right: auto;
 }
