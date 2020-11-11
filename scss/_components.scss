@@ -319,24 +319,25 @@ button {
   position: absolute;
   margin-top: 60vh;
   margin-left: 70vw;
-  background-image: url(../img/unselected-table.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 7.5vw;
-  height: 16.579vw;
+  // background-image: url(../img/unselected-table.svg);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  width: 6.667vw;
+  height: 15.79vw;
+  background-color: gray;
 }
 
 // this is my stupid solution for rotating tables as i cannot use the tranform porperty
 // if you change the height/width of the table make sure to change these to that but reversed
 .rotated-table{
-  width: 16.579vw;
-  height: 7.5vw;
-  background-image: url(../img/unselected-table-rotated.svg);
+  width: 15.79vw;
+  height: 6.667vw;
+  // background-image: url(../img/unselected-table-rotated.svg);
 }
 
-.selected.rotated-table{
-  background-image: url(../img/selected-table-rot.svg);
-}
+// .selected.rotated-table{
+//   background-image: url(../img/selected-table-rot.svg);
+// }
 
 
 
