@@ -13,5 +13,5 @@ body {
     height: 100%;
     // check this one. It might not be needed anymore actually cause then 
     // making things scrollable when they need to be will be a bit easier!
-    //overflow: hidden;
+    overflow-x: hidden;
 }
