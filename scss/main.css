@@ -459,14 +459,14 @@ button {
   position: absolute;
   margin-top: 60vh;
   margin-left: 70vw;
-  width: 6.667vw;
-  height: 15.79vw;
+  width: 10.834vw;
+  height: 19.738vw;
   background-color: gray;
 }
 
 .rotated-table {
-  width: 15.79vw;
-  height: 6.667vw;
+  width: 19.738vw;
+  height: 10.834vw;
 }
 
 .rotation-wrapper {

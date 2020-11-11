@@ -123,3 +123,6 @@ function tables(number){
 
     horizontal.addEventListener("click", rotationAdd())
     vertical.addEventListener("click", rotationRemove())
+
+
+    
