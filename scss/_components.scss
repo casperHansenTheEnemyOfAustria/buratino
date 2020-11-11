@@ -288,7 +288,7 @@ button {
   // The height causes a bug where you can
   // scroll to the bottom of the overlay,
   // even if there is no content.
-  height: 300vh;
+  height: 100vh;
   position: absolute;
   z-index: 3 !important;
 }
