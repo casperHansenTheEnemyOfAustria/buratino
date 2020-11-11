@@ -1,5 +1,6 @@
 var ovlBackground = document.querySelector(".ovlBackground")
 var ovlBackgroundArray = document.querySelectorAll(".ovlBackground")
+var closePageArray = document.querySelectorAll(".xclose")
 
 // functions for hiding and showing the background layer on every page at the clikc of a button :D
 function hidebg(){
@@ -125,6 +126,13 @@ btn3.forEach(element => {
 
 // hides all elements and resets its back to main page
 ovlBackgroundArray.forEach(element => {
+    element.addEventListener("click", function(){
+        resetOvls()
+    })
+});
+
+// Makes so you can click the x to close things
+closePageArray.forEach(element => {
     element.addEventListener("click", function(){
         resetOvls()
     })

@@ -455,6 +455,75 @@ button {
   margin-left: auto;
 }
 
+.map-ovl {
+  height: 87vh;
+}
+
+.table {
+  position: absolute;
+  margin-top: 75vh;
+  margin-left: 70vw;
+  background-color: blue;
+  width: 7.5vw;
+  height: 16.579vw;
+}
+
+.rotated-table {
+  width: 16.579vw;
+  height: 7.5vw;
+}
+
+.rotation-wrapper {
+  position: relative;
+  margin-top: 15vh;
+  z-index: -2;
+}
+
+.rotators {
+  position: relative;
+  width: 30vw;
+  height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.horizontal {
+  background-color: #cb0000;
+  background-image: url("../img/table-horizontal.svg");
+  background-repeat: no-repeat;
+  width: 10vw;
+  height: 7vh;
+}
+
+.vertical {
+  background-color: #cb0000;
+  background-image: url("../img/table-vertical.svg");
+  background-repeat: no-repeat;
+  width: 10vw;
+  height: 7vh;
+}
+
+.vertical, .horizontal {
+  -webkit-filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.35));
+}
+
+.map {
+  position: relative;
+  z-index: -2;
+  width: 78vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;
@@ -577,6 +646,10 @@ button {
 
 .hide {
   display: none !important;
+}
+
+.selected {
+  background-color: salmon;
 }
 
 /*This applies Helvetica font to entire webpage.*/
