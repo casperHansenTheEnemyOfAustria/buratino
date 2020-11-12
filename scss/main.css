@@ -461,12 +461,14 @@ button {
   margin-left: 70vw;
   width: 10.834vw;
   height: 19.738vw;
-  background-color: gray;
+  background-image: url(../img/unselected-table.svg);
+  background-repeat: no-repeat;
 }
 
 .rotated-table {
   width: 19.738vw;
   height: 10.834vw;
+  background-image: url(../img/unselected-table-rotated.svg);
 }
 
 .rotation-wrapper {
@@ -645,7 +647,8 @@ button {
 }
 
 .selected {
-  background-color: #cb0000;
+  -webkit-filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
+          filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
 }
 
 /*This applies Helvetica font to entire webpage.*/

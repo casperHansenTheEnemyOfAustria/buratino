@@ -321,9 +321,10 @@ button {
   margin-left: 70vw;
   width: 10.834vw;
   height: 19.738vw;
-  // width: 6.667vw;
-  // height: 15.79vw;
-  background-color: gray;
+  background-image: url(../img/unselected-table.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-x: center<;
   
 }
 
@@ -332,12 +333,9 @@ button {
 .rotated-table{
   width: 19.738vw;
   height: 10.834vw;
-  // background-image: url(../img/unselected-table-rotated.svg);
+  background-image: url(../img/unselected-table-rotated.svg);
 }
 
-// .selected.rotated-table{
-//   background-image: url(../img/selected-table-rot.svg);
-// }
 
 
 

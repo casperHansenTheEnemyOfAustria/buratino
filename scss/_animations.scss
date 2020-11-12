@@ -85,8 +85,7 @@
 }
 
 .selected{
-  // background-image: url(../img/selected-table.svg);
-  // background-repeat: no-repeat;
-  background-color: #cb0000;
+  // the filter property changes the color of the tables. Play with the hue rotate to find a desireable color
+  filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
 }
 
