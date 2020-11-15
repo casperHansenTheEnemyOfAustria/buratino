@@ -368,6 +368,31 @@ button {
   margin-left: 55vw !important;
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
+  -webkit-animation: startFade 0s 5s forwards;
+          animation: startFade 0s 5s forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  opacity: 0%;
+}
+
+@-webkit-keyframes startFade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes startFade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .curtain-string {
