@@ -55,17 +55,17 @@
             </div>
             <!--When clicking this button, the curtain rolls down-->
             <img src="img/halfCurtain.svg" alt="curtain edge" class="curtainEdge ">
-            <button  class="long-button btn1"><p id="long-button-text">START</p></button>
+            <button  class="long-button btn1"><p id="long-button-text" onclick="curtainAction()">START</p></button>
             <img src="img/bruh-string.svg" alt="curtain string" class="curtain-string">
 
             <!-- this is the overlay for showing the wifi password. -->
-            <div class=wifi>
+            <div class="wifi">
                 <div class="wifi-ovl overlay one hide">
                     <h6>WIFI-LÖSENORD:</h6>
                     <p>CooltLösenord123</p>
                     <img src="img/close-24px 2ex.svg" alt="close page" class="xclose wifi-close">
                 </div>
-                <div class="ovlBackground wifi-close">
+                <div class="ovlBackground wifi-close hide">
 
                 </div>
             </div>
@@ -76,6 +76,7 @@
         <div  id="cover-image" class="start">
             <img src="img/company-logo.png" alt="buratino">
             <img src="img/mask-logo.png" alt="masks">
+            <h5 class="start-prompt">Dra i snöret!</h5>
         </div>
         <div class="hide security">
             <div class="ovlBackground">
@@ -395,6 +396,7 @@
 <script src="js/overlays.js"></script>
 <script src="js/index.js"></script>
 <script src="js/tables.js"></script>
+<script src="js/curtain.js"></script>
 </html>
 
 <!-- Don't forget to comment your code smh-->

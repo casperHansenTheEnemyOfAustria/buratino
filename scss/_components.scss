@@ -133,7 +133,7 @@ button {
 }
 
 // Here lies all the pages for the separate tiles. The content in the sub-pages have a padding to them, as well as a lower z-index, so they'll be covered by the main curtain.
-.security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
+.start, .security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
     padding-top:$nonCurtainPadding;
     z-index: -20;
     position: relative;
@@ -220,6 +220,14 @@ button {
               } 
         }
         
+}
+
+.start-prompt{
+  z-index: -2;
+  position:fixed;
+  margin-bottom: 80vh !important;
+  margin-left: 55vw !important;
+  transform: rotate(-30deg);
 }
 
 .curtain-string {
@@ -380,3 +388,4 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+
