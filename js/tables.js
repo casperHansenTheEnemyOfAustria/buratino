@@ -1,4 +1,5 @@
 // for the love of all that is holy do not check the console i beg you
+// console looks fine again
 
 function colliding(){
   function collisionDetection(number2){
@@ -13,7 +14,7 @@ function colliding(){
               object_1.top < object_2.top + object_2.height && object_1.top + object_1.height > object_2.top) {
           //   rect.classList.add("collide");
                 // does something on collision
-              console.log("aaaa they collide"+number2)
+              console.log("collision detected at"+number2)
               warning.classList.remove("hide")
           }
           else{
