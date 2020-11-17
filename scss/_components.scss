@@ -345,7 +345,13 @@ button {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
-  
+  display:flex;
+  text-align: center;
+}
+
+.table p{
+  margin-left: 1px;
+  font-size: 0.6em;
 }
 
 // this is my stupid solution for rotating tables as i cannot use the tranform porperty
@@ -402,3 +408,10 @@ button {
   margin-right: auto;
 }
 
+.warning{
+  font-size: 0.9em !important;
+  color: #CB0000 !important;
+  position:absolute;
+  z-index: 23;
+  top:3vh;
+}

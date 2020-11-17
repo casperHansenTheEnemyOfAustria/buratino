@@ -4,6 +4,7 @@ function colliding(){
   function collisionDetection(number2){
       dragMe = document.querySelector(".selected")
       rect = document.querySelector(".table"+number2)
+      var warning = document.querySelector(".warning")
       function isCollapsed(dragMe, rect){
           var object_1 = dragMe.getBoundingClientRect();
           var object_2 = rect.getBoundingClientRect();
@@ -13,10 +14,12 @@ function colliding(){
           //   rect.classList.add("collide");
                 // does something on collision
               console.log("aaaa they collide"+number2)
+              warning.classList.remove("hide")
           }
           else{
           //   rect.classList.remove("collide");
             // undoes something on not collision
+            warning.classList.add("hide")
           }
       }
       if (rect != dragMe){

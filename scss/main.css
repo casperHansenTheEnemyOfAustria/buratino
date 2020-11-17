@@ -502,6 +502,15 @@ button {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.table p {
+  margin-left: 1px;
+  font-size: 0.6em;
 }
 
 .rotated-table {
@@ -559,6 +568,14 @@ button {
   width: 78vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+.warning {
+  font-size: 0.9em !important;
+  color: #CB0000 !important;
+  position: absolute;
+  z-index: 23;
+  top: 3vh;
 }
 
 .roll-down {
