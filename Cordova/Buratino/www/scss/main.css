@@ -218,7 +218,7 @@ button {
   z-index: -4;
 }
 
-.security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
+.start, .security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
   padding-top: 20vmax;
   z-index: -20;
   position: relative;
@@ -238,13 +238,13 @@ button {
   grid-gap: 5vh;
 }
 
-.security img, .sound img, .light img, .furniture img, .cleaning img, .breakers img, .addons img, .contact img {
+.start img, .security img, .sound img, .light img, .furniture img, .cleaning img, .breakers img, .addons img, .contact img {
   -o-object-fit: contain;
      object-fit: contain;
   max-width: 80vw;
 }
 
-.security h5, .sound h5, .light h5, .furniture h5, .cleaning h5, .breakers h5, .addons h5, .contact h5 {
+.start h5, .security h5, .sound h5, .light h5, .furniture h5, .cleaning h5, .breakers h5, .addons h5, .contact h5 {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -256,18 +256,18 @@ button {
 }
 
 @media screen and (min-width: 320px) {
-  .security h5, .sound h5, .light h5, .furniture h5, .cleaning h5, .breakers h5, .addons h5, .contact h5 {
+  .start h5, .security h5, .sound h5, .light h5, .furniture h5, .cleaning h5, .breakers h5, .addons h5, .contact h5 {
     font-size: calc(20px + 6 * ((100vw - 320px) / 680));
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .security h5, .sound h5, .light h5, .furniture h5, .cleaning h5, .breakers h5, .addons h5, .contact h5 {
+  .start h5, .security h5, .sound h5, .light h5, .furniture h5, .cleaning h5, .breakers h5, .addons h5, .contact h5 {
     font-size: 24px;
   }
 }
 
-.security .redbox, .sound .redbox, .light .redbox, .furniture .redbox, .cleaning .redbox, .breakers .redbox, .addons .redbox, .contact .redbox {
+.start .redbox, .security .redbox, .sound .redbox, .light .redbox, .furniture .redbox, .cleaning .redbox, .breakers .redbox, .addons .redbox, .contact .redbox {
   background-color: #CB0000;
   width: 87.0625vw;
   height: 24.0625vw;
@@ -288,7 +288,7 @@ button {
           flex-direction: column;
 }
 
-.security .redbox h6, .sound .redbox h6, .light .redbox h6, .furniture .redbox h6, .cleaning .redbox h6, .breakers .redbox h6, .addons .redbox h6, .contact .redbox h6 {
+.start .redbox h6, .security .redbox h6, .sound .redbox h6, .light .redbox h6, .furniture .redbox h6, .cleaning .redbox h6, .breakers .redbox h6, .addons .redbox h6, .contact .redbox h6 {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -300,18 +300,18 @@ button {
 }
 
 @media screen and (min-width: 320px) {
-  .security .redbox h6, .sound .redbox h6, .light .redbox h6, .furniture .redbox h6, .cleaning .redbox h6, .breakers .redbox h6, .addons .redbox h6, .contact .redbox h6 {
+  .start .redbox h6, .security .redbox h6, .sound .redbox h6, .light .redbox h6, .furniture .redbox h6, .cleaning .redbox h6, .breakers .redbox h6, .addons .redbox h6, .contact .redbox h6 {
     font-size: calc(20px + 6 * ((100vw - 320px) / 680));
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .security .redbox h6, .sound .redbox h6, .light .redbox h6, .furniture .redbox h6, .cleaning .redbox h6, .breakers .redbox h6, .addons .redbox h6, .contact .redbox h6 {
+  .start .redbox h6, .security .redbox h6, .sound .redbox h6, .light .redbox h6, .furniture .redbox h6, .cleaning .redbox h6, .breakers .redbox h6, .addons .redbox h6, .contact .redbox h6 {
     font-size: 24px;
   }
 }
 
-.security .redbox-mixer, .sound .redbox-mixer, .light .redbox-mixer, .furniture .redbox-mixer, .cleaning .redbox-mixer, .breakers .redbox-mixer, .addons .redbox-mixer, .contact .redbox-mixer {
+.start .redbox-mixer, .security .redbox-mixer, .sound .redbox-mixer, .light .redbox-mixer, .furniture .redbox-mixer, .cleaning .redbox-mixer, .breakers .redbox-mixer, .addons .redbox-mixer, .contact .redbox-mixer {
   background-color: #CB0000;
   width: 87.0625vw;
   height: 52.0625vw;
@@ -334,11 +334,11 @@ button {
       justify-content: space-around;
 }
 
-.security .redbox-mixer img, .sound .redbox-mixer img, .light .redbox-mixer img, .furniture .redbox-mixer img, .cleaning .redbox-mixer img, .breakers .redbox-mixer img, .addons .redbox-mixer img, .contact .redbox-mixer img {
+.start .redbox-mixer img, .security .redbox-mixer img, .sound .redbox-mixer img, .light .redbox-mixer img, .furniture .redbox-mixer img, .cleaning .redbox-mixer img, .breakers .redbox-mixer img, .addons .redbox-mixer img, .contact .redbox-mixer img {
   max-width: 45vw;
 }
 
-.security .redbox-mixer h6, .sound .redbox-mixer h6, .light .redbox-mixer h6, .furniture .redbox-mixer h6, .cleaning .redbox-mixer h6, .breakers .redbox-mixer h6, .addons .redbox-mixer h6, .contact .redbox-mixer h6 {
+.start .redbox-mixer h6, .security .redbox-mixer h6, .sound .redbox-mixer h6, .light .redbox-mixer h6, .furniture .redbox-mixer h6, .cleaning .redbox-mixer h6, .breakers .redbox-mixer h6, .addons .redbox-mixer h6, .contact .redbox-mixer h6 {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -350,14 +350,48 @@ button {
 }
 
 @media screen and (min-width: 320px) {
-  .security .redbox-mixer h6, .sound .redbox-mixer h6, .light .redbox-mixer h6, .furniture .redbox-mixer h6, .cleaning .redbox-mixer h6, .breakers .redbox-mixer h6, .addons .redbox-mixer h6, .contact .redbox-mixer h6 {
+  .start .redbox-mixer h6, .security .redbox-mixer h6, .sound .redbox-mixer h6, .light .redbox-mixer h6, .furniture .redbox-mixer h6, .cleaning .redbox-mixer h6, .breakers .redbox-mixer h6, .addons .redbox-mixer h6, .contact .redbox-mixer h6 {
     font-size: calc(18px + 6 * ((100vw - 320px) / 680));
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .security .redbox-mixer h6, .sound .redbox-mixer h6, .light .redbox-mixer h6, .furniture .redbox-mixer h6, .cleaning .redbox-mixer h6, .breakers .redbox-mixer h6, .addons .redbox-mixer h6, .contact .redbox-mixer h6 {
+  .start .redbox-mixer h6, .security .redbox-mixer h6, .sound .redbox-mixer h6, .light .redbox-mixer h6, .furniture .redbox-mixer h6, .cleaning .redbox-mixer h6, .breakers .redbox-mixer h6, .addons .redbox-mixer h6, .contact .redbox-mixer h6 {
     font-size: 22px;
+  }
+}
+
+.start-prompt {
+  z-index: -2;
+  position: fixed;
+  margin-bottom: 80vh !important;
+  margin-left: 55vw !important;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  -webkit-animation: startFade 0s 5s forwards;
+          animation: startFade 0s 5s forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  opacity: 0%;
+}
+
+@-webkit-keyframes startFade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes startFade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
   }
 }
 
@@ -396,6 +430,7 @@ button {
           filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.35));
   top: 5vh;
   padding: 1em;
+  margin-bottom: 1em;
 }
 
 .overlay h6 {
@@ -435,14 +470,16 @@ button {
           backdrop-filter: blur(25px);
   background-color: rgba(0, 0, 0, 0.25);
   width: 100vw;
-  height: 300vh;
-  position: absolute;
+  height: 500vh;
+  position: fixed;
   z-index: 3 !important;
+  margin: 0;
+  padding: 0;
 }
 
 .wifi-ovl {
-  margin-left: 6vw;
-  margin-top: 30vh;
+  top: 33vh;
+  left: 5vw;
 }
 
 .wifi {
@@ -455,22 +492,31 @@ button {
   margin-left: auto;
 }
 
-.map-ovl {
-  height: 87vh;
-}
-
 .table {
   position: absolute;
-  margin-top: 75vh;
+  margin-top: 60vh;
   margin-left: 70vw;
-  background-color: blue;
-  width: 6.666vw;
-  height: 15.79vw;
+  width: 10.834vw;
+  height: 19.738vw;
+  background-image: url(../img/unselected-table.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.table p {
+  margin-left: 1px;
+  font-size: 0.6em;
 }
 
 .rotated-table {
-  width: 15.789vw;
-  height: 6.666vw;
+  width: 19.738vw;
+  height: 10.834vw;
+  background-image: url(../img/unselected-table-rotated.svg);
 }
 
 .rotation-wrapper {
@@ -481,8 +527,8 @@ button {
 
 .rotators {
   position: relative;
-  width: 30vw;
-  height: 10vw;
+  width: 35vw;
+  height: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,16 +545,16 @@ button {
   background-color: #cb0000;
   background-image: url("../img/table-horizontal.svg");
   background-repeat: no-repeat;
-  width: 10vw;
-  height: 10vw;
+  width: 3em;
+  height: 3em;
 }
 
 .vertical {
   background-color: #cb0000;
   background-image: url("../img/table-vertical.svg");
   background-repeat: no-repeat;
-  width: 10vw;
-  height: 10vw;
+  width: 3em;
+  height: 3em;
 }
 
 .vertical, .horizontal {
@@ -522,6 +568,34 @@ button {
   width: 78vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+.warning {
+  font-size: 0.9em !important;
+  color: #CB0000 !important;
+  position: absolute;
+  z-index: 23;
+  top: 3vh;
+}
+
+.yt-wrapper {
+  width: 90%;
+}
+
+.yt-player {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.yt-player iframe, .yt-player object, .yt-player embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .roll-down {
@@ -649,7 +723,8 @@ button {
 }
 
 .selected {
-  background-color: salmon;
+  -webkit-filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
+          filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
 }
 
 /*This applies Helvetica font to entire webpage.*/
@@ -660,5 +735,6 @@ button {
 body {
   margin: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=main.css.map */

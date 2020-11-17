@@ -133,7 +133,7 @@ button {
 }
 
 // Here lies all the pages for the separate tiles. The content in the sub-pages have a padding to them, as well as a lower z-index, so they'll be covered by the main curtain.
-.security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
+.start, .security, .sound, .light, .furniture, .cleaning, .breakers, .addons, .contact {
     padding-top:$nonCurtainPadding;
     z-index: -20;
     position: relative;
@@ -222,6 +222,27 @@ button {
         
 }
 
+.start-prompt{
+  z-index: -2;
+  position:fixed;
+  margin-bottom: 80vh !important;
+  margin-left: 55vw !important;
+  transform: rotate(-30deg);
+  animation: startFade 0s 5s forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 500ms;
+  opacity: 0%;
+}
+
+@keyframes startFade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 .curtain-string {
   position: absolute;
   bottom: -20vh;
@@ -250,6 +271,7 @@ button {
   filter: drop-shadow($itemShadow);
   top: 5vh;
   padding: 1em;
+  margin-bottom: 1em;
 
   // The header title for the overlay.
   h6 {
@@ -285,16 +307,14 @@ button {
   backdrop-filter: blur(25px);
   background-color: rgba($color: #000000, $alpha: .25);
   width: 100vw;
-  // The height causes a bug where you can
-  // scroll to the bottom of the overlay,
-  // even if there is no content.
-  height: 300vh;
-  position: absolute;
+  height: 500vh;
+  position: fixed;
   z-index: 3 !important;
+  @include reset-mp;
 }
 .wifi-ovl{
-  margin-left: 6vw;
-  margin-top:30vh;
+  top: 33vh;
+  left: 5vw;
 }
 .wifi{
   position: absolute;
@@ -307,24 +327,43 @@ button {
 }
 
 .map-ovl{
-  height: 87vh;
+  // height: 87vh;
 }
 
+
+// table dimesons are currently WITH the margin wanted by mattias
+// relative dimensions without margin: w:0.8m L: 2m
+// margin: 0.1m
+// maybe add an image or something with illusrtations of the margin
 .table{
   position: absolute;
-  margin-top: 75vh;
+  margin-top: 60vh;
   margin-left: 70vw;
-  background-color: blue;
-  width: 6.666vw;
-  height: 15.79vw;
+  width: 10.834vw;
+  height: 19.738vw;
+  background-image: url(../img/unselected-table.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  display:flex;
+  text-align: center;
+}
+
+.table p{
+  margin-left: 1px;
+  font-size: 0.6em;
 }
 
 // this is my stupid solution for rotating tables as i cannot use the tranform porperty
 // if you change the height/width of the table make sure to change these to that but reversed
 .rotated-table{
-  width: 15.789vw;
-  height: 6.666vw;
+  width: 19.738vw;
+  height: 10.834vw;
+  background-image: url(../img/unselected-table-rotated.svg);
 }
+
+
+
 
 // these are for the buttons that rotate the tables around
 .rotation-wrapper{
@@ -334,8 +373,8 @@ button {
 }
 .rotators{
   position: relative;
-  width: 30vw;
-  height: 10vw;
+  width: 35vw;
+  height: 3em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -344,21 +383,23 @@ button {
   background-color: rgba($color: #CB0000, $alpha: 1);
   background-image: url("../img/table-horizontal.svg");
   background-repeat: no-repeat;
-  width:10vw;
-  height: 10vw;
+  width:3em;
+  height: 3em;
 }
 .vertical{
   background-color: rgba($color: #CB0000, $alpha: 1);
   background-image: url("../img/table-vertical.svg");
   background-repeat: no-repeat;
-  width:10vw;
-  height: 10vw;
+  width:3em;
+  height: 3em;
 }
 
 .vertical, .horizontal{
   filter: drop-shadow($itemShadow);
 }
 
+
+// defining the size of the map to make relative sizing of tables correct
 .map{
   position: relative;
   z-index: -2;
@@ -366,3 +407,33 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+
+.warning{
+  font-size: 0.9em !important;
+  color: #CB0000 !important;
+  position:absolute;
+  z-index: 23;
+  top:3vh;
+}
+
+.yt-wrapper{
+  width: 90%;
+}
+
+.yt-player{
+  position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+  
+}
+
+.yt-player iframe, .yt-player object , .yt-player embed{
+  position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+

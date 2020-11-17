@@ -3,7 +3,8 @@
 <head>
     
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <!-- default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:; frame-src https://www.youtube.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buratino</title>
     <link rel="stylesheet" href="scss/main.css">
@@ -123,6 +124,12 @@
             
             <img src="img/double-mask-logo(transparent).png" alt="masks">
 
+            <div class="yt-wrapper">
+                <div class="yt-player">
+                    <iframe width="640" height="352" src="https://www.youtube.com/embed/UMaAF2WTK1A?rel=0" frameborder="0" allowfullscreen ></iframe>
+                    <div class="play-button"></div>
+                </div>
+            </div>
             <!-- add btn1 etc to every button you make to make thewm correspond to the one two things -->
             <button class="redbox btn1">
                 <h6>Så här sköter du lås & larm</h6>
@@ -399,6 +406,7 @@
 <script src="js/tables.js"></script>
 <script src="js/curtain.js"></script>
 <script src="js/collisionDetection.js"></script>
+<script src="js/youtubeButtons.js"></script>
 </html>
 
 <!-- Don't forget to comment your code smh-->

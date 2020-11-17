@@ -85,6 +85,8 @@
 }
 
 .selected{
-  background-color: salmon;
+  // the filter property changes the color of the tables. Play with the hue rotate to find a desireable color
+  filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
 }
+
 

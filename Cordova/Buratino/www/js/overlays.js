@@ -1,6 +1,7 @@
 var ovlBackground = document.querySelector(".ovlBackground")
 var ovlBackgroundArray = document.querySelectorAll(".ovlBackground")
 var closePageArray = document.querySelectorAll(".xclose")
+var wifiClose = document.querySelectorAll(".wifi-close")
 
 // functions for hiding and showing the background layer on every page at the clikc of a button :D
 function hidebg(){
@@ -137,4 +138,10 @@ closePageArray.forEach(element => {
         resetOvls()
     })
 });
-    
+ 
+wifiClose.forEach( element => {
+    element.addEventListener("click", function(){
+        document.getElementById("slide-box").classList.add("hide")
+        console.log("added hide to slide box")
+    })
+});

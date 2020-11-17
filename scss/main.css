@@ -578,6 +578,26 @@ button {
   top: 3vh;
 }
 
+.yt-wrapper {
+  width: 90%;
+}
+
+.yt-player {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.yt-player iframe, .yt-player object, .yt-player embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;

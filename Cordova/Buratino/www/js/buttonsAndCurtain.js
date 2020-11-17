@@ -89,24 +89,32 @@ var curtainString = document.querySelector(".curtain-string")
 var y1 = 0
 var y2 = 0
 
-// for desktop
-    // curtain.addEventListener("mousedown", function(e) {
-    //     y1 = e.pageY
-    //     console.log(y1);
+function desktopTouch(){
+    curtain.addEventListener("mousedown", function(e) {
+        y1 = e.pageY
+        console.log(y1);
         
-    // });
+    });
 
     
-    // curtain.addEventListener("mouseup", function(e) {
-    //     y2 = e.pageY;
-    //     console.log(y2);
-    //     if(y1 < y2){
-    //         curtainDown();
-    //         wifiSwitch() 
+    curtain.addEventListener("mouseup", function(e) {
+        y2 = e.pageY;
+        console.log(y2);
+        if(y1 < y2){
+            longButtonTopMarginRemove()
+            document.getElementById("curtain-grid").classList.remove("tile-detransition")
+            console.log("pressend")
+            document.getElementById("curtain").classList.remove("roll-up")
+            document.getElementById("slide-box").classList.add("hide")
+            // added to show the wifi overlay when it nmeeds to be able to show
+            wifiOvl.classList.remove("hide")
+            bringBack()
+            curtainDown();
+            wifiSwitch() 
             
-    //     }
-    // });
-
+        }
+    });
+};
 // for phones
 function phoneTouch(){
     i = 0
@@ -147,6 +155,7 @@ function phoneTouch(){
     i += 1
 }
 
+desktopTouch()
 phoneTouch()
 
 

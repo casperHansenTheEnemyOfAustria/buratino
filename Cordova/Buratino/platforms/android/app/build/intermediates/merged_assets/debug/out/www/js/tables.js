@@ -1,3 +1,74 @@
+// for the love of all that is holy do not check the console i beg you
+// console looks fine again
+
+function colliding(){
+  function collisionDetection(number2){
+      dragMe = document.querySelector(".selected")
+      rect = document.querySelector(".table"+number2)
+      var warning = document.querySelector(".warning")
+      function isCollapsed(dragMe, rect){
+          var object_1 = dragMe.getBoundingClientRect();
+          var object_2 = rect.getBoundingClientRect();
+          // checks if boundaries of the two items collide
+          if (object_1.left < object_2.left + object_2.width  && object_1.left + object_1.width  > object_2.left &&
+              object_1.top < object_2.top + object_2.height && object_1.top + object_1.height > object_2.top) {
+          //   rect.classList.add("collide");
+                // does something on collision
+              console.log("collision detected at"+number2)
+              warning.classList.remove("hide")
+          }
+          else{
+          //   rect.classList.remove("collide");
+            // undoes something on not collision
+            warning.classList.add("hide")
+          }
+      }
+      if (rect != dragMe){
+          // makes it do that an item cannot collide with itself
+          isCollapsed(dragMe, rect)
+      }
+
+  } 
+  function multiFunc(number){
+    // runs function on all of the items 
+      collisionDetection("1")
+      collisionDetection("2")
+      collisionDetection("3")
+      collisionDetection(  "4")
+      collisionDetection(  "5")
+      collisionDetection(  "6")
+      collisionDetection(  "7")
+      collisionDetection(  "8")
+      collisionDetection(  "9")
+      collisionDetection(  "10")
+      collisionDetection(  "11")
+      collisionDetection(  "12")
+      collisionDetection(  "13")
+      collisionDetection(  "14")
+      collisionDetection(  "15")
+  }
+  // runs function on all of the items^2
+  multiFunc("1")
+  multiFunc("2")
+  multiFunc("3")
+  multiFunc("4")
+  multiFunc("5")
+  multiFunc("6")
+  multiFunc("7")
+  multiFunc("8")
+  multiFunc("9")
+  multiFunc("10")
+  multiFunc("11")
+  multiFunc("12")
+  multiFunc("13")
+  multiFunc("14")
+  multiFunc("15")
+}
+
+
+
+
+
 var table = document.querySelector(".table")
 
 document.querySelector(".table15").classList.add("selected")
@@ -79,6 +150,8 @@ function tables(number){
         initialY = currentY;
 
         active = false;
+        // colision detetction once someone lets go of table
+        colliding()
       }
 
       function drag(e) {
@@ -123,3 +196,6 @@ function tables(number){
 
     horizontal.addEventListener("click", rotationAdd())
     vertical.addEventListener("click", rotationRemove())
+
+
+    
