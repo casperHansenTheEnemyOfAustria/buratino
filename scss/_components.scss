@@ -409,7 +409,7 @@ button {
 }
 
 .warning{
-  font-size: 0.9em !important;
+  @include subtitle-warning;
   color: #CB0000 !important;
   position:absolute;
   z-index: 23;
@@ -417,7 +417,7 @@ button {
 }
 
 .yt-wrapper{
-  width: 90%;
+  width: (100vw - (414 / 32));
 }
 
 .yt-player{

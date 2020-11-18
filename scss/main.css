@@ -571,7 +571,11 @@ button {
 }
 
 .warning {
-  font-size: 0.9em !important;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
   color: #CB0000 !important;
   position: absolute;
   z-index: 23;
@@ -579,7 +583,7 @@ button {
 }
 
 .yt-wrapper {
-  width: 90%;
+  width: 87.0625vw;
 }
 
 .yt-player {
@@ -736,5 +740,9 @@ body {
   margin: 0;
   height: 100%;
   overflow-x: hidden;
+}
+
+.overflow {
+  overflow-y: hidden;
 }
 /*# sourceMappingURL=main.css.map */

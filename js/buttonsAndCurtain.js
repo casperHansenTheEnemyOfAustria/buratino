@@ -7,6 +7,7 @@
 var sens = 10
 var ovlBackgroundArray = document.querySelectorAll(".ovlBackground")
 var wifiOvl = document.querySelector(".wifi")
+var body = document.querySelector(".body")
 // initial hide of later items top items due to bug
 document.getElementById("slide-box").classList.remove("hide")
 // resets the hitbox to show
@@ -111,7 +112,8 @@ function desktopTouch(){
             bringBack()
             curtainDown();
             wifiSwitch() 
-            
+            window.scrollTo(0,0); 
+            body.classList.add("overflow")
         }
     });
 };
@@ -146,6 +148,8 @@ function phoneTouch(){
             bringBack()
             curtainDown();
             wifiSwitch();
+            window.scrollTo(0,0); 
+            body.classList.add("overflow")
             // i had to make y zer0 a bunch of times but it works now donw worry about it :D
             y2 = 0
             endCoord = 0
@@ -175,6 +179,7 @@ phoneTouch()
             wifiOvl.classList.add("hide")
             
             // removes roll down when curtain is rolled up
+            body.classList.remove("overflow")
             var targetElement = document.getElementById("curtain");
             targetElement.classList.remove("roll-down")
             var targetElement = document.getElementById("curtain-grid");

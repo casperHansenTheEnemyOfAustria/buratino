@@ -51,3 +51,10 @@ $nonCurtainPadding: 20vmax;
     font-size: 20px;
     @include reset-mp;
 }
+
+@mixin subtitle-warning{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    @include reset-mp;
+}
