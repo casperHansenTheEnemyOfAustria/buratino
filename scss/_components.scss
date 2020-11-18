@@ -272,6 +272,8 @@ button {
   top: 5vh;
   padding: 1em;
   margin-bottom: 1em;
+  animation-name: tile-fadein;
+  animation-duration: 250ms;
 
   // The header title for the overlay.
   h6 {
@@ -311,6 +313,8 @@ button {
   position: fixed;
   z-index: 3 !important;
   @include reset-mp;
+  animation-name: tile-fadein;
+  animation-duration: 250ms;
 }
 .wifi-ovl{
   top: 33vh;
