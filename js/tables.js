@@ -1,6 +1,9 @@
 // for the love of all that is holy do not check the console i beg you
 // console looks fine again
-
+function warningText(){
+  var warning = document.querySelector(".warning");
+  warning.classList.add("hide");
+}
 function colliding(){
   function collisionDetection(number2){
       dragMe = document.querySelector(".selected")
@@ -16,12 +19,15 @@ function colliding(){
                 // does something on collision
               console.log("collision detected at"+number2)
               warning.classList.remove("hide")
+              // setTimeout(function(){
+              //     warning.classList.add("hide")
+              // }, 3000)
           }
-          else{
+        
           //   rect.classList.remove("collide");
             // undoes something on not collision
-            warning.classList.add("hide")
-          }
+            
+          
       }
       if (rect != dragMe){
           // makes it do that an item cannot collide with itself
@@ -103,6 +109,7 @@ function tables(number){
     );
   }
   
+  
 // makes the selected item look selected
   
   
@@ -129,6 +136,7 @@ function tables(number){
 
       function dragStart(e) {
         resetColors()
+       
         dragItem.classList.add("selected")
         // check pos at start
         if (e.type === "touchstart") {
@@ -148,10 +156,11 @@ function tables(number){
         // leave pos at end
         initialX = currentX;
         initialY = currentY;
-
+        warningText()
+        colliding()
         active = false;
         // colision detetction once someone lets go of table
-        colliding()
+        
       }
 
       function drag(e) {
@@ -164,6 +173,7 @@ function tables(number){
             // moves if you move yo fingah
             currentX = e.touches[0].clientX - initialX;
             currentY = e.touches[0].clientY - initialY;
+            warningText()
           } else {
             currentX = e.clientX - initialX;
             currentY = e.clientY - initialY;
@@ -171,13 +181,15 @@ function tables(number){
 
           xOffset = currentX;
           yOffset = currentY;
-
+          colliding()
           setTranslate(currentX, currentY, dragItem);
         }
       }
 
       function setTranslate(xPos, yPos, el) {
         // adds all the positioning data togetherto make it do its thing
+        warningText()
+        colliding()
         el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
       }
     }
