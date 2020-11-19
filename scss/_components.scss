@@ -11,7 +11,7 @@
 
 .long-button {
     position: relative;
-    height: 5vh;
+    height: 5vmax;
     width: (100vw - (414 / 32));
     align-self: center;
     background-color: $offWhite;
@@ -22,6 +22,11 @@
 .longButtonTopmargin{
     margin-top: 7vh;
 }
+@media screen and (min-width: 1000px) {
+  .longButtonTopmargin {
+    margin-top: 0vh;
+  }
+}
 
 
 #long-button-text {
@@ -30,7 +35,7 @@
 }
   @media screen and (min-width: 320px) {
     #long-button-text {
-      font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+      font-size: calc(18px + 4 * ((100vw - 320px) / 680));
     }
   }
   @media screen and (min-width: 1000px) {
@@ -53,12 +58,22 @@ button {
 }
     @media screen and (min-width: 320px) {
         .tile-1 {
-        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+        font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+        width: $tileSize;
+        height: $tileSize;
         }
+    }
+    @media screen and (min-width: 700px) {
+      .tile-1 {
+        width: $tileSize - 10vmin;
+        height: $tileSize - 10vmin;
+      }
     }
     @media screen and (min-width: 1000px) {
         .tile-1 {
         font-size: 22px;
+        width: $tileSize - 12.5vmin;
+        height: $tileSize - 12.5vmin;
         }
     } 
 
@@ -69,12 +84,22 @@ button {
 }
     @media screen and (min-width: 320px) {
         .tile-2 {
-        font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+        font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+        width: $tileSize;
+        height: $tileSize;
         }
+    }
+    @media screen and (min-width: 700px) {
+      .tile-2 {
+        width: $tileSize - 10vmin;
+        height: $tileSize - 10vmin;
+      }
     }
     @media screen and (min-width: 1000px) {
         .tile-2 {
         font-size: 22px;
+        width: $tileSize - 12.5vmin;
+        height: $tileSize - 12.5vmin;
         }
     } 
 
@@ -88,6 +113,23 @@ button {
     align-content: space-evenly;
     opacity: 0%;
 }
+@media screen and (min-width: 320px) {
+  #curtain-grid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media screen and (min-width: 700px) {
+  #curtain-grid {
+    grid-template-columns: repeat(2, auto);
+    width: (100vw - (414 / 16));
+  }
+}
+@media screen and (min-width: 1000px) {
+  #curtain-grid {
+    grid-template-columns: repeat(4, auto);
+    width: (100vw - (414 / 32));
+  }
+} 
 
 
 #cover-image {
@@ -180,7 +222,7 @@ button {
         }
           @media screen and (min-width: 320px) {
             h6 {
-              font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+              font-size: calc(20px + 4 * ((100vw - 320px) / 680));
             }
           }
           @media screen and (min-width: 1000px) {
@@ -210,7 +252,7 @@ button {
             }
               @media screen and (min-width: 320px) {
                 h6 {
-                  font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+                  font-size: calc(18px + 4 * ((100vw - 320px) / 680));
                 }
               }
               @media screen and (min-width: 1000px) {
@@ -278,16 +320,40 @@ button {
   // The header title for the overlay.
   h6 {
     @include subtitle;
+    font-size: 22px;
     line-height: 22px;
     padding-bottom: 1em;
   }
+  @media screen and (min-width: 320px) {
+    h6 {
+      font-size: calc(22px + 4 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    h6 {
+      font-size: 26px;
+    }
+  } 
+
 
   // The general text inside the overlay.
   p {
     @include reset-mp;
     font-weight: 600;
     line-height: 22px;
+    font-size: 18px;
   }
+  @media screen and (min-width: 320px) {
+    p {
+      font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    p {
+      font-size: 22px;
+    }
+  } 
+
   li {
     @include reset-mp;
     font-weight: 600;
@@ -296,7 +362,18 @@ button {
     list-style-position: inside;
     text-indent: -1em;
     padding-left: 1em;
+    font-size: 18px;
     }
+    @media screen and (min-width: 320px) {
+      li {
+        font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+      }
+    }
+    @media screen and (min-width: 1000px) {
+      li {
+        font-size: 22px;
+      }
+    } 
 }
 
 // thing to make pages work as intended
@@ -330,10 +407,11 @@ button {
   margin-left:auto;
 }
 
+/*
 .map-ovl{
-  // height: 87vh;
+  height: 87vh;
 }
-
+*/
 
 // table dimesons are currently WITH the margin wanted by mattias
 // relative dimensions without margin: w:0.8m L: 2m

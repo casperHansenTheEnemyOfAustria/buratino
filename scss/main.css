@@ -19,7 +19,7 @@
 
 .long-button {
   position: relative;
-  height: 5vh;
+  height: 5vmax;
   width: 87.0625vw;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -33,6 +33,12 @@
   margin-top: 7vh;
 }
 
+@media screen and (min-width: 1000px) {
+  .longButtonTopmargin {
+    margin-top: 0vh;
+  }
+}
+
 #long-button-text {
   font-style: normal;
   font-weight: bold;
@@ -44,7 +50,7 @@
 
 @media screen and (min-width: 320px) {
   #long-button-text {
-    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
   }
 }
 
@@ -91,13 +97,24 @@ button {
 
 @media screen and (min-width: 320px) {
   .tile-1 {
-    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+    width: 35vmin;
+    height: 35vmin;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .tile-1 {
+    width: 25vmin;
+    height: 25vmin;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .tile-1 {
     font-size: 22px;
+    width: 22.5vmin;
+    height: 22.5vmin;
   }
 }
 
@@ -131,13 +148,24 @@ button {
 
 @media screen and (min-width: 320px) {
   .tile-2 {
-    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+    width: 35vmin;
+    height: 35vmin;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .tile-2 {
+    width: 25vmin;
+    height: 25vmin;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .tile-2 {
     font-size: 22px;
+    width: 22.5vmin;
+    height: 22.5vmin;
   }
 }
 
@@ -156,6 +184,29 @@ button {
   -ms-flex-line-pack: space-evenly;
       align-content: space-evenly;
   opacity: 0%;
+}
+
+@media screen and (min-width: 320px) {
+  #curtain-grid {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #curtain-grid {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    width: 74.125vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #curtain-grid {
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    width: 87.0625vw;
+  }
 }
 
 #cover-image {
@@ -301,7 +352,7 @@ button {
 
 @media screen and (min-width: 320px) {
   .start .redbox h6, .security .redbox h6, .sound .redbox h6, .light .redbox h6, .furniture .redbox h6, .cleaning .redbox h6, .breakers .redbox h6, .addons .redbox h6, .contact .redbox h6 {
-    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(20px + 4 * ((100vw - 320px) / 680));
   }
 }
 
@@ -351,7 +402,7 @@ button {
 
 @media screen and (min-width: 320px) {
   .start .redbox-mixer h6, .security .redbox-mixer h6, .sound .redbox-mixer h6, .light .redbox-mixer h6, .furniture .redbox-mixer h6, .cleaning .redbox-mixer h6, .breakers .redbox-mixer h6, .addons .redbox-mixer h6, .contact .redbox-mixer h6 {
-    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
   }
 }
 
@@ -443,8 +494,21 @@ button {
   font-size: 20px;
   margin: 0;
   padding: 0;
+  font-size: 22px;
   line-height: 22px;
   padding-bottom: 1em;
+}
+
+@media screen and (min-width: 320px) {
+  .overlay h6 {
+    font-size: calc(22px + 4 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .overlay h6 {
+    font-size: 26px;
+  }
 }
 
 .overlay p {
@@ -452,6 +516,19 @@ button {
   padding: 0;
   font-weight: 600;
   line-height: 22px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  .overlay p {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .overlay p {
+    font-size: 22px;
+  }
 }
 
 .overlay li {
@@ -463,6 +540,19 @@ button {
   list-style-position: inside;
   text-indent: -1em;
   padding-left: 1em;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  .overlay li {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .overlay li {
+    font-size: 22px;
+  }
 }
 
 .bring-forward {
@@ -500,6 +590,11 @@ button {
   margin-left: auto;
 }
 
+/*
+.map-ovl{
+  height: 87vh;
+}
+*/
 .table {
   position: absolute;
   margin-top: 60vh;
