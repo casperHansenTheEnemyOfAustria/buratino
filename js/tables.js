@@ -2,13 +2,16 @@
 // console looks fine again
 function warningText(){
   var warning = document.querySelector(".warning");
+  var warning2 = document.querySelector(".warning2");
   warning.classList.add("hide");
+  warning2.classList.add("hide")
 }
 function colliding(){
   function collisionDetection(number2){
       dragMe = document.querySelector(".selected")
       rect = document.querySelector(".table"+number2)
       var warning = document.querySelector(".warning")
+      var warning2 = document.querySelector(".warning2")
       function isCollapsed(dragMe, rect){
           var object_1 = dragMe.getBoundingClientRect();
           var object_2 = rect.getBoundingClientRect();
@@ -17,8 +20,14 @@ function colliding(){
               object_1.top < object_2.top + object_2.height && object_1.top + object_1.height > object_2.top) {
           //   rect.classList.add("collide");
                 // does something on collision
-              console.log("collision detected at"+number2)
-              warning.classList.remove("hide")
+              if (number2 == "16"){
+                console.log("collision detected at skåpsbyrå")
+                warning2.classList.remove("hide")
+              }
+              else{
+                console.log("collision detected at"+number2)
+                warning.classList.remove("hide")
+              }
               // setTimeout(function(){
               //     warning.classList.add("hide")
               // }, 3000)
@@ -52,6 +61,7 @@ function colliding(){
       collisionDetection(  "13")
       collisionDetection(  "14")
       collisionDetection(  "15")
+      collisionDetection(  "16")
   }
   // runs function on all of the items^2
   multiFunc("1")

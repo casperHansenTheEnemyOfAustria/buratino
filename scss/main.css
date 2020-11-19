@@ -673,7 +673,15 @@ button {
   margin-right: auto;
 }
 
-.warning {
+.restricted {
+  position: absolute;
+  width: 11vw;
+  height: 20vw;
+  top: 4.5em;
+  right: 7vw;
+}
+
+.warning, .warning2 {
   font-style: normal;
   font-weight: bold;
   font-size: 10px;

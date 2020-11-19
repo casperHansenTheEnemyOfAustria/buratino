@@ -489,8 +489,15 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+.restricted{
+  position: absolute;
+  width: 11vw;
+  height: 20vw;
+  top:4.5em;
+  right:7vw;
+}
 
-.warning{
+.warning, .warning2{
   @include subtitle-warning;
   color: #CB0000 !important;
   position:absolute;
