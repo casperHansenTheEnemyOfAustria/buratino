@@ -29,8 +29,39 @@
           box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
 }
 
+.long-button-hidden {
+  background-color: rgba(0, 0, 0, 0) !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.long-button-big-text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 32px !important;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+  -webkit-filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35)) !important;
+          filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35)) !important;
+}
+
+@media screen and (min-width: 320px) {
+  .long-button-big-text {
+    font-size: calc(32px + 4 * ((100vw - 320px) / 680)) !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .long-button-big-text {
+    font-size: 36px !important;
+  }
+}
+
 .longButtonTopmargin {
-  margin-top: 7vh;
+  margin-top: 4vh;
 }
 
 @media screen and (min-width: 1000px) {
@@ -39,7 +70,7 @@
   }
 }
 
-#long-button-text {
+.long-button-text {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -49,13 +80,13 @@
 }
 
 @media screen and (min-width: 320px) {
-  #long-button-text {
+  .long-button-text {
     font-size: calc(18px + 4 * ((100vw - 320px) / 680));
   }
 }
 
 @media screen and (min-width: 1000px) {
-  #long-button-text {
+  .long-button-text {
     font-size: 22px;
   }
 }
@@ -383,6 +414,11 @@ button {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
 }
 
 .start .redbox-mixer img, .security .redbox-mixer img, .sound .redbox-mixer img, .light .redbox-mixer img, .furniture .redbox-mixer img, .cleaning .redbox-mixer img, .breakers .redbox-mixer img, .addons .redbox-mixer img, .contact .redbox-mixer img {

@@ -15,10 +15,16 @@ document.getElementById("curtain-grid").classList.add("hide")
 
 // defines addin a margin to long button for consistency
 function longButtonTopMarginAdd(){
+    // add styling for page descriptions
     document.querySelector(".long-button").classList.add("longButtonTopmargin")
+    document.querySelector(".long-button").classList.add("long-button-hidden")
+    document.querySelector(".long-button-text").classList.add("long-button-big-text")
 }
 function longButtonTopMarginRemove(){
+    console.log("removing styling")
     document.querySelector(".long-button").classList.remove("longButtonTopmargin")
+    document.querySelector(".long-button").classList.remove("long-button-hidden")
+    document.querySelector(".long-button-text").classList.remove("long-button-big-text")
 }
 
 // adds margin
@@ -37,8 +43,9 @@ function curtainDown() {
 // Changes the text in the long-button, as well as giving it
 // the btn1 class for the purpose of an overlay.
 function wifiSwitch() {
-  var targetElement = document.getElementById("long-button-text");
-  targetElement.innerHTML = "TRYCK HÄR FÖR WIFI";
+console.log("wifi text change")
+  var targetElement = document.querySelector(".long-button-text");
+  targetElement.innerText = "TRYCK HÄR FÖR WIFI";
   var targetElement = document.querySelector(".long-button");
   targetElement.classList.add("btn1")
 }
@@ -103,8 +110,13 @@ function desktopTouch(){
         console.log(y2);
         if(y1 < y2){
             longButtonTopMarginRemove()
-            document.getElementById("curtain-grid").classList.remove("tile-detransition")
-            console.log("pressend")
+            // removing styling for the page texts
+            console.log("removing styling")
+            document.querySelector(".long-button").classList.remove("longButtonTopmargin")
+            document.querySelector(".long-button").classList.remove("long-button-hidden")
+            document.querySelector(".long-button-text").classList.remove("long-button-big-text")
+
+            console.log("pressend1")
             document.getElementById("curtain").classList.remove("roll-up")
             document.getElementById("slide-box").classList.add("hide")
             // added to show the wifi overlay when it nmeeds to be able to show
@@ -114,6 +126,7 @@ function desktopTouch(){
             wifiSwitch() 
             window.scrollTo(0,0); 
             body.classList.add("overflow")
+            console.log("bruh")
         }
     });
 };
@@ -139,6 +152,12 @@ function phoneTouch(){
         if(y2-y1 > sens){ 
             // removes margin
             longButtonTopMarginRemove()
+            // removing styling for the page texts
+            console.log("removing styling")
+            document.querySelector(".long-button").classList.remove("longButtonTopmargin")
+            document.querySelector(".long-button").classList.remove("long-button-hidden")
+            document.querySelector(".long-button-text").classList.remove("long-button-big-text")
+
             document.getElementById("curtain-grid").classList.remove("tile-detransition")
             console.log("pressend")
             document.getElementById("curtain").classList.remove("roll-up")
@@ -190,7 +209,7 @@ phoneTouch()
 
         function anyText(word) {
             // adds title text for every different site
-            document.getElementById("long-button-text").innerHTML = word;
+            document.querySelector(".long-button-text").innerHTML = word;
             // here im also showing the slide box cause i needed it to run for every button click in the grid dont judge
             document.getElementById("slide-box").classList.remove("hide")
             // added to hide the wifi overlay when it shouldnt show
