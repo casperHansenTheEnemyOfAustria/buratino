@@ -25,19 +25,19 @@
 }
 .long-button-big-text{
   @include subtitle;
-  font-size: 32px !important;
+  font-size: 36px !important;
   letter-spacing: 4px;
   color:#FFFFFF;
-  filter: drop-shadow(4px 4px 2px rgba(0,0,0, 0.35))!important;
+  filter: drop-shadow(4px 4px 2px rgba(0,0,0, 0.35)) !important;
 }
 @media screen and (min-width: 320px) {
   .long-button-big-text {
-    font-size: calc(32px + 4 * ((100vw - 320px) / 680))!important;
+    font-size: calc(36px + 4 * ((100vw - 320px) / 680)) !important;
   }
 }
 @media screen and (min-width: 1000px) {
   .long-button-big-text {
-    font-size: 36px!important;
+    font-size: 40px !important;
   }
 } 
 
