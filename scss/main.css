@@ -601,7 +601,7 @@ button {
   margin-left: 70vw;
   width: 10.834vw;
   height: 19.738vw;
-  background-image: url(../img/unselected-table.png);
+  background-image: url(../img/unselected-table.svg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -620,7 +620,7 @@ button {
 .rotated-table {
   width: 19.738vw;
   height: 10.834vw;
-  background-image: url(../img/unselected-table-rotated.png);
+  background-image: url(../img/unselected-table-rotated.svg);
 }
 
 .rotation-wrapper {
