@@ -888,6 +888,7 @@ body {
   margin: 0;
   height: 100%;
   overflow-x: hidden;
+  overscroll-behavior: contain;
 }
 
 .overflow {
