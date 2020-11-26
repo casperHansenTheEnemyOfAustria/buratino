@@ -9,9 +9,16 @@
     "theme_color": "#CB0000",
     "icons": [
       {
-        "src": "/img/mask-logo.png",
+        "src": "/img/home-icon256.png",
         "type": "img/png",
-        "sizes": "301x228"
+        "sizes": "256x256",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/img/home-icon2k.png",
+        "type": "img/png",
+        "sizes": "2048x2048",
+        "purpose": "maskable"
       }
     ]
   }
