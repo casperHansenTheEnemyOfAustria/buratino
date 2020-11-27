@@ -2,47 +2,50 @@
     "short_name": "Buratino",
     "name": "Buratino: Instruktionsapp",
     "description": "Få tillgång till Buratinos instruktionsbok genom denna applikationen!",
-    
-    "start_url": ".",
-    "background_color": "#CB0000",
+    "start_url": "https://vacuous-trains.surge.sh/",
+    "background_color": "#EEEEEE",
     "display": "standalone",
     "theme_color": "#CB0000",
     "icons": [
-      {
-        "src": "/img/home-icon144.png",
-        "type": "img/png",
-        "sizes": "144x144",
-        "purpose": "any"
-      },
-      {
-        "src": "/img/home-icon192.png",
-        "type": "img/png",
-        "sizes": "192x192",
-        "purpose": "any"
-      },
-      {
-        "src": "/img/home-icon256.png",
-        "type": "img/png",
-        "sizes": "256x256",
-        "purpose": "any"
-      },
-      {
-        "src": "/img/home-icon512.png",
-        "type": "img/png",
-        "sizes": "512x512",
-        "purpose": "any"
-      },
-      {
-        "src": "/img/home-icon1k.png",
-        "type": "img/png",
-        "sizes": "1024x1024",
-        "purpose": "any"
-      },
-      {
-        "src": "/img/home-icon2k.png",
-        "type": "img/png",
-        "sizes": "2048x2048",
-        "purpose": "any"
-      }
-    ]
-  }
+        {
+            "src": "/images/img/home-icon144.png",
+            "type": "img/png",
+            "sizes": "144x144",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/img/home-icon192.png",
+            "type": "img/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/img/home-icon256.png",
+            "type": "img/png",
+            "sizes": "256x256",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/img/home-icon512.png",
+            "type": "img/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/img/home-icon1k.png",
+            "type": "img/png",
+            "sizes": "1024x1024",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/img/home-icon2k.png",
+            "type": "img/png",
+            "sizes": "2048x2048",
+            "purpose": "maskable"
+        }
+    ],
+    "url": "https://vacuous-trains.surge.sh",
+    "lang": "",
+    "screenshots": [],
+    "orientation": "portrait"
+}
