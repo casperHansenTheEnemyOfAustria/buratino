@@ -9,16 +9,40 @@
     "theme_color": "#CB0000",
     "icons": [
       {
+        "src": "/img/home-icon144.png",
+        "type": "img/png",
+        "sizes": "144x144",
+        "purpose": "any"
+      },
+      {
+        "src": "/img/home-icon192.png",
+        "type": "img/png",
+        "sizes": "192x192",
+        "purpose": "any"
+      },
+      {
         "src": "/img/home-icon256.png",
         "type": "img/png",
         "sizes": "256x256",
-        "purpose": "maskable"
+        "purpose": "any"
+      },
+      {
+        "src": "/img/home-icon512.png",
+        "type": "img/png",
+        "sizes": "512x512",
+        "purpose": "any"
+      },
+      {
+        "src": "/img/home-icon1k.png",
+        "type": "img/png",
+        "sizes": "1024x1024",
+        "purpose": "any"
       },
       {
         "src": "/img/home-icon2k.png",
         "type": "img/png",
         "sizes": "2048x2048",
-        "purpose": "maskable"
+        "purpose": "any"
       }
     ]
   }
