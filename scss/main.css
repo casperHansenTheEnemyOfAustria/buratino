@@ -351,8 +351,8 @@ button {
 
 .start .redbox, .security .redbox, .sound .redbox, .light .redbox, .furniture .redbox, .cleaning .redbox, .breakers .redbox, .addons .redbox, .contact .redbox {
   background-color: #CB0000;
-  width: 87.0625vw;
-  height: 24.0625vw;
+  width: 87.0625vmin;
+  height: 24.0625vmin;
   -webkit-filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.25));
   display: -webkit-box;
@@ -395,8 +395,8 @@ button {
 
 .start .redbox-mixer, .security .redbox-mixer, .sound .redbox-mixer, .light .redbox-mixer, .furniture .redbox-mixer, .cleaning .redbox-mixer, .breakers .redbox-mixer, .addons .redbox-mixer, .contact .redbox-mixer {
   background-color: #CB0000;
-  width: 87.0625vw;
-  height: 52.0625vw;
+  width: 87.0625vmin;
+  height: 24.0625vmin;
   -webkit-filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.25));
   display: -webkit-box;
@@ -419,10 +419,28 @@ button {
   outline: none;
   padding: 0;
   text-decoration: none;
+  gap: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .start .redbox-mixer img, .security .redbox-mixer img, .sound .redbox-mixer img, .light .redbox-mixer img, .furniture .redbox-mixer img, .cleaning .redbox-mixer img, .breakers .redbox-mixer img, .addons .redbox-mixer img, .contact .redbox-mixer img {
-  max-width: 45vw;
+  min-width: 0vmin;
+  max-width: 20vmin;
+}
+
+@media screen and (min-width: 320px) {
+  .start .redbox-mixer img, .security .redbox-mixer img, .sound .redbox-mixer img, .light .redbox-mixer img, .furniture .redbox-mixer img, .cleaning .redbox-mixer img, .breakers .redbox-mixer img, .addons .redbox-mixer img, .contact .redbox-mixer img {
+    min-width: 10vmin;
+    max-width: 25vmin;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .start .redbox-mixer img, .security .redbox-mixer img, .sound .redbox-mixer img, .light .redbox-mixer img, .furniture .redbox-mixer img, .cleaning .redbox-mixer img, .breakers .redbox-mixer img, .addons .redbox-mixer img, .contact .redbox-mixer img {
+    min-width: 20vmin;
+    max-width: 45vmin;
+  }
 }
 
 .start .redbox-mixer h6, .security .redbox-mixer h6, .sound .redbox-mixer h6, .light .redbox-mixer h6, .furniture .redbox-mixer h6, .cleaning .redbox-mixer h6, .breakers .redbox-mixer h6, .addons .redbox-mixer h6, .contact .redbox-mixer h6 {
@@ -494,6 +512,18 @@ button {
           filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35));
 }
 
+@media screen and (min-width: 320px) {
+  .curtain-string {
+    width: 15vmin;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .curtain-string {
+    width: 10vmin;
+  }
+}
+
 #slide-box {
   z-index: 2;
   height: 36vh;
@@ -551,8 +581,9 @@ button {
   margin: 0;
   padding: 0;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 1.4;
   font-size: 18px;
+  color: #212121;
 }
 
 @media screen and (min-width: 320px) {
@@ -571,12 +602,13 @@ button {
   margin: 0;
   padding: 0;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 1.4;
   list-style-type: disc;
   list-style-position: inside;
   text-indent: -1em;
   padding-left: 1em;
   font-size: 18px;
+  color: #212121;
 }
 
 @media screen and (min-width: 320px) {
@@ -731,7 +763,7 @@ button {
 }
 
 .yt-wrapper {
-  width: 87.0625vw;
+  width: 87.0625vmin;
 }
 
 .yt-player {
@@ -889,6 +921,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   overscroll-behavior: contain;
+  margin-bottom: 1em;
 }
 
 .overflow {
