@@ -912,10 +912,10 @@ button {
 }
 
 /*This applies Helvetica font to entire webpage.*/
-* {
-  font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* {
+    font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+*/
 body {
   margin: 0;
   height: 100%;
