@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: 8
       - run: npm install -g surge
-      - run: surge ./ ${{ https://vacuous-trains.surge.sh/ }} --token ${{ 7a70838bd791cf56ead79ca7b70d92ea }}
+      - run: surge ./ ${{ 'https://vacuous-trains.surge.sh/' }} --token ${{ '7a70838bd791cf56ead79ca7b70d92ea' }}
