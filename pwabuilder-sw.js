@@ -16,7 +16,10 @@ self.addEventListener("message", (event) => {
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage))
+      .then((cache) => cache.add(offlineFallbackPage)),
+    caches.open("sw-cache").then(function(chache){
+        return caches.add("index.html", "js/buttonsAndCurtain.js", "js/collisionDetection.js", "js/curtain.js", "js/index.js", "js/overlays.js", "js/tables.js", "js/youtubeButtons.js", "scss/main.css")
+    })
   );
 });
 
@@ -42,6 +45,12 @@ self.addEventListener('fetch', (event) => {
         const cachedResp = await cache.match(offlineFallbackPage);
         return cachedResp;
       }
+  
     })());
   }
+  event.respondWith(
+    caches.match(event.request).then(function(response){
+        return response || fetch(event.request)
+    })
+)
 });
