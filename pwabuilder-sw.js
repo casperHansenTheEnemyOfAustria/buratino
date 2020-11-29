@@ -17,9 +17,9 @@ self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
       .then((cache) => cache.add(offlineFallbackPage)),
-    caches.open("sw-cache").then(function(chache){
-        return caches.add("index.html", "js/buttonsAndCurtain.js", "js/collisionDetection.js", "js/curtain.js", "js/index.js", "js/overlays.js", "js/tables.js", "js/youtubeButtons.js", "scss/main.css")
-    })
+    // caches.open("sw-cache").then(function(chache){
+    //     return caches.add("index.html", "js/buttonsAndCurtain.js", "js/collisionDetection.js", "js/curtain.js", "js/index.js", "js/overlays.js", "js/tables.js", "js/youtubeButtons.js", "scss/main.css")
+    // })
   );
 });
 
