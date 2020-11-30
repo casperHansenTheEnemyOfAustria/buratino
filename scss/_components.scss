@@ -26,7 +26,7 @@
 .long-button-big-text{
   @include subtitle;
   font-size: 36px !important;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
   color:#FFFFFF;
   filter: drop-shadow(4px 4px 2px rgba(0,0,0, 0.35)) !important;
 }
@@ -166,6 +166,7 @@ button {
     img {
         max-width: 80vmin;
         z-index: -20;
+        overflow: visible;
     }
 }
 
@@ -209,6 +210,7 @@ button {
     img {
         object-fit: contain;
         max-width: 80vw;
+        overflow: visible;
     }
 
     h5 {
@@ -485,6 +487,7 @@ button {
   background-size: contain;
   display:flex;
   text-align: center;
+  overflow: visible;
 }
 
 .table p{
@@ -498,6 +501,7 @@ button {
   width: 19.738vw;
   height: 10.834vw;
   background-image: url(../img/unselected-table-rotated.svg);
+  overflow: visible;
 }
 
 
@@ -523,6 +527,7 @@ button {
   background-repeat: no-repeat;
   width:3em;
   height: 3em;
+  overflow: visible;
 }
 .vertical{
   background-color: rgba($color: #CB0000, $alpha: 1);
@@ -530,6 +535,7 @@ button {
   background-repeat: no-repeat;
   width:3em;
   height: 3em;
+  overflow: visible;
 }
 
 .vertical, .horizontal{
@@ -544,6 +550,7 @@ button {
   width:78vw;
   margin-left: auto;
   margin-right: auto;
+  overflow: visible;
 }
 .restricted{
   position: absolute;

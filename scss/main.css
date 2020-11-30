@@ -42,7 +42,7 @@
   margin: 0;
   padding: 0;
   font-size: 36px !important;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
   color: #FFFFFF;
   -webkit-filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35)) !important;
           filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35)) !important;
@@ -263,6 +263,7 @@ button {
 #cover-image img {
   max-width: 80vmin;
   z-index: -20;
+  overflow: visible;
 }
 
 .tile-icon {
@@ -324,6 +325,7 @@ button {
   -o-object-fit: contain;
      object-fit: contain;
   max-width: 80vw;
+  overflow: visible;
 }
 
 .start h5, .security h5, .sound h5, .light h5, .furniture h5, .cleaning h5, .breakers h5, .addons h5, .contact h5 {
@@ -678,6 +680,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  overflow: visible;
 }
 
 .table p {
@@ -689,6 +692,7 @@ button {
   width: 19.738vw;
   height: 10.834vw;
   background-image: url(../img/unselected-table-rotated.svg);
+  overflow: visible;
 }
 
 .rotation-wrapper {
@@ -719,6 +723,7 @@ button {
   background-repeat: no-repeat;
   width: 3em;
   height: 3em;
+  overflow: visible;
 }
 
 .vertical {
@@ -727,6 +732,7 @@ button {
   background-repeat: no-repeat;
   width: 3em;
   height: 3em;
+  overflow: visible;
 }
 
 .vertical, .horizontal {
@@ -740,6 +746,7 @@ button {
   width: 78vw;
   margin-left: auto;
   margin-right: auto;
+  overflow: visible;
 }
 
 .restricted {
