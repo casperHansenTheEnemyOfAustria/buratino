@@ -8,13 +8,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  height: 15vh;
+  height: 95vh;
   background: #CB0000;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   overflow: visible;
   position: absolute;
+  top: -80vh;
 }
 
 .long-button {
@@ -61,13 +62,7 @@
 }
 
 .longButtonTopmargin {
-  margin-top: 4vh;
-}
-
-@media screen and (min-width: 1000px) {
-  .longButtonTopmargin {
-    margin-top: 0vh;
-  }
+  top: 42vh;
 }
 
 .long-button-text {
@@ -790,19 +785,23 @@ button {
 
 @-webkit-keyframes slide-down {
   from {
-    height: 15vh;
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
   }
   to {
-    height: 95vh;
+    -webkit-transform: translateY(80vh);
+            transform: translateY(80vh);
   }
 }
 
 @keyframes slide-down {
   from {
-    height: 15vh;
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
   }
   to {
-    height: 95vh;
+    -webkit-transform: translateY(80vh);
+            transform: translateY(80vh);
   }
 }
 
@@ -819,19 +818,23 @@ button {
 
 @-webkit-keyframes slide-up {
   from {
-    height: 95vh;
+    -webkit-transform: translateY(80vh);
+            transform: translateY(80vh);
   }
   to {
-    height: 15vh;
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
   }
 }
 
 @keyframes slide-up {
   from {
-    height: 95vh;
+    -webkit-transform: translateY(80vh);
+            transform: translateY(80vh);
   }
   to {
-    height: 15vh;
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
   }
 }
 

@@ -10,11 +10,12 @@
 @keyframes slide-down {
 
   from {
-    height: 15vh;
+    transform: translateY(0vh);
+
   }
   
   to {
-      height: 95vh;
+      transform: translateY(80vh);
   }
 }
 
@@ -30,11 +31,11 @@
 @keyframes slide-up {
 
   from {
-    height: 95vh;
+    transform: translateY(80vh);
   }
 
   to {
-      height: 15vh;
+    transform: translateY(0vh);
   }
 }
 // This animates the fade-in for the tiles.

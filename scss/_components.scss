@@ -2,15 +2,17 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 15vh;
+    height: 95vh;
     background: $buratinoRed;
     justify-content: center;
     overflow: visible;
     position: absolute;
+    top: -80vh;
 }
 
 .long-button {
     position: relative;
+    
     height: 5vmax;
     width: (100vw - (414 / 32));
     align-self: center;
@@ -43,13 +45,9 @@
 
 // margin when needed
 .longButtonTopmargin{
-    margin-top: 4vh;
+    top: 42vh;
 }
-@media screen and (min-width: 1000px) {
-  .longButtonTopmargin {
-    margin-top: 0vh;
-  }
-}
+
 
 
 .long-button-text {
