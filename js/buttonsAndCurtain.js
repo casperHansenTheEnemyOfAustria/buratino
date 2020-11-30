@@ -97,6 +97,32 @@ var curtainString = document.querySelector(".curtain-string")
 var y1 = 0
 var y2 = 0
 
+// this is what makes all the nessicairy actions for a curtain move
+function curtains(){
+    // removes margin
+    longButtonTopMarginRemove()
+    // removing styling for the page texts
+    console.log("removing styling")
+    document.querySelector(".long-button").classList.remove("longButtonTopmargin")
+    document.querySelector(".long-button").classList.remove("long-button-hidden")
+    document.querySelector(".long-button-text").classList.remove("long-button-big-text")
+
+    document.getElementById("curtain-grid").classList.remove("tile-detransition")
+    console.log("pressend")
+    document.getElementById("curtain").classList.remove("roll-up")
+    document.getElementById("slide-box").classList.add("hide")
+    // added to show the wifi overlay when it nmeeds to be able to show
+    wifiOvl.classList.remove("hide")
+    bringBack()
+    curtainDown();
+    wifiSwitch();
+    window.scrollTo(0,0); 
+    body.classList.add("overflow")
+}
+
+// added clic kfor user acessibility
+curtain.addEventListener("click", curtains)
+
 function desktopTouch(){
     curtain.addEventListener("mousedown", function(e) {
         y1 = e.pageY
@@ -109,24 +135,7 @@ function desktopTouch(){
         y2 = e.pageY;
         console.log(y2);
         if(y1 < y2){
-            longButtonTopMarginRemove()
-            // removing styling for the page texts
-            console.log("removing styling")
-            document.querySelector(".long-button").classList.remove("longButtonTopmargin")
-            document.querySelector(".long-button").classList.remove("long-button-hidden")
-            document.querySelector(".long-button-text").classList.remove("long-button-big-text")
-
-            console.log("pressend1")
-            document.getElementById("curtain").classList.remove("roll-up")
-            document.getElementById("slide-box").classList.add("hide")
-            // added to show the wifi overlay when it nmeeds to be able to show
-            wifiOvl.classList.remove("hide")
-            bringBack()
-            curtainDown();
-            wifiSwitch() 
-            window.scrollTo(0,0); 
-            body.classList.add("overflow")
-            console.log("bruh")
+            curtains()
         }
     });
 };
@@ -150,25 +159,7 @@ function phoneTouch(){
         y2 = endCoord.pageY;
         console.log(y2)    
         if(y2-y1 > sens){ 
-            // removes margin
-            longButtonTopMarginRemove()
-            // removing styling for the page texts
-            console.log("removing styling")
-            document.querySelector(".long-button").classList.remove("longButtonTopmargin")
-            document.querySelector(".long-button").classList.remove("long-button-hidden")
-            document.querySelector(".long-button-text").classList.remove("long-button-big-text")
-
-            document.getElementById("curtain-grid").classList.remove("tile-detransition")
-            console.log("pressend")
-            document.getElementById("curtain").classList.remove("roll-up")
-            document.getElementById("slide-box").classList.add("hide")
-            // added to show the wifi overlay when it nmeeds to be able to show
-            wifiOvl.classList.remove("hide")
-            bringBack()
-            curtainDown();
-            wifiSwitch();
-            window.scrollTo(0,0); 
-            body.classList.add("overflow")
+            curtains()
             // i had to make y zer0 a bunch of times but it works now donw worry about it :D
             y2 = 0
             endCoord = 0
