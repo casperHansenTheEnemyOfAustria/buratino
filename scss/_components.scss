@@ -203,9 +203,11 @@ button {
     padding-top:$nonCurtainPadding;
     z-index: -20;
     position: relative;
-    @include center;
-    flex-direction: column;
-    grid-gap: 5vh;
+    display: grid;
+    grid-template-columns: 1;
+    align-items: center;
+    justify-items: center;
+    gap: 5vh;
 
     img {
         object-fit: contain;
@@ -445,6 +447,7 @@ button {
   width: 100vw;
   height: 500vh;
   position: fixed;
+  top: -24px;
   z-index: 3 !important;
   @include reset-mp;
   animation-name: tile-fadein;

@@ -305,20 +305,15 @@ button {
   padding-top: 20vmax;
   z-index: -20;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1;
+      grid-template-columns: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  grid-gap: 5vh;
+  justify-items: center;
+  gap: 5vh;
 }
 
 .start img, .security img, .sound img, .light img, .furniture img, .cleaning img, .breakers img, .addons img, .contact img {
@@ -636,6 +631,7 @@ button {
   width: 100vw;
   height: 500vh;
   position: fixed;
+  top: -24px;
   z-index: 3 !important;
   margin: 0;
   padding: 0;
