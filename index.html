@@ -4,7 +4,7 @@
     
     <meta charset="UTF-8">
     <!-- default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:; frame-src https://www.youtube.com;script-src-elem *" >
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'; media-src *; img-src http://* 'self' data: content:; frame-src * " >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buratino Instruktino</title>
     <meta name="description" content="Få tillgång till Buratinos instruktionsbok genom denna applikationen!">
@@ -141,8 +141,9 @@
             </picture>
 
             <div class="yt-wrapper">
-                <div class="yt-player">
-                    <iframe width="640" height="352" src="https://www.youtube.com/embed/UMaAF2WTK1A?rel=0" frameborder="0" allowfullscreen ></iframe>
+                <div class="yt-player" onclick="inject('KBXTnrD_Zs4')">
+                    <div class="frame"></div>
+                    <img src="img/thumbnail1.webp" alt="video thumbnail">
                 </div>
             </div>
             <!-- add btn1 etc to every button you make to make thewm correspond to the one two things -->
@@ -190,9 +191,12 @@
                 <img src="img/double-mask-logo(transparent).png" alt="masks">
             </picture>
             <div class="yt-wrapper">
-                <div class="yt-player">
-                    <iframe width="640" height="352" src="https://www.youtube.com/embed/UMaAF2WTK1A?rel=0" frameborder="0" allowfullscreen ></iframe>
+                <div class="yt-wrapper">
+                <div class="yt-player" onclick="inject('KBXTnrD_Zs4')">
+                    <div class="frame"></div>
+                    <img src="img/thumbnail1.webp" alt="video thumbnail">
                 </div>
+            </div>
             </div>
             <button class="redbox btn1">
                 <h6>Så här sköter du ljudet</h6>
@@ -234,9 +238,12 @@
                 <img src="img/double-mask-logo(transparent).png" alt="masks">
             </picture>
             <div class="yt-wrapper">
-                <div class="yt-player">
-                    <iframe width="640" height="352" src="https://www.youtube.com/embed/UMaAF2WTK1A?rel=0" frameborder="0" allowfullscreen ></iframe>
+                <div class="yt-wrapper">
+                <div class="yt-player" onclick="inject('KBXTnrD_Zs4')">
+                    <div class="frame"></div>
+                    <img src="img/thumbnail1.webp" alt="video thumbnail" class="thumbnail">
                 </div>
+            </div>
             </div>
             <button class="redbox btn1">
                 <h6>Så här sköter du belysningen</h6>
@@ -340,9 +347,12 @@
             </picture>
             <h5>STÄDNING PÅ BURATINO</h5>
             <div class="yt-wrapper">
-                <div class="yt-player">
-                    <iframe width="640" height="352" src="https://www.youtube.com/embed/UMaAF2WTK1A?rel=0" frameborder="0" allowfullscreen ></iframe>
+                <div class="yt-wrapper">
+                <div class="yt-player" onclick="inject('KBXTnrD_Zs4')">
+                    <div class="frame"></div>
+                    <img src="img/thumbnail1.webp" alt="video thumbnail">
                 </div>
+            </div>
             </div>
             <button class="redbox btn1">
                 <h6>STÄDRUTINER</h6>
@@ -465,7 +475,7 @@
 <script src="js/overlays.js"></script>
 <script src="js/tables.js" defer></script>
 <script src="js/curtain.js"></script>
-<!-- <script src="js/youtubeButtons.js" defer></script> -->
+<script src="js/videoInject.js"></script>
 <script src="js/pwaSpecifics.js"></script>
 <script src="js/manup.js"></script>
 <script src="/pwabuilder-sw.js"></script>
