@@ -11,73 +11,73 @@
             "src": "/images/img/home-icon144.png",
             "type": "img/png",
             "sizes": "144x144",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon192.png",
             "type": "img/png",
             "sizes": "192x192",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon256.png",
             "type": "img/png",
             "sizes": "256x256",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon512.png",
             "type": "img/png",
             "sizes": "512x512",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon1k.png",
             "type": "img/png",
             "sizes": "1024x1024",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon2k.png",
             "type": "img/png",
             "sizes": "2048x2048",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon144.webp",
             "type": "img/webp",
             "sizes": "144x144",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon192.webp",
             "type": "img/webp",
             "sizes": "192x192",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon256.webp",
             "type": "img/webp",
             "sizes": "256x256",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon512.webp",
             "type": "img/webp",
             "sizes": "512x512",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon1k.webp",
             "type": "img/webp",
             "sizes": "1024x1024",
-            "purpose": "any"
+            "purpose": "maskable any"
         },
         {
             "src": "/images/img/home-icon2k.webp",
             "type": "img/webp",
             "sizes": "2048x2048",
-            "purpose": "any"
+            "purpose": "maskable any"
         }
     ],
     "url": "https://vacuous-trains.surge.sh",
