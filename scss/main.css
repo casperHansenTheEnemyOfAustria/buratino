@@ -409,8 +409,8 @@ button {
   padding: 0;
   text-decoration: none;
   gap: 1em;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 3em;
 }
 
 .start .redbox-mixer img, .security .redbox-mixer img, .sound .redbox-mixer img, .light .redbox-mixer img, .furniture .redbox-mixer img, .cleaning .redbox-mixer img, .breakers .redbox-mixer img, .addons .redbox-mixer img, .contact .redbox-mixer img {
