@@ -14,16 +14,16 @@ function resetVideos(){
 function videos(num){
     // add the video embed id to the id
     if (num == 1){
-        id = "KBXTnrD_Zs4"
+        id = "WXxV9g7lsFE"
     }
     if (num == 2){
-        id = "KBXTnrD_Zs4"
+        id = "WXxV9g7lsFE"
     }
     if (num == 3){
-        id = "KBXTnrD_Zs4"
+        id = "WXxV9g7lsFE"
     }
     if (num == 4){
-        id = "KBXTnrD_Zs4"
+        id = "WXxV9g7lsFE"
     }
 
     console.log("clicks"+num)
