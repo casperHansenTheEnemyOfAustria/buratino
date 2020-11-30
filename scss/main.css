@@ -307,12 +307,11 @@ button {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1;
-      grid-template-columns: 1;
+  display: grid;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: center;
   gap: 5vh;
 }
 
@@ -396,19 +395,12 @@ button {
   height: 24.0625vmin;
   -webkit-filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.25));
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   cursor: pointer;

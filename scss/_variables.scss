@@ -11,9 +11,15 @@ $textColor: #212121;
 
 
 // This mixin is used for when an element needs to be horizontally and vertically centered, using Flexbox.
-@mixin center {
+@mixin center-flex {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+@mixin center-grid {
+    display: grid;
+    justify-items: center;
     align-items: center;
 }
 
@@ -34,7 +40,7 @@ $textColor: #212121;
 
 // These are the standard properties that each main navigation tile uses.
 @mixin tile-properties {
-    @include center;
+    @include center-flex;
     justify-content: space-between;
     flex-direction: column;
     background: $tileWhite;
