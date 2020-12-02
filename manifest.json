@@ -10,7 +10,7 @@
         {
             "src": "/images/img/home-icon144.png",
             "type": "img/png",
-            "sizes": "144x144",
+            "sizes": "144x144px",
             "purpose": "maskable any"
         },
         {
