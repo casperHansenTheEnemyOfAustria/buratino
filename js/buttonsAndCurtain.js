@@ -2,6 +2,12 @@
 // activate the curtain animation
 // might need to add event listener for a string to the curtain at some point
 
+// todo: add video load at curtain down
+
+
+
+
+
 // sets dead zone in css-pixels for the swipe
 // hides curtain grid because of bug where items were clickable even though they were invisible
 var sens = 10
