@@ -8,14 +8,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  height: 95vh;
+  height: 90vh;
   background: #CB0000;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   overflow: visible;
   position: absolute;
-  top: -80vh;
+  top: -75vh;
 }
 
 .long-button {
@@ -36,33 +36,26 @@
           box-shadow: none;
 }
 
-.long-button-big-text {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
+/*.long-button-big-text{
+  @include subtitle;
   font-size: 36px !important;
   letter-spacing: 0.25rem;
-  color: #FFFFFF;
-  -webkit-filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35)) !important;
-          filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35)) !important;
+  color:#FFFFFF;
+  filter: drop-shadow(4px 4px 2px rgba(0,0,0, 0.35)) !important;
 }
-
 @media screen and (min-width: 320px) {
   .long-button-big-text {
     font-size: calc(36px + 4 * ((100vw - 320px) / 680)) !important;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .long-button-big-text {
     font-size: 40px !important;
   }
-}
-
+} 
+*/
 .longButtonTopmargin {
-  top: 42vh;
+  top: 39.5vh;
 }
 
 .long-button-text {
@@ -800,8 +793,8 @@ button {
             transform: translateY(0vh);
   }
   to {
-    -webkit-transform: translateY(80vh);
-            transform: translateY(80vh);
+    -webkit-transform: translateY(75vh);
+            transform: translateY(75vh);
   }
 }
 
@@ -811,8 +804,8 @@ button {
             transform: translateY(0vh);
   }
   to {
-    -webkit-transform: translateY(80vh);
-            transform: translateY(80vh);
+    -webkit-transform: translateY(75vh);
+            transform: translateY(75vh);
   }
 }
 
