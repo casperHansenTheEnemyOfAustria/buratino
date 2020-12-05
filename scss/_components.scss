@@ -478,8 +478,8 @@ button {
   position: absolute;
   margin-top: 60vh;
   margin-left: 70vw;
-  width: 10.666667vw;
-  height: 14.6666667vw;
+  width: 14.6666667vw;
+  height: 15vw;
   background-image: url(../img/unselected-table.svg);
   background-repeat: no-repeat;
   background-position-x: center;
@@ -498,8 +498,8 @@ button {
 // this is my stupid solution for rotating tables as i cannot use the tranform porperty
 // if you change the height/width of the table make sure to change these to that but reversed
 .rotated-table{
-  width: 19.738vw;
-  height: 10.834vw;
+  width: 15vw;
+  height: 14.666667vw;
   background-image: url(../img/unselected-table-rotated.svg);
   overflow: visible;
 }
@@ -548,7 +548,6 @@ button {
   position: relative;
   z-index: -2;
   width:78vw;
-  height:91.7vw;
   margin-left: auto;
   margin-right: auto;
   overflow: visible;
