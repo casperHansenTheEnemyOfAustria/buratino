@@ -208,14 +208,14 @@ button {
 
     img {
         object-fit: contain;
-        max-width: 80vw;
+        max-width: $boxWidth;
         overflow: visible;
     }
 
     h5 {
         @include subtitle;
         font-size: 20px;
-        max-width: (100vw - (414 / 32));
+        max-width: $boxWidth;
         text-align: center;
     }
       @media screen and (min-width: 320px) {
@@ -231,8 +231,8 @@ button {
     
     .redbox {
         background-color: $buratinoRed;
-        width: (100vmin - (414 / 32));
-        height: (37vmin - (414 / 32));
+        width: $boxWidth;
+        height: $boxHeight;
         filter: drop-shadow($boxShadow);
         @include center-flex;
         flex-direction: column;
@@ -257,8 +257,8 @@ button {
         }
         .redbox-mixer {
             background-color: $buratinoRed;
-            width: (100vmin - (414 / 32));
-            height: (37vmin - (414 / 32));
+            width: $boxWidth;
+            height: $boxHeight;
             filter: drop-shadow($boxShadow);
             @include center-grid;
             justify-content: space-around;
@@ -393,6 +393,7 @@ button {
   // The general text inside the overlay.
   p {
     @include reset-mp;
+    padding-right: 2em;
     font-weight: 600;
     line-height: 1.4;
     font-size: 18px;

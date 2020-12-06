@@ -8,6 +8,8 @@ $itemShadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
 $boxShadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
 $nonCurtainPadding: 20vmax;
 $textColor: #212121;
+$boxWidth: (100vmin - (414 / 32));
+$boxHeight: (37vmin - (414 / 32));
 
 
 // This mixin is used for when an element needs to be horizontally and vertically centered, using Flexbox.

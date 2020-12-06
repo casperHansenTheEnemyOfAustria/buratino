@@ -306,7 +306,7 @@ button {
 .start img, .security img, .sound img, .light img, .furniture img, .cleaning img, .breakers img, .addons img, .contact img {
   -o-object-fit: contain;
      object-fit: contain;
-  max-width: 80vw;
+  max-width: 87.0625vmin;
   overflow: visible;
 }
 
@@ -317,7 +317,7 @@ button {
   margin: 0;
   padding: 0;
   font-size: 20px;
-  max-width: 87.0625vw;
+  max-width: 87.0625vmin;
   text-align: center;
 }
 
@@ -558,6 +558,7 @@ button {
 .overlay p {
   margin: 0;
   padding: 0;
+  padding-right: 2em;
   font-weight: 600;
   line-height: 1.4;
   font-size: 18px;
