@@ -522,39 +522,38 @@ button {
   position: relative;
   margin-top: 15vh;
   z-index:-2;
-}
-.rotators{
-  position: relative;
-  width: 35vw;
-  height: 3em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
-.toggler{
-  position: relative;
-  // put things here for rotation toggle btn
-}
-.horizontal{
-  background-color: rgba($color: #CB0000, $alpha: 1);
-  background-image: url("../img/table-horizontal.svg");
-  background-repeat: no-repeat;
-  width:3em;
-  height: 3em;
-  overflow: visible;
-}
-.vertical{
-  background-color: rgba($color: #CB0000, $alpha: 1);
-  background-image: url("../img/table-vertical.svg");
-  background-repeat: no-repeat;
-  width:3em;
-  height: 3em;
-  overflow: visible;
-}
-.vertical, .horizontal{
-  filter: drop-shadow($itemShadow);
+.rotators {
+  @include center-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0.87;
 }
 
+.rotator-caption {
+  padding: 0 !important;
+  width: max-content;
+  font-weight: 600;
+  line-height: 1 !important;
+  font-size: 16px !important;
+  color: $textColor;
+}
+@media screen and (min-width: 320px) {
+  .rotator-caption {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 680)) !important;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .rotator-caption {
+    font-size: 20px !important;
+  }
+} 
+
+.toggler{
+  position: relative;
+  width: max-content;
+}
 
 // defining the size of the map to make relative sizing of tables correct
 .map{
