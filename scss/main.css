@@ -706,6 +706,10 @@ button {
           justify-content: space-between;
 }
 
+.toggler {
+  position: relative;
+}
+
 .horizontal {
   background-color: #cb0000;
   background-image: url("../img/table-horizontal.svg");

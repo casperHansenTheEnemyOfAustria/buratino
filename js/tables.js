@@ -221,6 +221,7 @@ function tables(number){
     // functions for rotating the tables
     var horizontal = document.querySelector(".horizontal")
     var vertical = document.querySelector(".vertical")
+    var rotTog = document.querySelector(".toggler")
     function rotationAdd(){
       var rotatable = document.querySelector(".selected")
       rotatable.classList.add("rotated-table")
@@ -230,8 +231,13 @@ function tables(number){
       rotatable.classList.remove("rotated-table")
     }
 
+    function rotationToggle(){
+      var rotatable = document.querySelector(".selected")
+      rotatable.classList.toggle("rotated-table")
+    }
+
     horizontal.addEventListener("click", rotationAdd())
     vertical.addEventListener("click", rotationRemove())
-
+    rotTog.addEventListener("click", rotationToggle())
 
     

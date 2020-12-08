@@ -531,6 +531,10 @@ button {
   flex-direction: row;
   justify-content: space-between;
 }
+.toggler{
+  position: relative;
+  // put things here for rotation toggle btn
+}
 .horizontal{
   background-color: rgba($color: #CB0000, $alpha: 1);
   background-image: url("../img/table-horizontal.svg");
@@ -547,7 +551,6 @@ button {
   height: 3em;
   overflow: visible;
 }
-
 .vertical, .horizontal{
   filter: drop-shadow($itemShadow);
 }
