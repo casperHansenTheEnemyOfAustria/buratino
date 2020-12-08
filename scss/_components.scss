@@ -475,10 +475,10 @@ button {
 // relative dimensions without margin: w:0.8m L: 2m
 // margin: 0.1m
 // maybe add an image or something with illusrtations of the margin
-.table{
+.sqtable{
   position: absolute;
-  margin-top: 60vh;
-  margin-left: 70vw;
+  margin-top: 141vw;
+  margin-left: 67vw;
   width: 14.6666667vw;
   height: 15vw;
   background-image: url(../img/unselected-table.svg);
@@ -490,6 +490,15 @@ button {
   text-align: center;
   overflow: visible;
 }
+.rtable{
+  position: absolute;
+  width: 10vw;
+  height:10vw;
+  background-color: rgba($color:#999999, $alpha: 1.0);
+  border-radius: 5vw;
+  margin-top: 141vw;
+  margin-left: 53vw;
+}
 
 .table p{
   margin-left: 1px;
@@ -498,7 +507,7 @@ button {
 
 // this is my stupid solution for rotating tables as i cannot use the tranform porperty
 // if you change the height/width of the table make sure to change these to that but reversed
-.rotated-table{
+.sqtable.rotated-table{
   width: 15vw;
   height: 14.666667vw;
   background-image: url(../img/unselected-table-rotated.svg);
@@ -553,12 +562,28 @@ button {
   margin-right: auto;
   overflow: visible;
 }
-.restricted{
+.table16.restricted{
   position: absolute;
   width: 11vw;
   height: 20vw;
   top:4.5em;
   right:7vw;
+}
+
+.table21.restricted{
+  position: absolute;
+  width: 14vw;
+  height: 20vw;
+  top: 85vw;
+  left:2em;
+}
+
+.table22.restricted{
+  position: absolute;
+  width: 14vw;
+  height: 20vw;
+  top: 85vw;
+  left: 67vw;
 }
 
 .warning, .warning2{
@@ -600,3 +625,13 @@ button {
   position:absolute;
 	// width: (100vmin - (414 / 32))
 }
+¨
+
+
+button:active{
+  -webkit-box-shadow: inset 10px 10px 54px -17px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 10px 10px 54px -17px rgba(0,0,0,0.75);
+  box-shadow: inset 10px 10px 54px -17px rgba(0,0,0,0.75);
+}
+
+

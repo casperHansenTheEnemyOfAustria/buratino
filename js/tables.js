@@ -20,12 +20,12 @@ function colliding(){
               object_1.top < object_2.top + object_2.height && object_1.top + object_1.height > object_2.top) {
           //   rect.classList.add("collide");
                 // does something on collision
-              if (number2 == "16"){
-                console.log("collision detected at skåpsbyrå")
+              if (number2 == "16" || number2 == "21" || number2 == "22" ){
+                // console.log("collision detected at skåpsbyrå")
                 warning2.classList.remove("hide")
               }
               else{
-                console.log("collision detected at"+number2)
+                // console.log("collision detected at"+number2)
                 warning.classList.remove("hide")
               }
               // setTimeout(function(){
@@ -62,6 +62,12 @@ function colliding(){
       collisionDetection(  "14")
       collisionDetection(  "15")
       collisionDetection(  "16")
+      collisionDetection(  "17")
+      collisionDetection(  "18")
+      collisionDetection(  "19")
+      collisionDetection(  "20")
+      collisionDetection(  "21")
+      collisionDetection(  "22")
   }
   // runs function on all of the items^2
   multiFunc("1")
@@ -79,6 +85,10 @@ function colliding(){
   multiFunc("13")
   multiFunc("14")
   multiFunc("15")
+  multiFunc("17")
+  multiFunc("18")
+  multiFunc("19")
+  multiFunc("20")
 }
 
 
@@ -103,6 +113,10 @@ tables("12")
 tables("13")
 tables("14")
 tables("15")
+tables("17")
+tables("18")
+tables("19")
+tables("20")
 
 
 function tables(number){
