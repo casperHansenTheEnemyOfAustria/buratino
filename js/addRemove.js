@@ -37,3 +37,4 @@ function removeTable(){
     selected.classList.add("hide")
     console.log("removed teble")
 }
+
