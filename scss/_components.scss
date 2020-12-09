@@ -463,6 +463,8 @@ button {
 }
 
 .xclose{
+  z-index: 5;
+  position: relative;
   margin-left:auto;
 }
 
@@ -565,8 +567,20 @@ button {
   margin-right: auto;
   overflow: visible;
 }
+.map-desc{
+  position: relative;
+  bottom: 1.2em;
+  font-size: calc(23px + 6 * ((100vw - 320px) / 680)) !important;
+}
+.warning,.warning2{
+  background-color: white;
+  transition: background-color 1s ease;
+  width: 65vw;
+  height:3vh
+}
 .table16.restricted{
   position: absolute;
+  z-index: -3;
   width: 11vw;
   height: 20vw;
   top:4.5em;
