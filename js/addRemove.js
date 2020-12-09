@@ -1,5 +1,5 @@
 var table = document.querySelectorAll("table")
-var selected = document.querySelector("selected")
+var selected = document.querySelector(".selected")
 var addRound = document.querySelector(".add-round")
 var addRect = document.querySelector(".add-rect")
 var current = document.querySelectorAll("table")
@@ -40,6 +40,7 @@ function addTable(number){
 }
 
 function removeTable(){
+    var selected = document.querySelector(".selected")
     selected.classList.add("hide")
     console.log("removed teble")
 }
