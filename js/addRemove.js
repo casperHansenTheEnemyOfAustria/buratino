@@ -1,3 +1,5 @@
+// TODO add what happens if max tables reached
+
 var table = document.querySelectorAll("table")
 var selected = document.querySelector(".selected")
 var addRound = document.querySelector(".add-round")
