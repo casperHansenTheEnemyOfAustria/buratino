@@ -235,7 +235,7 @@ button {
         background-color: $buratinoRed;
         width: $boxWidth;
         height: $boxHeight;
-        filter: drop-shadow($boxShadow);
+        box-shadow: $boxShadow;
         @include center-flex;
         flex-direction: column;
 
@@ -261,7 +261,7 @@ button {
             background-color: $buratinoRed;
             width: $boxWidth;
             height: $boxHeight;
-            filter: drop-shadow($boxShadow);
+            box-shadow: $boxShadow;
             @include center-grid;
             justify-content: space-around;
             cursor: pointer;
@@ -366,7 +366,7 @@ button {
   display: flex;
   width: 80vmin;
   background-color: white;
-  filter: drop-shadow($itemShadow);
+  box-shadow: $itemShadow;
   top: 5vh;
   padding: 1em;
   margin-bottom: 1em;
@@ -531,7 +531,6 @@ button {
   @include center-flex;
   flex-direction: column;
   justify-content: flex-start;
-  opacity: 0.87;
 }
 
 .rotator-caption {
@@ -539,18 +538,18 @@ button {
   width: min-content;
   text-align: center;
   font-weight: 600;
-  line-height: 1 !important;
-  font-size: 16px !important;
+  line-height: 1.1 !important;
+  font-size: 14px !important;
   color: $textColor;
 }
 @media screen and (min-width: 320px) {
   .rotator-caption {
-    font-size: calc(16px + 4 * ((100vw - 320px) / 680)) !important;
+    font-size: calc(14px + 4 * ((100vw - 320px) / 680)) !important;
   }
 }
 @media screen and (min-width: 1000px) {
   .rotator-caption {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 } 
 
@@ -560,12 +559,17 @@ button {
   z-index:-2;
   display: grid;
   grid-auto-flow: column;
-  width: fit-content;
+  width: 80vmin;
+  opacity: 0.87;
 }
 
 .toggler{
   position: relative;
   width: max-content;
+}
+
+.add-remove-wrapper {
+  justify-content: space-evenly;
 }
 
 // defining the size of the map to make relative sizing of tables correct
