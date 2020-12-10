@@ -523,7 +523,6 @@ button {
 // these are for the buttons that rotate the tables around
 .rotation-wrapper{
   position: relative;
-  margin-top: 15vh;
   z-index:-2;
   display: flex;
 }
@@ -536,7 +535,8 @@ button {
 
 .rotator-caption {
   padding: 0 !important;
-  width: max-content;
+  width: min-content;
+  text-align: center;
   font-weight: 600;
   line-height: 1 !important;
   font-size: 16px !important;
@@ -552,6 +552,15 @@ button {
     font-size: 20px !important;
   }
 } 
+
+.operator-wrapper {
+  position: relative;
+  margin-top: 15vh;
+  z-index:-2;
+  display: grid;
+  grid-auto-flow: column;
+  width: fit-content;
+}
 
 .toggler{
   position: relative;
