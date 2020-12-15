@@ -859,6 +859,25 @@ button:active {
   box-shadow: inset 10px 10px 54px -17px rgba(0, 0, 0, 0.75);
 }
 
+footer {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+}
+
+@media screen and (min-width: 320px) {
+  footer {
+    font-size: calc(10px + 4 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  footer {
+    font-size: 10px;
+  }
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;
