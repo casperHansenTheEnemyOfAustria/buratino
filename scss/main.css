@@ -563,7 +563,7 @@ button {
   padding: 0;
   padding-right: 1em;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.5;
   font-size: 18px;
   color: #212121;
 }
@@ -688,31 +688,28 @@ button {
   overflow: visible;
 }
 
-.rotation-wrapper {
-  position: relative;
-  z-index: -2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.rotators {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.operator-wrapper {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-top: 10vh;
+  z-index: -2;
+  grid-auto-flow: column;
+  width: 80vmin;
+  opacity: 0.87;
+}
+
+.operator-wrapper button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .rotator-caption {
@@ -737,30 +734,6 @@ button {
   .rotator-caption {
     font-size: 18px !important;
   }
-}
-
-.operator-wrapper {
-  position: relative;
-  margin-top: 15vh;
-  z-index: -2;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  width: 80vmin;
-  opacity: 0.87;
-}
-
-.toggler {
-  position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.add-remove-wrapper {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .map {

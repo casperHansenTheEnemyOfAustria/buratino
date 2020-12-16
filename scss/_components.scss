@@ -397,7 +397,7 @@ button {
     @include reset-mp;
     padding-right: 1em;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.5;
     font-size: 18px;
     color: $textColor;
   }
@@ -522,15 +522,20 @@ button {
 
 
 // these are for the buttons that rotate the tables around
-.rotation-wrapper{
+
+.operator-wrapper {
+  @include center-grid;
+  justify-content: space-between;
   position: relative;
+  margin-top: 10vh;
   z-index:-2;
-  display: flex;
-}
-.rotators {
-  @include center-flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  grid-auto-flow: column;
+  width: 80vmin;
+  opacity: 0.87;
+
+  button {
+    align-items: center;
+  }
 }
 
 .rotator-caption {
@@ -551,26 +556,8 @@ button {
   .rotator-caption {
     font-size: 18px !important;
   }
-} 
-
-.operator-wrapper {
-  position: relative;
-  margin-top: 15vh;
-  z-index:-2;
-  display: grid;
-  grid-auto-flow: column;
-  width: 80vmin;
-  opacity: 0.87;
 }
 
-.toggler{
-  position: relative;
-  width: max-content;
-}
-
-.add-remove-wrapper {
-  justify-content: space-evenly;
-}
 
 // defining the size of the map to make relative sizing of tables correct
 .map{
