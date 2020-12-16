@@ -525,7 +525,7 @@ button {
 
 .operator-wrapper {
   @include center-grid;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
   margin-top: 10vh;
   z-index:-2;
