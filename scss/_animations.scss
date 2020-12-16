@@ -4,7 +4,7 @@
     animation-duration: 500ms;
     // Preserve the effect of the animation at ending.
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
+    animation-timing-function: $cubicAnimation;
   }
 
 @keyframes slide-down {
@@ -25,7 +25,7 @@
   animation-duration: 500ms;
   // Preserve the effect of the animation at ending.
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
+  animation-timing-function: $cubicAnimation;
 }
 
 @keyframes slide-up {
@@ -44,7 +44,7 @@
     animation-duration: 500ms;
     // Preserve the effect of the animation at ending.
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
+    animation-timing-function: $cubicAnimation;
      // This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping. 
     animation-delay: 500ms;
 }
@@ -64,7 +64,7 @@
   animation-duration: 500ms;
   // Preserve the effect of the animation at ending.
   animation-fill-mode: backwards;
-  animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
+  animation-timing-function: $cubicAnimation;
    // This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping. 
   animation-delay: 0ms;
 }

@@ -10,6 +10,7 @@ $nonCurtainPadding: 20vmax;
 $textColor: #212121;
 $boxWidth: (100vmin - (414 / 32));
 $boxHeight: (37vmin - (414 / 32));
+$cubicAnimation: cubic-bezier(0.45, 0.1, 0.25, 1);
 
 
 // This mixin is used for when an element needs to be horizontally and vertically centered, using Flexbox.
@@ -64,6 +65,6 @@ $boxHeight: (37vmin - (414 / 32));
 @mixin subtitle-warning{
     font-style: normal;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 18px !important;
     @include reset-mp;
 }

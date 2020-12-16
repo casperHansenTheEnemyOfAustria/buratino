@@ -449,14 +449,14 @@ button {
 .start-prompt {
   z-index: -2;
   position: fixed;
-  margin-bottom: 80vh !important;
-  margin-left: 55vw !important;
+  bottom: 74vh;
+  left: 60vw;
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
   -webkit-animation: startFade 0s 5s forwards;
           animation: startFade 0s 5s forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
+          animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
   -webkit-animation-duration: 500ms;
           animation-duration: 500ms;
   opacity: 0%;
@@ -753,8 +753,8 @@ button {
 
 .warning, .warning2 {
   background-color: white;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease;
+  -webkit-transition: background-color 1s cubic-bezier(0.45, 0.1, 0.25, 1);
+  transition: background-color 1s cubic-bezier(0.45, 0.1, 0.25, 1);
   width: 65vw;
   height: 3vh;
 }
@@ -787,13 +787,25 @@ button {
 .warning, .warning2 {
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 18px !important;
   margin: 0;
   padding: 0;
   color: #CB0000 !important;
   position: absolute;
   z-index: 23;
   top: 3vh;
+}
+
+@media screen and (min-width: 320px) {
+  .warning, .warning2 {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680)) !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .warning, .warning2 {
+    font-size: 22px !important;
+  }
 }
 
 .yt-wrapper {
