@@ -935,8 +935,8 @@ footer {
 
 @-webkit-keyframes slide-up {
   from {
-    -webkit-transform: translateY(80vh);
-            transform: translateY(80vh);
+    -webkit-transform: translateY(75vh);
+            transform: translateY(75vh);
   }
   to {
     -webkit-transform: translateY(0vh);
@@ -946,8 +946,8 @@ footer {
 
 @keyframes slide-up {
   from {
-    -webkit-transform: translateY(80vh);
-            transform: translateY(80vh);
+    -webkit-transform: translateY(75vh);
+            transform: translateY(75vh);
   }
   to {
     -webkit-transform: translateY(0vh);
