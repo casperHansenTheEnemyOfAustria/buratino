@@ -533,6 +533,8 @@ button {
           animation-name: tile-fadein;
   -webkit-animation-duration: 250ms;
           animation-duration: 250ms;
+  -webkit-animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
+          animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
 }
 
 .overlay h6 {
@@ -610,8 +612,8 @@ button {
 }
 
 .ovlBackground {
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   background-color: rgba(0, 0, 0, 0.25);
   width: 100vw;
   height: 500vh;
@@ -624,6 +626,8 @@ button {
           animation-name: tile-fadein;
   -webkit-animation-duration: 250ms;
           animation-duration: 250ms;
+  -webkit-animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
+          animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
 }
 
 .wifi-ovl {

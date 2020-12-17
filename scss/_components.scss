@@ -372,6 +372,7 @@ button {
   margin-bottom: 1em;
   animation-name: tile-fadein;
   animation-duration: 250ms;
+  animation-timing-function: $cubicAnimation;
 
   // The header title for the overlay.
   h6 {
@@ -442,7 +443,7 @@ button {
 
 // settings for the background fade layer
 .ovlBackground{
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(12px);
   background-color: rgba($color: #000000, $alpha: .25);
   width: 100vw;
   height: 500vh;
@@ -452,6 +453,7 @@ button {
   @include reset-mp;
   animation-name: tile-fadein;
   animation-duration: 250ms;
+  animation-timing-function: $cubicAnimation;
 }
 .wifi-ovl{
   top: 33vh;
