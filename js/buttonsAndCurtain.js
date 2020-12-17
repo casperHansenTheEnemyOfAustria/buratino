@@ -105,25 +105,33 @@ var y2 = 0
 
 // this is what makes all the nessicairy actions for a curtain move
 function curtains(){
-    // removes margin
-    longButtonTopMarginRemove()
-    // removing styling for the page texts
-    console.log("removing styling")
-    document.querySelector(".long-button").classList.remove("longButtonTopmargin")
-    document.querySelector(".long-button").classList.remove("long-button-hidden")
-    document.querySelector(".long-button-text").classList.remove("long-button-big-text")
-
-    document.getElementById("curtain-grid").classList.remove("tile-detransition")
-    console.log("pressend")
-    document.getElementById("curtain").classList.remove("roll-up")
-    document.getElementById("slide-box").classList.add("hide")
-    // added to show the wifi overlay when it nmeeds to be able to show
-    wifiOvl.classList.remove("hide")
     bringBack()
-    curtainDown();
-    wifiSwitch();
-    window.scrollTo(0,0); 
-    body.classList.add("overflow")
+    // removes margin
+    setTimeout(function() {
+        longButtonTopMarginRemove()
+        // removing styling for the page texts
+        console.log("removing styling")
+        document.querySelector(".long-button").classList.remove("longButtonTopmargin")
+        document.querySelector(".long-button").classList.remove("long-button-hidden")
+        document.querySelector(".long-button-text").classList.remove("long-button-big-text")
+
+        document.getElementById("curtain-grid").classList.remove("tile-detransition")
+        console.log("pressend")
+        document.getElementById("curtain").classList.remove("roll-up")
+        document.getElementById("slide-box").classList.add("hide")
+        // added to show the wifi overlay when it nmeeds to be able to show
+        wifiOvl.classList.remove("hide")
+        curtainDown();
+        wifiSwitch();
+        window.scrollTo(0,0); 
+        body.classList.add("overflow")
+    }
+    )
+    bringBack()
+    setTimeout(() => {
+        // bugfix: brings the element to the backgrounf z index once again if it has not already been registered
+        bringBack() 
+    }, 250);
 }
 
 // added clic kfor user acessibility
@@ -202,6 +210,10 @@ phoneTouch()
             targetElement.classList.remove("tile-transition")
             console.log("transit")
             resetOvls()
+            setTimeout(function(){
+                // brings element into z axis foreground after 250 msto make it work with event listeners :D
+                bringForward()
+            },250); 
         }
 
         function anyText(word) {
@@ -325,10 +337,7 @@ phoneTouch()
                 anyText("KONTAKT")    
             }
             phoneTouch()
-            setTimeout(function(){
-                // brings element into z axis foreground after 500 msto make it work with event listeners :D
-                bringForward()
-            }, 500); 
+            
         };
 // this was the only solution my brain could come up with but i mean it works
 // play with different orders of the different sub-functions to maybe make the animation smoother
