@@ -131,7 +131,7 @@ function curtains(){
     setTimeout(() => {
         // bugfix: brings the element to the backgrounf z index once again if it has not already been registered
         bringBack() 
-    }, 250);
+    }, 360);
 }
 
 // added clic kfor user acessibility
@@ -211,9 +211,9 @@ phoneTouch()
             console.log("transit")
             resetOvls()
             setTimeout(function(){
-                // brings element into z axis foreground after 250 msto make it work with event listeners :D
+                // brings element into z axis foreground after 350 msto make it work with event listeners :D
                 bringForward()
-            },250); 
+            },350); 
         }
 
         function anyText(word) {
