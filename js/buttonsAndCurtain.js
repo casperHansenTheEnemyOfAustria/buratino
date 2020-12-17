@@ -4,8 +4,8 @@
 
 // todo: add video load at curtain down
 
-
-
+// the delay of contents switching to bakground/foregroung and back in milliseconds
+var contentDelay = 350
 
 
 // sets dead zone in css-pixels for the swipe
@@ -131,7 +131,7 @@ function curtains(){
     setTimeout(() => {
         // bugfix: brings the element to the backgrounf z index once again if it has not already been registered
         bringBack() 
-    }, 360);
+    }, contentDelay + 10);
 }
 
 // added clic kfor user acessibility
@@ -213,7 +213,7 @@ phoneTouch()
             setTimeout(function(){
                 // brings element into z axis foreground after 350 msto make it work with event listeners :D
                 bringForward()
-            },350); 
+            },contentDelay); 
         }
 
         function anyText(word) {
