@@ -165,7 +165,7 @@ button {
     z-index: -20;
 
     img {
-        max-width: 80vmin;
+        max-width: 75vmin;
         z-index: -20;
         overflow: visible;
     }
@@ -311,7 +311,7 @@ button {
 
 .start-prompt{
   z-index: -2;
-  position:fixed;
+  position: absolute;
   bottom: 74vh;
 	left: 60vw;
   transform: rotate(-30deg);
@@ -624,16 +624,15 @@ button {
 } 
 
 .yt-wrapper{
-  width: (100vmin - (414 / 32));
+  width: $boxWidth;
 }
 
 .yt-player{
   position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden;
-  
+	width: $boxWidth;
+  height: $boxWidth * 0.5625;
+  overflow:hidden;
+  box-shadow: $boxShadow;
 }
 
 .yt-player iframe, .yt-player object , .yt-player embed{
@@ -646,13 +645,22 @@ button {
 }
 
 .thumbnail{
+  background-color: $buratinoRed;
+  width: $boxWidth;
+  height: $boxWidth * 0.5625;
+  
+  @include center-flex;
+  flex-direction: column;
+  top: 0;
   z-index: -30;
-  top:0;
-	left:0;
-	width: 100%;
-	height:100%;
   position:absolute;
-	// width: (100vmin - (414 / 32))
+  
+  img {
+    width: 20vmin;
+  }
+  h5 {
+    color: #FFFFFF;
+  }
 }
 ¨
 
