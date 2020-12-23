@@ -2,7 +2,7 @@
     "short_name": "Buratino",
     "name": "Buratino: Instruktionsapp",
     "description": "Få tillgång till Buratinos instruktionsbok genom denna applikationen!",
-    "start_url": "https://app.buratino.se/",
+    "start_url": "https://vacuous-trains.surge.sh/",
     "background_color": "#EEEEEE",
     "display": "standalone",
     "theme_color": "#CB0000",
@@ -80,7 +80,7 @@
             "purpose": "maskable any"
         }
     ],
-    "url": "https://app.buratino.se/",
+    "url": "https://vacuous-trains.surge.sh/",
     "lang": "",
     "screenshots": [],
     "orientation": "portrait"

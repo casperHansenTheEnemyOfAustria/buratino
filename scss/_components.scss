@@ -455,14 +455,10 @@ button {
   animation-duration: 250ms;
   animation-timing-function: $cubicAnimation;
 }
-.wifi-ovl{
-  top: 33vh;
-  left: 5vw;
-}
+
 .wifi{
-  position: absolute;
   z-index: 3;
-  top:0;
+  @include center-flex;
 }
 
 .xclose{
