@@ -13,7 +13,6 @@
 
 .long-button {
     position: relative;
-    
     height: 5vmax;
     width: (100vw - (414 / 32));
     align-self: center;
@@ -193,10 +192,11 @@ button {
 // Adds a curtain ends for that snazzy look
 .curtainEdge{
     position: absolute;
-    width: 100vw;
+    width: 110vw;
     filter: drop-shadow($curtainShadow);
-    bottom: -3.5vh;
+    bottom: -3.5vmax;
     z-index: -4;
+    left: -5vw;
 }
 
 // Here lies all the pages for the separate tiles. The content in the sub-pages have a padding to them, as well as a lower z-index, so they'll be covered by the main curtain.
