@@ -192,7 +192,7 @@ button {
 // Adds a curtain ends for that snazzy look
 .curtainEdge{
     position: absolute;
-    width: 110vw;
+    width: 100vw;
     filter: drop-shadow($curtainShadow);
     bottom: -3.5vmax;
     z-index: -4;
