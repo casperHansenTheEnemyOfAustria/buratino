@@ -659,7 +659,7 @@ button {
 .sqtable {
   position: absolute;
   margin-top: 125vw;
-  margin-left: 67vw;
+  margin-left: 47vw;
   width: 14.6666667vw;
   height: 15vw;
   background-image: url(../img/unselected-table.svg);
@@ -681,7 +681,7 @@ button {
   background-color: #999999;
   border-radius: 5vw;
   margin-top: 126vw;
-  margin-left: 53vw;
+  margin-left: 65vw;
 }
 
 .table p {
@@ -1033,14 +1033,6 @@ footer {
 /*This applies Helvetica font to entire webpage.*/
 /* {
     font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-*/
-/*body {
-    margin: 0;
-    height: 100%;
-    overflow-x: hidden;
-    overscroll-behavior: contain;
-    margin-bottom: 1em;
 }
 */
 .overflow {
