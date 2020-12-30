@@ -7,8 +7,8 @@
     "display": "standalone",
     "theme_color": "#CB0000",
     
-    "icons":[{"src":"/images/img/home-icon512.png","sizes":"512x512","type":"image/png"}],
-    "purpose": "maskable any",
+    "icons":[{"src":"/images/img/home-icon512.png","sizes":"512x512","type":"image/png", "purpose": "maskable any"}],
+    
     "url": "https://vacuous-trains.surge.sh/",
     "lang": "",
     "screenshots": [],
