@@ -7,7 +7,7 @@
     "display": "standalone",
     "theme_color": "#CB0000",
     
-    "icons":[{"src":"/images/img/home-icon192.webp","sizes":"192x192","type":"image/png"}],
+    "icons":[{"src":"/images/img/home-icon512.png","sizes":"512x512","type":"image/png"}],
     "url": "https://vacuous-trains.surge.sh/",
     "lang": "",
     "screenshots": [],
