@@ -11,6 +11,8 @@ function resetVideos(){
       frame4.innerHTML = " "
 }
 
+
+
 function videos(num){
     // add the video embed id to the id
     if (num == 1){

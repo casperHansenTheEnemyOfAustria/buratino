@@ -214,6 +214,8 @@ phoneTouch()
                 // brings element into z axis foreground after 350 msto make it work with event listeners :D
                 bringForward()
             },contentDelay); 
+            // resets iframe implements
+            resetVideos()
         }
 
         function anyText(word) {
@@ -229,7 +231,10 @@ phoneTouch()
         reset()
 
         function buttonAction(button){
+            // delay of iframe implement
+            var videoLoadBuffer = 10
             if(button == 'security'){
+                
                 reset();
                 // hides start image after btn press
                 document.querySelector(".start").classList.add("hide")
@@ -243,9 +248,13 @@ phoneTouch()
                 // hides curtain grid because of bug where items were clickable even though they were invisible
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
-                anyText("LÅS & LARM")      
+                anyText("LÅS & LARM") 
+                // adds iframe implement right after curtaindown
+                setTimeout(function(){videos(1);}, videoLoadBuffer)  
+                   
             }
             if(button == 'sound'){
+                
                 reset();
                 // hides start image after btn press
                 document.querySelector(".start").classList.add("hide")
@@ -256,9 +265,11 @@ phoneTouch()
                 // hides curtain grid because of bug where items were clickable even though they were invisible
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
-                anyText("LJUD")    
+                anyText("LJUD")
+                setTimeout(function(){videos(2);}, videoLoadBuffer)     
             }
             if(button == 'light'){
+                
                 reset();
                 // hides start image after btn press
                 document.querySelector(".start").classList.add("hide")
@@ -270,6 +281,7 @@ phoneTouch()
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
                 anyText("LJUS")
+                setTimeout(function(){videos(3);}, videoLoadBuffer)  
             }
             if(button == 'furniture'){
                 reset();
@@ -285,6 +297,7 @@ phoneTouch()
                 anyText("MÖBLER")    
             }
             if(button == 'cleaning'){
+                
                 reset();
                 // hides start image after btn press
                 document.querySelector(".start").classList.add("hide")
@@ -295,7 +308,9 @@ phoneTouch()
                 // hides curtain grid because of bug where items were clickable even though they were invisible
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
-                anyText("STÄD")    
+                anyText("STÄD") 
+                setTimeout(function(){videos(4);}, videoLoadBuffer)  
+                
             }
             if(button == 'breakers'){
                 reset();
