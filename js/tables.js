@@ -21,7 +21,7 @@ function colliding(){
           //   rect.classList.add("collide");
                 // does something on collision
               if (number2 == "16" || number2 == "21" || number2 == "22" ){
-                // console.log("collision detected at skåpsbyrå")
+                // console.log("collision detected at restricted area")
                 warning2.classList.remove("hide")
               }
               else{
