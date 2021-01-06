@@ -631,6 +631,7 @@ button {
           animation-duration: 250ms;
   -webkit-animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
           animation-timing-function: cubic-bezier(0.45, 0.1, 0.25, 1);
+  padding-bottom: 1em;
 }
 
 .wifi {

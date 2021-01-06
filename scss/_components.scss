@@ -457,6 +457,7 @@ button {
   animation-name: tile-fadein;
   animation-duration: 250ms;
   animation-timing-function: $cubicAnimation;
+  padding-bottom: 1em;
 }
 
 .wifi{
@@ -688,3 +689,4 @@ footer{
     font-size: 10px;
   }
 } 
+
