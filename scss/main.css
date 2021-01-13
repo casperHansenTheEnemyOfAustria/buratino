@@ -288,7 +288,7 @@ button {
   width: 100vw;
   -webkit-filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35));
           filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35));
-  bottom: -2vmax;
+  bottom: -4vmax;
   z-index: -4;
 }
 
