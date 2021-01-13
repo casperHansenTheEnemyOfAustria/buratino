@@ -959,6 +959,17 @@ footer {
   font-size: 0.9em;
 }
 
+.swipe-up {
+  position: absolute;
+  z-index: -3;
+  background-color: rgba(0, 0, 0, 0);
+  width: 87vw;
+  height: 25vh;
+  top: 67%;
+  left: auto;
+  right: auto;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;

@@ -13,6 +13,7 @@
 
 .long-button {
     position: relative;
+    
     height: 5vmax;
     width: (100vw - (414 / 32));
     align-self: center;
@@ -747,4 +748,15 @@ footer{
   @include reset-mp;
   color: rgba($color: #000000, $alpha: .5);
   font-size: 0.9em;
+}
+
+.swipe-up{
+  position: absolute;
+  z-index: -3;
+  background-color: rgba($color: #000000, $alpha: 0);
+  width: 87vw;
+  height: 25vh;
+  top: 67%;
+  left: auto;
+  right: auto;
 }

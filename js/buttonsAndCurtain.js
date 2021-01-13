@@ -218,7 +218,7 @@ function phoneTouch(){
 
 desktopTouch()
 phoneTouch()
-
+swipeUp('start')
 
 // Here comes the functionality for buttons and different pages
 // its pretty straight forward and basically just hides every element and thne shows one for each different input from buttons
@@ -267,6 +267,17 @@ phoneTouch()
             document.querySelector(".body").classList.remove("slight-scroll")
             // delay of iframe implement
             var videoLoadBuffer = 10
+            if(button == 'start'){
+                // destransitions grid so that it become gone
+                document.getElementById("curtain-grid").classList.add("tile-detransition")
+                console.log("detran")
+                // same with curtain
+                document.getElementById("curtain").classList.add("roll-up")
+                // hides curtain grid because of bug where items were clickable even though they were invisible
+                document.getElementById("curtain-grid").classList.add("hide")
+                longButtonTopMarginAdd()
+                anyText("START") 
+            }
             if(button == 'security'){
                 
                 reset();
@@ -386,7 +397,37 @@ phoneTouch()
                 anyText("KONTAKT")    
             }
             phoneTouch()
-            
+            swipeUp(button)
         };
+
+        function swipeUp(current){
+            var sens2 = 20
+            swipeUpBox = document.querySelector(".swipe-up")
+            i = 0
+            swipeUpBox.addEventListener("touchstart", function(e) {
+                y1 = e.touches[0].pageY
+                console.log("pressbegin")
+                console.log(y1)   
+            });
+
+            var endCoord = {}
+            swipeUpBox.addEventListener("touchmove", function(e) {
+            endCoord = e.targetTouches[0];
+            });
+            y2 = 0  
+            swipeUpBox.addEventListener("touchend", function(e) {
+                y2 = endCoord.pageY;
+                console.log(y2)    
+                if(y1-y2 > sens2){ 
+                buttonAction(current)
+                // i had to make y zer0 a bunch of times but it works now donw worry about it :D
+                y2 = 0
+                endCoord = 0
+                }
+            }); 
+            endCoord = 0
+            i += 1
+
+        }
 // this was the only solution my brain could come up with but i mean it works
 // play with different orders of the different sub-functions to maybe make the animation smoother
