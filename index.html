@@ -70,7 +70,11 @@
                 </button>
             </div>
             <!--When clicking this button, the curtain rolls down-->
-            <img src="img/halfCurtain.png" alt="curtain edge" class="curtainEdge ">
+            <picture alt="curtain edge" class="curtainEdge ">
+                <source srcset="img/halfCurtain.png" type="image/png">
+                <source srcset="img/halfCurtain.webp" type="image/webp">
+                    <img src="img/halfCurtain.webp" alt="curtain edge" class="curtainEdge ">
+            </picture>
             <button  class="long-button btn1"><p class="long-button-text" onclick="curtainAction()">START</p></button>
             <img src="img/bruh-string.svg" alt="curtain string" class="curtain-string">
 
@@ -402,10 +406,7 @@
                     <br><br>
                     Vi hoppas att du som hyr här kommer få det supertrevligt! En stor grej när det gäller
                     trivsel är att det känns städat och fräscht! Därför har vi gjort en lista som hjälper dig att
-                    lämna det snyggt till nästa hyresgäst så dom får det lika fint och bra som du har fått det!
-                    Här är några punkter och vi vill gärna att ni bockar för allt när det är utfört. När ni känner
-                    er helt klara för att lämna lokalen vill vi att ni skriver under detta papper så att vi vet att ni
-                    har läst allt!
+                    lämna det snyggt till nästa hyresgäst så dom får det lika fint och bra som du har fått det
                     <br><br>
                     STORA SALEN
                     <br>
@@ -593,7 +594,25 @@
                 <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
                 <!-- this is where the descriptions go -->
                 <h6>BURATINO PREMIUM</h6>
-                <p>Här har du allt du kan tänka dig. Slå ihop Guld och Silver så har du bara början. Skall du ha en spelning, en teaterföreställning eller något annat som kräver en scen och publiken förväntar sig det bästa av det bästa? I Premium ingår en tekniker* för kvällens evenemang som ser till att allt flyter på. Dessa styr både ljud och ljus för er, är behjälplig med riggning samt vet hur allt skall mickas upp med mera. Teknikern anpassar även så att ni får era specifika färger och önskemål på olika typer av ljus så det kommer passa er. Vi tillhandahåller även allt runt omkring scenen såsom mikrofoner, line-boxar, gitarrförstärkare, medhörning, kablage, ljus och mycket mer!</p>
+                <p>Här har du allt du kan tänka dig. 
+                    Slå ihop Guld och Silver så har du bara början. 
+                    Skall du ha en spelning, en teaterföreställning 
+                    eller något annat som kräver en scen och publiken 
+                    förväntar sig det bästa av det bästa? I Premium 
+                    ingår en tekniker* för kvällens evenemang som 
+                    ser till att allt flyter på. Dessa styr både 
+                    ljud och ljus för er, är behjälplig med riggning 
+                    samt vet hur allt skall mickas upp med mera. 
+                    Teknikern anpassar även så att ni får era specifika 
+                    färger och önskemål på olika typer av ljus så 
+                    det kommer passa er. 
+                    Vi tillhandahåller även allt runt 
+                    omkring scenen såsom mikrofoner, line-boxar, 
+                    gitarrförstärkare, medhörning, kablage, 
+                    ljus och mycket mer!</p>
+                    <br>
+                    <br>
+                    <p>*Se hemsidan för mer information om tekniker. </p>
             </div>
             <div class="overlay four hide">
                 <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
