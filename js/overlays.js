@@ -230,6 +230,7 @@ wifiClose.forEach( element => {
         // scrolls back to the initial position for iphones 
         if(user.browser.family == "Mobile Safari" || "Chrome Mobile iOS"){
             window.scrollTo(0,25)
+            console.log("ew youre using an apple device")
         }
     })
 });
