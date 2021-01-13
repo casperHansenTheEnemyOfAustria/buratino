@@ -30,6 +30,7 @@ function showone(){
         element.classList.remove("hide")
     });
     window.scrollTo(0,0);
+    
 }
 function showtwo(){
     two.forEach(element => {
@@ -226,5 +227,9 @@ wifiClose.forEach( element => {
     element.addEventListener("click", function(){
         document.getElementById("slide-box").classList.add("hide")
         console.log("added hide to slide box")
+        scrolls back to the initiol 
+        if(user.browser.family == "Mobile Safari" || "Chrome Mobile iOS"){
+            window.scrollTo(0,25)
+        }
     })
 });

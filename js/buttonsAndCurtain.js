@@ -152,8 +152,6 @@ function curtains(){
             // first scrolls item into view to reset the viewport from initial iphone drag and then pulls it back to 25px scroll to get it into position
             document.querySelector(".long-button").scrollIntoView()
             window.scrollTo(0,25)
-            
-            
             console.log("ew you has apple")
         }
         else{
