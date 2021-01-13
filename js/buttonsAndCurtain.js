@@ -111,6 +111,8 @@ var curtainString = document.querySelector(".curtain-string")
 var y1 = 0
 var y2 = 0
 
+
+// just because i was tired of the error
 function resetVideos(){
     // this resets all the video tags
       frame1 = document.querySelector(".frame1")
