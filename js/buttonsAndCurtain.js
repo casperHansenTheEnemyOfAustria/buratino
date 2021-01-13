@@ -419,7 +419,8 @@ swipeUp('start')
             y2 = 0  
             swipeUpBox.addEventListener("touchend", function(e) {
                 y2 = endCoord.pageY;
-                console.log(y2)    
+                console.log(y2) 
+                // checks coord for start and finnish and if they dont matchup start swipåe up sequence wich is ressentially the same as pressing the button for the pagew you were just on   
                 if(y1-y2 > sens2){ 
                     buttonAction(current)
                     // i had to make y zer0 a bunch of times but it works now donw worry about it :D
