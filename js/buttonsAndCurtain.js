@@ -111,6 +111,20 @@ var curtainString = document.querySelector(".curtain-string")
 var y1 = 0
 var y2 = 0
 
+function resetVideos(){
+    // this resets all the video tags
+      frame1 = document.querySelector(".frame1")
+      frame2 = document.querySelector(".frame2")  
+      frame3 = document.querySelector(".frame3")  
+      frame4 = document.querySelector(".frame4")
+      
+      frame1.innerHTML = " "
+      frame2.innerHTML = " "
+      frame3.innerHTML = " "
+      frame4.innerHTML = " "
+}
+
+
 // this is what makes all the nessicairy actions for a curtain move
 function curtains(){
     bringBack()
