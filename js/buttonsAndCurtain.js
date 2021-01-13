@@ -147,9 +147,11 @@ function curtains(){
         wifiOvl.classList.remove("hide")
         curtainDown();
         wifiSwitch();
-        if(user.os.name == "iOS"){
-            window.scrollTo(0,8); 
+        if(user.browser.family == "Mobile Safari" || "Chrome Mobile iOS"){
             document.querySelector(".body").classList.add("slight-scroll")
+            window.scrollTo(0,16)
+            
+            console.log("ew you has apple")
         }
         else{
             window.scrollTo(0,0); 
