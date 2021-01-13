@@ -400,6 +400,8 @@ swipeUp('start')
             swipeUp(button)
         };
 
+
+        // checks for swipe up and runs swipe up command on current page
         function swipeUp(current){
             var sens2 = 20
             swipeUpBox = document.querySelector(".swipe-up")
@@ -419,14 +421,32 @@ swipeUp('start')
                 y2 = endCoord.pageY;
                 console.log(y2)    
                 if(y1-y2 > sens2){ 
-                buttonAction(current)
-                // i had to make y zer0 a bunch of times but it works now donw worry about it :D
-                y2 = 0
-                endCoord = 0
+                    buttonAction(current)
+                    // i had to make y zer0 a bunch of times but it works now donw worry about it :D
+                    y2 = 0
+                    endCoord = 0
                 }
             }); 
             endCoord = 0
             i += 1
+
+            swipeUpBox.addEventListener("mousedown", function(e) {
+                y1 = e.pageY
+                console.log(y1);
+                
+            });
+        
+
+            // for desktop
+            swipeUpBox.addEventListener("mouseup", function(e) {
+                y2 = e.pageY;
+                console.log(y2);
+                if(y1-y2 > sens2){
+                    buttonAction(current)
+                    y2 = 0
+                    endCoord = 0
+                }
+            });
 
         }
 // this was the only solution my brain could come up with but i mean it works
