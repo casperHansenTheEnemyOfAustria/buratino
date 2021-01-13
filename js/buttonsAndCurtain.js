@@ -156,6 +156,7 @@ function curtains(){
         else{
             console.log("not apple very good")
         }
+        
     }
     )
     bringBack()
@@ -262,6 +263,7 @@ phoneTouch()
         reset()
 
         function buttonAction(button){
+            body.classList.remove("slight-scroll")
             // delay of iframe implement
             var videoLoadBuffer = 10
             if(button == 'security'){
