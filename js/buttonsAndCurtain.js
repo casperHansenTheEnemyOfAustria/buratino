@@ -138,6 +138,9 @@ function curtains(){
             // scrolls down 4 pixels if you are on mobile safari for visibility
             console.log("hahah apple noob get rekt")
         }
+        else{
+            console.log("not apple very good")
+        }
     }
     )
     bringBack()
