@@ -148,8 +148,7 @@ function curtains(){
         window.scrollTo(0,0); 
         body.classList.add("overflow");
         if(user.browser.family == "Mobile Safari"){
-            window.scrollTo(0,17);
-            body.classList.add("slight-scroll")
+            window.scrollTo(0,19);
             // scrolls down 4 pixels if you are on mobile safari for visibility
             console.log("hahah apple noob get rekt")
         }
@@ -263,7 +262,6 @@ phoneTouch()
         reset()
 
         function buttonAction(button){
-            body.classList.remove("slight-scroll")
             // delay of iframe implement
             var videoLoadBuffer = 10
             if(button == 'security'){
