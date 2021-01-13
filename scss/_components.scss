@@ -168,7 +168,17 @@ button {
         z-index: -20;
         overflow: visible;
     }
+    @media screen and (min-width: 1000px) {
+      img {
+        max-width: 40vmin;
+      }
+    } 
 }
+@media screen and (min-width: 1025px) {
+  #cover-image {
+    padding-top: $nonCurtainPadding;
+  }
+} 
 
 .tile-icon {
     width: 75%;

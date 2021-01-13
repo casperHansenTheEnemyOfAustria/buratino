@@ -257,6 +257,18 @@ button {
   overflow: visible;
 }
 
+@media screen and (min-width: 1000px) {
+  #cover-image img {
+    max-width: 40vmin;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #cover-image {
+    padding-top: 20vmax;
+  }
+}
+
 .tile-icon {
   width: 75%;
 }
