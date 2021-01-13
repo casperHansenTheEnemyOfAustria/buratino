@@ -147,17 +147,16 @@ function curtains(){
         wifiOvl.classList.remove("hide")
         curtainDown();
         wifiSwitch();
-        window.scrollTo(0,0); 
-        body.classList.add("overflow");
-        if(user.browser.family == "Mobile Safari" || "Chrome Mobile iOS"){
+        if(user.os.name == "iOS"){
+            window.scrollTo(0,8); 
             document.querySelector(".body").classList.add("slight-scroll")
-            // scrolls down 4 pixels if you are on mobile safari for visibility
-            console.log("hahah apple noob get rekt")
         }
         else{
-            console.log("not apple very good")
+            window.scrollTo(0,0); 
         }
+        body.classList.add("overflow");
         
+            // scrolls down 4 pixels if you are on mobile safari for visibility  
     }
     )
     bringBack()
