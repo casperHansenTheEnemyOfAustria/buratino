@@ -746,16 +746,5 @@ button:active{
 footer{
   @include reset-mp;
   color: rgba($color: #000000, $alpha: .5);
-  font-size: 1em;
+  font-size: 0.75em;
 }
-@media screen and (min-width: 320px) {
-  footer {
-    font-size: calc(10px + 4 * ((100vw - 320px) / 680));
-  }
-}
-@media screen and (min-width: 1000px) {
-  footer {
-    font-size: 10px;
-  }
-} 
-
