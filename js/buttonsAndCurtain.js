@@ -2,11 +2,19 @@
 // activate the curtain animation
 // might need to add event listener for a string to the curtain at some point
 
-// todo: add video load at curtain down
+
 
 // the delay of contents switching to bakground/foregroung and back in milliseconds
 var contentDelay = 350
 
+
+// uses detect.js imported scripts to find device type and browser
+var user = detect.parse(navigator.userAgent);
+console.log(
+    user.browser.family ,
+    user.browser.version ,
+    user.os.name
+  );
 
 // sets dead zone in css-pixels for the swipe
 // hides curtain grid because of bug where items were clickable even though they were invisible
@@ -111,20 +119,25 @@ function curtains(){
         longButtonTopMarginRemove()
         // removing styling for the page texts
         console.log("removing styling")
-        document.querySelector(".long-button").classList.remove("longButtonTopmargin")
-        document.querySelector(".long-button").classList.remove("long-button-hidden")
-        document.querySelector(".long-button-text").classList.remove("long-button-big-text")
+        document.querySelector(".long-button").classList.remove("longButtonTopmargin");
+        document.querySelector(".long-button").classList.remove("long-button-hidden");
+        document.querySelector(".long-button-text").classList.remove("long-button-big-text");
 
-        document.getElementById("curtain-grid").classList.remove("tile-detransition")
-        console.log("pressend")
-        document.getElementById("curtain").classList.remove("roll-up")
-        document.getElementById("slide-box").classList.add("hide")
+        document.getElementById("curtain-grid").classList.remove("tile-detransition");
+        console.log("pressend");
+        document.getElementById("curtain").classList.remove("roll-up");
+        document.getElementById("slide-box").classList.add("hide");
         // added to show the wifi overlay when it nmeeds to be able to show
         wifiOvl.classList.remove("hide")
         curtainDown();
         wifiSwitch();
         window.scrollTo(0,0); 
-        body.classList.add("overflow")
+        body.classList.add("overflow");
+        if(user.browser.family == "Mobile Safari"){
+            window.scrollTo(0,4);
+            // scrolls down 4 pixels if you are on mobile safari for visibility
+            console.log("hahah apple noob get rekt")
+        }
     }
     )
     bringBack()
