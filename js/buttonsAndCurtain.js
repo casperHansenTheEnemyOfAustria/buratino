@@ -149,7 +149,7 @@ function curtains(){
         wifiSwitch();
         window.scrollTo(0,0); 
         body.classList.add("overflow");
-        if(user.browser.family == "Mobile Safari"){
+        if(user.browser.family == "Mobile Safari" || "Chrome Mobile iOS"){
             document.querySelector(".body").classList.add("slight-scroll")
             // scrolls down 4 pixels if you are on mobile safari for visibility
             console.log("hahah apple noob get rekt")
