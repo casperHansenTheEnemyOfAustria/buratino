@@ -1103,8 +1103,8 @@ footer {
 }
 
 .selected {
-  -webkit-filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
-          filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
+  -webkit-filter: brightness(0) saturate(100%) invert(13%) sepia(75%) saturate(5040%) hue-rotate(356deg) brightness(88%) contrast(117%);
+          filter: brightness(0) saturate(100%) invert(13%) sepia(75%) saturate(5040%) hue-rotate(356deg) brightness(88%) contrast(117%);
 }
 
 /*This applies Helvetica font to entire webpage.*/

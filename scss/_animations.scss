@@ -87,7 +87,7 @@
 
 .selected{
   // the filter property changes the color of the tables. Play with the hue rotate to find a desireable color
-  filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
+  filter: brightness(0) saturate(100%) invert(13%) sepia(75%) saturate(5040%) hue-rotate(356deg) brightness(88%) contrast(117%);
 }
 
 
