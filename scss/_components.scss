@@ -594,7 +594,7 @@ button {
 .map-desc{
   position: absolute;
   max-width: 70vmin !important;
-  bottom: 1.2em;
+  
   top: 1.2em;
   font-size: calc(23px + 6 * ((100vw - 320px) / 680)) !important;
   text-align: left !important;
@@ -676,22 +676,23 @@ button {
     height: 20vw;
   }
 }
-.warning, .warning2{
+.warning{
   @include subtitle-warning;
   max-width: 70vmin !important;
   position: absolute;
   color: #CB0000 !important;
   top:1.2em;
-  bottom: 1.2em;
+  z-index: -14;
+  
   text-align: left !important;
 }
 @media screen and (min-width: 320px) {
-  .warning, .warning2 {
-    font-size: calc(18px + 4 * ((100vw - 320px) / 680)) !important;
+  .warning{
+    font-size: calc(20px + 4 * ((100vw - 320px) / 680)) !important;
   }
 }
 @media screen and (min-width: 1000px) {
-  .warning, .warning2 {
+  .warning{
     font-size: 22px !important;
   }
 } 

@@ -23,13 +23,13 @@ function colliding(){
               if (number2 == "16" || number2 == "21" || number2 == "22" ){
                 // console.log("collision detected at restricted area")
                 // warning2.classList.remove("hide")
-                mapDesc.innerHTML = "OBS! Borden bör ha mer än 1 meters avstånd!"
+                mapDesc.innerHTML = "Här kan man inte placera borden!"
                 mapDesc.classList.add("warning")
               }
               else{
                 // console.log("collision detected at"+number2)
                 // warning.classList.remove("hide")
-                mapDesc.innerHTML = "Här kan man inte placera borden!"
+                mapDesc.innerHTML = "OBS! Borden bör ha mer än 1 meters avstånd!"
                 mapDesc.classList.add("warning")
               }
               // setTimeout(function(){
