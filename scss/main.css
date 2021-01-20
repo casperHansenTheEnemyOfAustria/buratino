@@ -775,15 +775,16 @@ button {
   margin-right: auto;
   overflow: visible;
   max-width: 80vmin !important;
+  margin-top: 2em;
 }
 
 .map-desc {
-  position: relative;
+  position: absolute;
+  max-width: 70vmin !important;
   bottom: 1.2em;
   top: 1.2em;
-  -ms-grid-column-align: center;
-      justify-self: center;
   font-size: calc(23px + 6 * ((100vw - 320px) / 680)) !important;
+  text-align: left !important;
 }
 
 .table16.restricted {
@@ -871,10 +872,12 @@ button {
   font-size: 18px !important;
   margin: 0;
   padding: 0;
+  max-width: 70vmin !important;
+  position: absolute;
   color: #CB0000 !important;
-  z-index: 40;
-  top: 1em;
+  top: 1.2em;
   bottom: 1.2em;
+  text-align: left !important;
 }
 
 @media screen and (min-width: 320px) {
