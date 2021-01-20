@@ -1,0 +1,5 @@
+var user = detect.parse(navigator.userAgent);
+
+if(user.os.name == "Windows 7" || user.os.name == "Windows 8" || user.os.name == "Windows 10" || user.os.name == "Mac OS"){
+ console.log("this is a desktop")
+}

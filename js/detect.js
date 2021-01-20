@@ -560,9 +560,11 @@
                 other: true
             }, {
                 regex: "(Mac OS X) (\\d+)[_.](\\d+)(?:[_.](\\d+))?",
+                os_replacement: "Mac OS",
                 manufacturer: "Apple"
             }, {
                 regex: "(?:PPC|Intel) (Mac OS X)",
+                os_replacement: "Mac OS",
                 manufacturer: "Apple"
             }, {
                 regex: "(CPU OS|iPhone OS) (\\d+)_(\\d+)(?:_(\\d+))?",

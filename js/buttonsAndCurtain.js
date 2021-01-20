@@ -150,7 +150,7 @@ function curtains(){
         if(user.browser.family == "Mobile Safari" || user.browser.family == "Chrome Mobile iOS"){
             document.querySelector(".body").classList.add("slight-scroll")
             // first scrolls item into view to reset the viewport from initial iphone drag and then pulls it back to 25px scroll to get it into position
-            window.scrollTo(0,0); 
+            window.scrollTo(0,0);
             document.querySelector(".long-button").scrollIntoView()
             window.scrollTo(0,25)
             console.log("ew you has apple")
