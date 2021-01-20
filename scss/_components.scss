@@ -593,14 +593,11 @@ button {
 .map-desc{
   position: relative;
   bottom: 1.2em;
+  top: 1.2em;
+  justify-self: center;
   font-size: calc(23px + 6 * ((100vw - 320px) / 680)) !important;
 }
-.warning,.warning2{
-  background-color: white;
-  transition: background-color 1s $cubicAnimation;
-  width: 65vw;
-  height:3vh
-}
+
 .table16.restricted{
   position: absolute;
   z-index: -3;
@@ -680,9 +677,9 @@ button {
 .warning, .warning2{
   @include subtitle-warning;
   color: #CB0000 !important;
-  position:absolute;
-  z-index: 23;
-  top:3vh;
+  z-index: 40;
+  top:1em;
+  bottom: 1.2em;
 }
 @media screen and (min-width: 320px) {
   .warning, .warning2 {

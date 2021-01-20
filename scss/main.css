@@ -780,15 +780,10 @@ button {
 .map-desc {
   position: relative;
   bottom: 1.2em;
+  top: 1.2em;
+  -ms-grid-column-align: center;
+      justify-self: center;
   font-size: calc(23px + 6 * ((100vw - 320px) / 680)) !important;
-}
-
-.warning, .warning2 {
-  background-color: white;
-  -webkit-transition: background-color 1s cubic-bezier(0.45, 0.1, 0.25, 1);
-  transition: background-color 1s cubic-bezier(0.45, 0.1, 0.25, 1);
-  width: 65vw;
-  height: 3vh;
 }
 
 .table16.restricted {
@@ -877,9 +872,9 @@ button {
   margin: 0;
   padding: 0;
   color: #CB0000 !important;
-  position: absolute;
-  z-index: 23;
-  top: 3vh;
+  z-index: 40;
+  top: 1em;
+  bottom: 1.2em;
 }
 
 @media screen and (min-width: 320px) {

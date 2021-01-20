@@ -1,17 +1,17 @@
 // for the love of all that is holy do not check the console i beg you
 // console looks fine again
 function warningText(){
-  var warning = document.querySelector(".warning");
-  var warning2 = document.querySelector(".warning2");
-  warning.classList.add("hide");
-  warning2.classList.add("hide")
+  var mapDesc = document.querySelector(".map-desc")
+  mapDesc.innerHTML = "Stora salen"
+  mapDesc.classList.remove("warning")
 }
 function colliding(){
   function collisionDetection(number2){
       dragMe = document.querySelector(".selected")
       rect = document.querySelector(".table"+number2)
-      var warning = document.querySelector(".warning")
-      var warning2 = document.querySelector(".warning2")
+      var mapDesc = document.querySelector(".map-desc")
+      // var warning = document.querySelector(".warning")
+      // var warning2 = document.querySelector(".warning2")
       function isCollapsed(dragMe, rect){
           var object_1 = dragMe.getBoundingClientRect();
           var object_2 = rect.getBoundingClientRect();
@@ -22,11 +22,15 @@ function colliding(){
                 // does something on collision
               if (number2 == "16" || number2 == "21" || number2 == "22" ){
                 // console.log("collision detected at restricted area")
-                warning2.classList.remove("hide")
+                // warning2.classList.remove("hide")
+                mapDesc.innerHTML = "OBS! Borden bör ha mer än 1 meters avstånd!"
+                mapDesc.classList.add("warning")
               }
               else{
                 // console.log("collision detected at"+number2)
-                warning.classList.remove("hide")
+                // warning.classList.remove("hide")
+                mapDesc.innerHTML = "Här kan man inte placera borden!"
+                mapDesc.classList.add("warning")
               }
               // setTimeout(function(){
               //     warning.classList.add("hide")
