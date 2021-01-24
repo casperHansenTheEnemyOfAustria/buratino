@@ -147,13 +147,21 @@ function curtains(){
         wifiOvl.classList.remove("hide")
         curtainDown();
         wifiSwitch();
-        if(user.browser.family == "Mobile Safari" || user.browser.family == "Chrome Mobile iOS"){
-            document.querySelector(".body").classList.add("slight-scroll")
-            // first scrolls item into view to reset the viewport from initial iphone drag and then pulls it back to 25px scroll to get it into position
-            window.scrollTo(0,0);
-            document.querySelector(".long-button").scrollIntoView()
-            window.scrollTo(0,25)
+        
+        if(user.browser.family == "Mobile Safari" || user.browser.family == "Chrome Mobile iOS" ){
             console.log("ew you has apple")
+            // checks if the pwa is already installed and then already using pwa viewing mode
+            if(!(( "standalone" in window.navigator) && window.navigator.standalone)){
+                console.log(( "standalone" in window.navigator) && window.navigator.standalone)
+                document.querySelector(".body").classList.add("slight-scroll")
+                // first scrolls item into view to reset the viewport from initial iphone drag and then pulls it back to 25px scroll to get it into position
+                window.scrollTo(0,0);
+                document.querySelector(".long-button").scrollIntoView()
+                window.scrollTo(0,25)    
+            }
+            else{
+                window.scrollTo(0,0); 
+            }
         }
         else{
             window.scrollTo(0,0); 
