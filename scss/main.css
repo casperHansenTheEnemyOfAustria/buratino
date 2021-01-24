@@ -720,6 +720,14 @@ button {
   overflow: visible;
 }
 
+.map-message {
+  width: 80vmin;
+  position: absolute;
+  z-index: 4000;
+  background-color: #FFFFFF;
+  height: 99%;
+}
+
 .operator-wrapper {
   display: -ms-grid;
   display: grid;

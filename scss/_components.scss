@@ -539,7 +539,13 @@ button {
   overflow: visible;
 }
 
-
+.map-message{
+  width: 80vmin;
+  position: absolute;
+  z-index: 4000;
+  background-color: #FFFFFF;
+  height:99%;
+}
 
 
 // these are for the buttons that rotate the tables around
