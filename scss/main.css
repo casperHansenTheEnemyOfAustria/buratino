@@ -609,10 +609,7 @@ button {
   padding: 0;
   font-weight: 600;
   line-height: 1.4;
-  list-style-type: disc;
-  list-style-position: inside;
-  text-indent: -1em;
-  padding-left: 1em;
+  padding-left: 0.5em;
   font-size: 18px;
   color: #212121;
 }
@@ -986,6 +983,10 @@ footer {
 
 .install-prompt {
   top: 30vh;
+}
+
+.apple-prompt-example {
+  max-width: 60vmin !important;
 }
 
 .roll-down {
