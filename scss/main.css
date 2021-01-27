@@ -725,7 +725,6 @@ button {
   position: absolute;
   z-index: 4000;
   background-color: #FFFFFF;
-  height: 99%;
 }
 
 .operator-wrapper {
