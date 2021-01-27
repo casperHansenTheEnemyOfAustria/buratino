@@ -665,7 +665,9 @@ button {
 .xclose {
   z-index: 5;
   position: relative;
-  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  justify-self: flex-end;
 }
 
 /*
@@ -987,6 +989,24 @@ footer {
 
 .apple-prompt-example {
   max-width: 60vmin !important;
+}
+
+ol, ul {
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
+}
+
+.title-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .roll-down {
