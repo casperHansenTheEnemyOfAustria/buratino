@@ -1009,6 +1009,10 @@ ol, ul {
           justify-content: space-between;
 }
 
+.promptClose {
+  z-index: 400000000000000000 !important;
+}
+
 .roll-down {
   -webkit-animation-name: slide-down;
           animation-name: slide-down;

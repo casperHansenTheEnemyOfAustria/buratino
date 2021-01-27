@@ -799,3 +799,7 @@ ol, ul {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
+
+.promptClose{
+  z-index: 400000000000000000 !important;
+}
