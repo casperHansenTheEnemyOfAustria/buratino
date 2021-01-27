@@ -44,7 +44,6 @@ $cubicAnimation: cubic-bezier(0.45, 0.1, 0.25, 1);
 // These are the standard properties that each main navigation tile uses.
 @mixin tile-properties {
     @include center-flex;
-    justify-content: space-between;
     flex-direction: column;
     background: $tileWhite;
     box-shadow: $itemShadow;
