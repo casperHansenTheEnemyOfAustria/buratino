@@ -470,7 +470,7 @@ button {
   height: 500vh;
   position: fixed;
   top: -24px;
-  z-index: 50000 !important;
+  z-index: 5000 !important;
   @include reset-mp;
   animation-name: tile-fadein;
   animation-duration: 250ms;

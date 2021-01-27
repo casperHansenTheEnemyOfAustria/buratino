@@ -638,7 +638,7 @@ button {
   height: 500vh;
   position: fixed;
   top: -24px;
-  z-index: 3 !important;
+  z-index: 5000 !important;
   margin: 0;
   padding: 0;
   -webkit-animation-name: tile-fadein;
