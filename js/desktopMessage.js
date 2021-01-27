@@ -6,5 +6,6 @@ if(user.os.name == "Windows 7" || user.os.name == "Windows 8" || user.os.name ==
  message.classList.remove("hide")
 }
 else{
+    var message = document.querySelector(".map-message")
     message.classList.add("hide")
 }
