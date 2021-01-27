@@ -228,7 +228,7 @@ wifiClose.forEach( element => {
         document.getElementById("slide-box").classList.add("hide")
         console.log("added hide to slide box")
         // scrolls back to the initial position for iphones 
-        if(user.browser.family == "Mobile Safari" || "Chrome Mobile iOS"){
+        if(user.browser.family == "Mobile Safari" || user.browser.family == "Chrome Mobile iOS"){
             if(!(( "standalone" in window.navigator) && window.navigator.standalone)){
                 window.scrollTo(0,25)
                 console.log("ew youre using an apple device")
