@@ -122,6 +122,14 @@ button {
   }
 }
 
+@media screen and (min-width: 380px) {
+  .tile-1 {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+    width: 35vmin;
+    height: 35vmin;
+  }
+}
+
 @media screen and (min-width: 700px) {
   .tile-1 {
     width: 25vmin;
@@ -163,10 +171,18 @@ button {
 }
 
 @media screen and (min-width: 320px) {
-  .tile-2 {
+  .tile-1 {
     font-size: calc(18px + 4 * ((100vw - 320px) / 680));
     width: 32vmin;
     height: 32vmin;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .tile-1 {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+    width: 35vmin;
+    height: 35vmin;
   }
 }
 

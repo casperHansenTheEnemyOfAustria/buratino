@@ -87,6 +87,13 @@ button {
         height: $tileSize - 3vmin;
         }
     }
+    @media screen and (min-width: 380px) {
+        .tile-1 {
+        font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+        width: $tileSize;
+        height: $tileSize;
+        }
+    }
     @media screen and (min-width: 700px) {
       .tile-1 {
         width: $tileSize - 10vmin;
@@ -107,12 +114,19 @@ button {
     justify-self: end;
 }
     @media screen and (min-width: 320px) {
-        .tile-2 {
+        .tile-1 {
         font-size: calc(18px + 4 * ((100vw - 320px) / 680));
         width: $tileSize - 3vmin;
         height: $tileSize - 3vmin;
         }
     }
+    @media screen and (min-width: 380px) {
+      .tile-1 {
+      font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+      width: $tileSize;
+      height: $tileSize;
+      }
+  }
     @media screen and (min-width: 700px) {
       .tile-2 {
         width: $tileSize - 10vmin;
