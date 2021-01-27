@@ -279,6 +279,7 @@ swipeUp('start')
             // delay of iframe implement
             var videoLoadBuffer = 10
             if(button == 'start'){
+                reset()
                 // destransitions grid so that it become gone
                 document.getElementById("curtain-grid").classList.add("tile-detransition")
                 console.log("detran")

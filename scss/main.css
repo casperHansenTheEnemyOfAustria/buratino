@@ -630,7 +630,7 @@ button {
 }
 
 .bring-forward {
-  z-index: 1;
+  z-index: 1 !important;
 }
 
 .ovlBackground {
@@ -982,6 +982,10 @@ footer {
   top: 67%;
   left: auto;
   right: auto;
+}
+
+.install-prompt {
+  top: 30vh;
 }
 
 .roll-down {

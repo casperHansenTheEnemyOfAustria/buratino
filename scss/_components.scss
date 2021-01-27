@@ -462,7 +462,7 @@ button {
 
 // thing to make pages work as intended
 .bring-forward{
-  z-index: 1 ; 
+  z-index: 1 !important; 
 }
 
 // settings for the background fade layer
@@ -780,4 +780,9 @@ footer{
   top: 67%;
   left: auto;
   right: auto;
+}
+
+.install-prompt{
+  top:30vh;
+ 
 }
