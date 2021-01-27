@@ -386,7 +386,7 @@ button {
 .overlay{
   position:absolute;
   flex-direction: column;
-  z-index: 4 !important;
+  z-index: 5001 !important;
   display: flex;
   width: 80vmin;
   background-color: white;
