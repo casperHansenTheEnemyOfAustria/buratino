@@ -8,6 +8,9 @@ $itemShadow: 8px 8px 4px rgba(0, 0, 0, 0.35);
 $boxShadow: 8px 8px 2px rgba(0, 0, 0, 0.25);
 $nonCurtainPadding: 20vmax;
 $textColor: #212121;
+$boxWidth: (100vmin - (414 / 32));
+$boxHeight: (37vmin - (414 / 32));
+$cubicAnimation: cubic-bezier(0.45, 0.1, 0.25, 1);
 
 
 // This mixin is used for when an element needs to be horizontally and vertically centered, using Flexbox.
@@ -41,7 +44,6 @@ $textColor: #212121;
 // These are the standard properties that each main navigation tile uses.
 @mixin tile-properties {
     @include center-flex;
-    justify-content: space-between;
     flex-direction: column;
     background: $tileWhite;
     box-shadow: $itemShadow;
@@ -62,6 +64,6 @@ $textColor: #212121;
 @mixin subtitle-warning{
     font-style: normal;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 18px !important;
     @include reset-mp;
 }
