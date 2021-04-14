@@ -2,19 +2,11 @@
 // activate the curtain animation
 // might need to add event listener for a string to the curtain at some point
 
+// todo: add video load at curtain down
 
 
-// the delay of contents switching to bakground/foregroung and back in milliseconds
-var contentDelay = 350
 
 
-// uses detect.js imported scripts to find device type and browser
-var user = detect.parse(navigator.userAgent);
-console.log(
-    user.browser.family ,
-    user.browser.version ,
-    user.os.name
-  );
 
 // sets dead zone in css-pixels for the swipe
 // hides curtain grid because of bug where items were clickable even though they were invisible
@@ -111,71 +103,27 @@ var curtainString = document.querySelector(".curtain-string")
 var y1 = 0
 var y2 = 0
 
-
-// just because i was tired of the error
-function resetVideos(){
-    // this resets all the video tags
-      frame1 = document.querySelector(".frame1")
-      frame2 = document.querySelector(".frame2")  
-      frame3 = document.querySelector(".frame3")  
-      frame4 = document.querySelector(".frame4")
-      
-      frame1.innerHTML = " "
-      frame2.innerHTML = " "
-      frame3.innerHTML = " "
-      frame4.innerHTML = " "
-}
-
-
 // this is what makes all the nessicairy actions for a curtain move
 function curtains(){
-    bringBack()
     // removes margin
-    setTimeout(function() {
-        longButtonTopMarginRemove()
-        // removing styling for the page texts
-        console.log("removing styling")
-        document.querySelector(".long-button").classList.remove("longButtonTopmargin");
-        document.querySelector(".long-button").classList.remove("long-button-hidden");
-        document.querySelector(".long-button-text").classList.remove("long-button-big-text");
+    longButtonTopMarginRemove()
+    // removing styling for the page texts
+    console.log("removing styling")
+    document.querySelector(".long-button").classList.remove("longButtonTopmargin")
+    document.querySelector(".long-button").classList.remove("long-button-hidden")
+    document.querySelector(".long-button-text").classList.remove("long-button-big-text")
 
-        document.getElementById("curtain-grid").classList.remove("tile-detransition");
-        console.log("pressend");
-        document.getElementById("curtain").classList.remove("roll-up");
-        document.getElementById("slide-box").classList.add("hide");
-        // added to show the wifi overlay when it nmeeds to be able to show
-        wifiOvl.classList.remove("hide")
-        curtainDown();
-        wifiSwitch();
-        
-        if(user.browser.family == "Mobile Safari" || user.browser.family == "Chrome Mobile iOS" ){
-            console.log("ew you has apple")
-            // checks if the pwa is already installed and then already using pwa viewing mode
-            if(!(( "standalone" in window.navigator) && window.navigator.standalone)){
-                console.log(( "standalone" in window.navigator) && window.navigator.standalone)
-                document.querySelector(".body").classList.add("slight-scroll")
-                // first scrolls item into view to reset the viewport from initial iphone drag and then pulls it back to 25px scroll to get it into position
-                window.scrollTo(0,0);
-                document.querySelector(".long-button").scrollIntoView()
-                window.scrollTo(0,25)    
-            }
-            else{
-                window.scrollTo(0,0); 
-            }
-        }
-        else{
-            window.scrollTo(0,0); 
-        }
-        body.classList.add("overflow");
-        
-            // scrolls down 4 pixels if you are on mobile safari for visibility  
-    }
-    )
+    document.getElementById("curtain-grid").classList.remove("tile-detransition")
+    console.log("pressend")
+    document.getElementById("curtain").classList.remove("roll-up")
+    document.getElementById("slide-box").classList.add("hide")
+    // added to show the wifi overlay when it nmeeds to be able to show
+    wifiOvl.classList.remove("hide")
     bringBack()
-    setTimeout(() => {
-        // bugfix: brings the element to the backgrounf z index once again if it has not already been registered
-        bringBack() 
-    }, contentDelay + 10);
+    curtainDown();
+    wifiSwitch();
+    window.scrollTo(0,0); 
+    body.classList.add("overflow")
 }
 
 // added clic kfor user acessibility
@@ -229,7 +177,7 @@ function phoneTouch(){
 
 desktopTouch()
 phoneTouch()
-swipeUp('start')
+
 
 // Here comes the functionality for buttons and different pages
 // its pretty straight forward and basically just hides every element and thne shows one for each different input from buttons
@@ -254,12 +202,6 @@ swipeUp('start')
             targetElement.classList.remove("tile-transition")
             console.log("transit")
             resetOvls()
-            setTimeout(function(){
-                // brings element into z axis foreground after 350 msto make it work with event listeners :D
-                bringForward()
-            },contentDelay); 
-            // resets iframe implements
-            resetVideos()
         }
 
         function anyText(word) {
@@ -275,23 +217,7 @@ swipeUp('start')
         reset()
 
         function buttonAction(button){
-            document.querySelector(".body").classList.remove("slight-scroll")
-            // delay of iframe implement
-            var videoLoadBuffer = 10
-            if(button == 'start'){
-                reset()
-                // destransitions grid so that it become gone
-                document.getElementById("curtain-grid").classList.add("tile-detransition")
-                console.log("detran")
-                // same with curtain
-                document.getElementById("curtain").classList.add("roll-up")
-                // hides curtain grid because of bug where items were clickable even though they were invisible
-                document.getElementById("curtain-grid").classList.add("hide")
-                longButtonTopMarginAdd()
-                anyText("START") 
-            }
             if(button == 'security'){
-                
                 reset();
                 // hides start image after btn press
                 document.querySelector(".start").classList.add("hide")
@@ -305,13 +231,9 @@ swipeUp('start')
                 // hides curtain grid because of bug where items were clickable even though they were invisible
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
-                anyText("LÅS & LARM") 
-                // adds iframe implement right after curtaindown
-                setTimeout(function(){videos(1);}, videoLoadBuffer)  
-                   
+                anyText("LÅS & LARM")      
             }
             if(button == 'sound'){
-                
                 reset();
                 // hides start image after btn press
                 document.querySelector(".start").classList.add("hide")
@@ -322,11 +244,9 @@ swipeUp('start')
                 // hides curtain grid because of bug where items were clickable even though they were invisible
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
-                anyText("LJUD")
-                setTimeout(function(){videos(2);}, videoLoadBuffer)     
+                anyText("LJUD")    
             }
             if(button == 'light'){
-                
                 reset();
                 // hides start image after btn press
                 document.querySelector(".start").classList.add("hide")
@@ -338,7 +258,6 @@ swipeUp('start')
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
                 anyText("LJUS")
-                setTimeout(function(){videos(3);}, videoLoadBuffer)  
             }
             if(button == 'furniture'){
                 reset();
@@ -354,7 +273,6 @@ swipeUp('start')
                 anyText("MÖBLER")    
             }
             if(button == 'cleaning'){
-                
                 reset();
                 // hides start image after btn press
                 document.querySelector(".start").classList.add("hide")
@@ -365,9 +283,7 @@ swipeUp('start')
                 // hides curtain grid because of bug where items were clickable even though they were invisible
                 document.getElementById("curtain-grid").classList.add("hide")
                 longButtonTopMarginAdd()
-                anyText("STÄD") 
-                setTimeout(function(){videos(4);}, videoLoadBuffer)  
-                
+                anyText("STÄD")    
             }
             if(button == 'breakers'){
                 reset();
@@ -409,58 +325,10 @@ swipeUp('start')
                 anyText("KONTAKT")    
             }
             phoneTouch()
-            swipeUp(button)
+            setTimeout(function(){
+                // brings element into z axis foreground after 500 msto make it work with event listeners :D
+                bringForward()
+            }, 500); 
         };
-
-
-        // checks for swipe up and runs swipe up command on current page
-        function swipeUp(current){
-            var sens2 = 20
-            swipeUpBox = document.querySelector(".swipe-up")
-            i = 0
-            swipeUpBox.addEventListener("touchstart", function(e) {
-                y1 = e.touches[0].pageY
-                console.log("pressbegin")
-                console.log(y1)   
-            });
-
-            var endCoord = {}
-            swipeUpBox.addEventListener("touchmove", function(e) {
-            endCoord = e.targetTouches[0];
-            });
-            y2 = 0  
-            swipeUpBox.addEventListener("touchend", function(e) {
-                y2 = endCoord.pageY;
-                console.log(y2) 
-                // checks coord for start and finnish and if they dont matchup start swipåe up sequence wich is ressentially the same as pressing the button for the pagew you were just on   
-                if(y1-y2 > sens2){ 
-                    buttonAction(current)
-                    // i had to make y zer0 a bunch of times but it works now donw worry about it :D
-                    y2 = 0
-                    endCoord = 0
-                }
-            }); 
-            endCoord = 0
-            i += 1
-
-            swipeUpBox.addEventListener("mousedown", function(e) {
-                y1 = e.pageY
-                console.log(y1);
-                
-            });
-        
-
-            // for desktop
-            swipeUpBox.addEventListener("mouseup", function(e) {
-                y2 = e.pageY;
-                console.log(y2);
-                if(y1-y2 > sens2){
-                    buttonAction(current)
-                    y2 = 0
-                    endCoord = 0
-                }
-            });
-
-        }
 // this was the only solution my brain could come up with but i mean it works
 // play with different orders of the different sub-functions to maybe make the animation smoother

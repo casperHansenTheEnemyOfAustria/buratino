@@ -1,17 +1,17 @@
 // for the love of all that is holy do not check the console i beg you
 // console looks fine again
 function warningText(){
-  var mapDesc = document.querySelector(".map-desc")
-  mapDesc.innerHTML = "Stora salen"
-  mapDesc.classList.remove("warning")
+  var warning = document.querySelector(".warning");
+  var warning2 = document.querySelector(".warning2");
+  warning.classList.add("hide");
+  warning2.classList.add("hide")
 }
 function colliding(){
   function collisionDetection(number2){
       dragMe = document.querySelector(".selected")
       rect = document.querySelector(".table"+number2)
-      var mapDesc = document.querySelector(".map-desc")
-      // var warning = document.querySelector(".warning")
-      // var warning2 = document.querySelector(".warning2")
+      var warning = document.querySelector(".warning")
+      var warning2 = document.querySelector(".warning2")
       function isCollapsed(dragMe, rect){
           var object_1 = dragMe.getBoundingClientRect();
           var object_2 = rect.getBoundingClientRect();
@@ -20,17 +20,13 @@ function colliding(){
               object_1.top < object_2.top + object_2.height && object_1.top + object_1.height > object_2.top) {
           //   rect.classList.add("collide");
                 // does something on collision
-              if (number2 == "16" || number2 == "21" || number2 == "22" ){
-                // console.log("collision detected at restricted area")
-                // warning2.classList.remove("hide")
-                mapDesc.innerHTML = "Här kan man inte placera borden!"
-                mapDesc.classList.add("warning")
+              if (number2 == "16"){
+                console.log("collision detected at skåpsbyrå")
+                warning2.classList.remove("hide")
               }
               else{
-                // console.log("collision detected at"+number2)
-                // warning.classList.remove("hide")
-                mapDesc.innerHTML = "OBS! Borden bör ha mer än 1 meters avstånd!"
-                mapDesc.classList.add("warning")
+                console.log("collision detected at"+number2)
+                warning.classList.remove("hide")
               }
               // setTimeout(function(){
               //     warning.classList.add("hide")
@@ -66,12 +62,6 @@ function colliding(){
       collisionDetection(  "14")
       collisionDetection(  "15")
       collisionDetection(  "16")
-      collisionDetection(  "17")
-      collisionDetection(  "18")
-      collisionDetection(  "19")
-      collisionDetection(  "20")
-      collisionDetection(  "21")
-      collisionDetection(  "22")
   }
   // runs function on all of the items^2
   multiFunc("1")
@@ -89,10 +79,6 @@ function colliding(){
   multiFunc("13")
   multiFunc("14")
   multiFunc("15")
-  multiFunc("17")
-  multiFunc("18")
-  multiFunc("19")
-  multiFunc("20")
 }
 
 
@@ -117,10 +103,6 @@ tables("12")
 tables("13")
 tables("14")
 tables("15")
-tables("17")
-tables("18")
-tables("19")
-tables("20")
 
 
 function tables(number){
@@ -225,7 +207,6 @@ function tables(number){
     // functions for rotating the tables
     var horizontal = document.querySelector(".horizontal")
     var vertical = document.querySelector(".vertical")
-    var rotTog = document.querySelector(".toggler")
     function rotationAdd(){
       var rotatable = document.querySelector(".selected")
       rotatable.classList.add("rotated-table")
@@ -235,13 +216,8 @@ function tables(number){
       rotatable.classList.remove("rotated-table")
     }
 
-    function rotationToggle(){
-      var rotatable = document.querySelector(".selected")
-      rotatable.classList.toggle("rotated-table")
-    }
-
     horizontal.addEventListener("click", rotationAdd())
     vertical.addEventListener("click", rotationRemove())
-    rotTog.addEventListener("click", rotationToggle())
+
 
     

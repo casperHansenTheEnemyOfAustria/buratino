@@ -8,7 +8,6 @@
     overflow: visible;
     position: absolute;
     top: -75vh;
-    will-change: transform;
 }
 
 .long-button {
@@ -72,7 +71,6 @@ button {
     border: none;
     outline: none;
     padding: 0;
-    background-color: transparent;
 }
 
 // Tiles using this class are left-bound on the grid.
@@ -81,13 +79,6 @@ button {
     justify-self: start;
 }
     @media screen and (min-width: 320px) {
-        .tile-1 {
-        font-size: calc(18px + 4 * ((100vw - 320px) / 680));
-        width: $tileSize - 3vmin;
-        height: $tileSize - 3vmin;
-        }
-    }
-    @media screen and (min-width: 380px) {
         .tile-1 {
         font-size: calc(18px + 4 * ((100vw - 320px) / 680));
         width: $tileSize;
@@ -116,17 +107,10 @@ button {
     @media screen and (min-width: 320px) {
         .tile-2 {
         font-size: calc(18px + 4 * ((100vw - 320px) / 680));
-        width: $tileSize - 3vmin;
-        height: $tileSize - 3vmin;
+        width: $tileSize;
+        height: $tileSize;
         }
     }
-    @media screen and (min-width: 380px) {
-      .tile-2 {
-      font-size: calc(18px + 4 * ((100vw - 320px) / 680));
-      width: $tileSize;
-      height: $tileSize;
-      }
-  }
     @media screen and (min-width: 700px) {
       .tile-2 {
         width: $tileSize - 10vmin;
@@ -179,21 +163,11 @@ button {
     z-index: -20;
 
     img {
-        max-width: 75vmin;
+        max-width: 80vmin;
         z-index: -20;
         overflow: visible;
     }
-    @media screen and (min-width: 1000px) {
-      img {
-        max-width: 40vmin;
-      }
-    } 
 }
-@media screen and (min-width: 1025px) {
-  #cover-image {
-    padding-top: $nonCurtainPadding;
-  }
-} 
 
 .tile-icon {
     width: 75%;
@@ -217,9 +191,9 @@ button {
 // Adds a curtain ends for that snazzy look
 .curtainEdge{
     position: absolute;
-    width: 100vw;
+    width: 110vw;
     filter: drop-shadow($curtainShadow);
-    bottom: -4vmax;
+    bottom: -3.5vh;
     z-index: -4;
 }
 
@@ -234,14 +208,14 @@ button {
 
     img {
         object-fit: contain;
-        max-width: $boxWidth;
+        max-width: 80vw;
         overflow: visible;
     }
 
     h5 {
         @include subtitle;
         font-size: 20px;
-        max-width: $boxWidth;
+        max-width: (100vw - (414 / 32));
         text-align: center;
     }
       @media screen and (min-width: 320px) {
@@ -257,9 +231,9 @@ button {
     
     .redbox {
         background-color: $buratinoRed;
-        width: $boxWidth;
-        height: $boxHeight;
-        box-shadow: $boxShadow;
+        width: (100vmin - (414 / 32));
+        height: (37vmin - (414 / 32));
+        filter: drop-shadow($boxShadow);
         @include center-flex;
         flex-direction: column;
 
@@ -283,9 +257,9 @@ button {
         }
         .redbox-mixer {
             background-color: $buratinoRed;
-            width: $boxWidth;
-            height: $boxHeight;
-            box-shadow: $boxShadow;
+            width: (100vmin - (414 / 32));
+            height: (37vmin - (414 / 32));
+            filter: drop-shadow($boxShadow);
             @include center-grid;
             justify-content: space-around;
             cursor: pointer;
@@ -335,12 +309,12 @@ button {
 
 .start-prompt{
   z-index: -2;
-  position: absolute;
-  bottom: 74vh;
-	left: 60vw;
+  position:fixed;
+  margin-bottom: 80vh !important;
+  margin-left: 55vw !important;
   transform: rotate(-30deg);
   animation: startFade 0s 5s forwards;
-  animation-timing-function: $cubicAnimation;
+  animation-timing-function: ease-in-out;
   animation-duration: 500ms;
   opacity: 0%;
 }
@@ -386,24 +360,23 @@ button {
 .overlay{
   position:absolute;
   flex-direction: column;
-  z-index: 5001 !important;
+  z-index: 4 !important;
   display: flex;
   width: 80vmin;
   background-color: white;
-  box-shadow: $itemShadow;
+  filter: drop-shadow($itemShadow);
   top: 5vh;
   padding: 1em;
   margin-bottom: 1em;
   animation-name: tile-fadein;
   animation-duration: 250ms;
-  animation-timing-function: $cubicAnimation;
 
   // The header title for the overlay.
   h6 {
     @include subtitle;
     font-size: 22px;
     line-height: 22px;
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
   }
   @media screen and (min-width: 320px) {
     h6 {
@@ -420,9 +393,8 @@ button {
   // The general text inside the overlay.
   p {
     @include reset-mp;
-    padding-right: 1em;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.4;
     font-size: 18px;
     color: $textColor;
   }
@@ -441,7 +413,10 @@ button {
     @include reset-mp;
     font-weight: 600;
     line-height: 1.4;
-    padding-left: 0.5em;
+    list-style-type: disc;
+    list-style-position: inside;
+    text-indent: -1em;
+    padding-left: 1em;
     font-size: 18px;
     color: $textColor;
     }
@@ -459,36 +434,34 @@ button {
 
 // thing to make pages work as intended
 .bring-forward{
-  z-index: 1 !important; 
+  z-index: 1 ; 
 }
 
 // settings for the background fade layer
 .ovlBackground{
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(25px);
   background-color: rgba($color: #000000, $alpha: .25);
   width: 100vw;
   height: 500vh;
   position: fixed;
   top: -24px;
-  z-index: 5000 !important;
+  z-index: 3 !important;
   @include reset-mp;
   animation-name: tile-fadein;
   animation-duration: 250ms;
-  animation-timing-function: $cubicAnimation;
-  
 }
-
+.wifi-ovl{
+  top: 33vh;
+  left: 5vw;
+}
 .wifi{
+  position: absolute;
   z-index: 3;
-  @include center-flex;
+  top:0;
 }
 
 .xclose{
-  z-index: 5;
-  position: relative;
-  width: 32px;
-  height: 32px;
-  justify-self: flex-end;
+  margin-left:auto;
 }
 
 /*
@@ -501,12 +474,12 @@ button {
 // relative dimensions without margin: w:0.8m L: 2m
 // margin: 0.1m
 // maybe add an image or something with illusrtations of the margin
-.sqtable{
+.table{
   position: absolute;
-  margin-top: 125vw;
-  margin-left: 47vw;
-  width: 14.6666667vw;
-  height: 15vw;
+  margin-top: 60vh;
+  margin-left: 70vw;
+  width: 10.834vw;
+  height: 19.738vw;
   background-image: url(../img/unselected-table.svg);
   background-repeat: no-repeat;
   background-position-x: center;
@@ -516,27 +489,6 @@ button {
   text-align: center;
   overflow: visible;
 }
-@media screen and (min-width: 768px){
-  .sqtable{ 
-  margin-top: 80vw;
-  margin-left: 30vw;
-}
-}
-.rtable{
-  position: absolute;
-  width: 10vw;
-  height:10vw;
-  background-color: rgba($color:#999999, $alpha: 1.0);
-  border-radius: 5vw;
-  margin-top: 126vw;
-  margin-left: 65vw;
-}
-@media screen and (min-width: 768px){
-  .rtable{ 
-  margin-top: 82vw;
-  margin-left: 46vw;
-}
-}
 
 .table p{
   margin-left: 1px;
@@ -545,56 +497,49 @@ button {
 
 // this is my stupid solution for rotating tables as i cannot use the tranform porperty
 // if you change the height/width of the table make sure to change these to that but reversed
-.sqtable.rotated-table{
-  width: 15vw;
-  height: 14.666667vw;
+.rotated-table{
+  width: 19.738vw;
+  height: 10.834vw;
   background-image: url(../img/unselected-table-rotated.svg);
   overflow: visible;
 }
 
-.map-message{
-  width: 80vmin;
-  position: absolute;
-  z-index: 4000;
-  background-color: #FFFFFF;
-}
+
 
 
 // these are for the buttons that rotate the tables around
-
-.operator-wrapper {
-  @include center-grid;
-  justify-content: space-around;
+.rotation-wrapper{
   position: relative;
-  margin-top: 10vh;
+  margin-top: 15vh;
   z-index:-2;
-  grid-auto-flow: column;
-  width: 80vmin;
-  opacity: 0.87;
-
-  button {
-    align-items: center;
-  }
+}
+.rotators{
+  position: relative;
+  width: 35vw;
+  height: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.horizontal{
+  background-color: rgba($color: #CB0000, $alpha: 1);
+  background-image: url("../img/table-horizontal.svg");
+  background-repeat: no-repeat;
+  width:3em;
+  height: 3em;
+  overflow: visible;
+}
+.vertical{
+  background-color: rgba($color: #CB0000, $alpha: 1);
+  background-image: url("../img/table-vertical.svg");
+  background-repeat: no-repeat;
+  width:3em;
+  height: 3em;
+  overflow: visible;
 }
 
-.rotator-caption {
-  padding: 0 !important;
-  width: min-content;
-  text-align: center;
-  font-weight: 600;
-  line-height: 1.1 !important;
-  font-size: 14px !important;
-  color: $textColor;
-}
-@media screen and (min-width: 320px) {
-  .rotator-caption {
-    font-size: calc(14px + 4 * ((100vw - 320px) / 680)) !important;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .rotator-caption {
-    font-size: 18px !important;
-  }
+.vertical, .horizontal{
+  filter: drop-shadow($itemShadow);
 }
 
 
@@ -606,130 +551,39 @@ button {
   margin-left: auto;
   margin-right: auto;
   overflow: visible;
-  max-width: 80vmin !important;
-  margin-top: 2em;
 }
-.map-desc{
+.restricted{
   position: absolute;
-  max-width: 70vmin !important;
-  
-  top: 1.2em;
-  font-size: calc(23px + 6 * ((100vw - 320px) / 680)) !important;
-  text-align: left !important;
-}
-
-.table16.restricted{
-  position: absolute;
-  z-index: -3;
   width: 11vw;
   height: 20vw;
   top:4.5em;
   right:7vw;
 }
 
-@media screen and (min-width: 1024px){
-  .table16.restricted{
-    left:51vw;
-    top:8vw;
-    width: 8vw;
-    height: 13vw;
-  }
-}
-
-@media screen and (min-width: 1024px) and (min-height:1366px){
-  .table16.restricted{
-    left:67vw;
-    top:10vw;
-    width: 10vw;
-    height: 16vw;
-  }
-}
-.table21.restricted{
-  position: absolute;
-  width: 14vw;
-  height: 20vw;
-  top: 85vw;
-  left:2em;
-}
-@media screen and (min-width: 1024px){
-  .table21.restricted{
-    left:3vw;
-    top:60vw;
-    width: 11vw;
-    height: 16vw;
-  }
-}
-
-@media screen and (min-width: 1024px) and (min-height:1366px){
-  .table21.restricted{
-    left:6vw;
-    top:74vw;
-    width: 12vw;
-    height: 20vw;
-  }
-}
-
-.table22.restricted{
-  position: absolute;
-  width: 14vw;
-  height: 20vw;
-  top: 85vw;
-  left: 67vw;
-}
-
-@media screen and (min-width: 1024px){
-  .table22.restricted{
-    left:47vw;
-    top:60vw;
-    width: 11vw;
-    height: 16vw;
-  }
-}
-
-@media screen and (min-width: 1024px) and (min-height:1366px){
-  .table22.restricted{
-    left:65vw;
-    top:74vw;
-    width: 12vw;
-    height: 20vw;
-  }
-}
-.warning{
+.warning, .warning2{
   @include subtitle-warning;
-  max-width: 70vmin !important;
-  position: absolute;
   color: #CB0000 !important;
-  top:1.2em;
-  z-index: -14;
-  
-  text-align: left !important;
+  position:absolute;
+  z-index: 23;
+  top:3vh;
 }
-@media screen and (min-width: 320px) {
-  .warning{
-    font-size: calc(20px + 4 * ((100vw - 320px) / 680)) !important;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .warning{
-    font-size: 22px !important;
-  }
-} 
 
 .yt-wrapper{
-  width: $boxWidth;
+  width: (100vmin - (414 / 32));
 }
 
 .yt-player{
   position:relative;
-	width: $boxWidth;
-  height: $boxWidth * 0.5625;
-  overflow:hidden;
-  box-shadow: $boxShadow;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+  
 }
 
 .yt-player iframe, .yt-player object , .yt-player embed{
   position:absolute;
-  z-index: 2 !important;
+  z-index: 3 !important;
 	top:0;
 	left:0;
 	width:100%;
@@ -737,69 +591,11 @@ button {
 }
 
 .thumbnail{
-  background-color: $buratinoRed;
-  width: $boxWidth;
-  height: $boxWidth * 0.5625;
-  
-  @include center-flex;
-  flex-direction: column;
-  top: 0;
   z-index: -30;
+  top:0;
+	left:0;
+	width: 100%;
+	height:100%;
   position:absolute;
-  
-  img {
-    width: 20vmin;
-  }
-  h5 {
-    color: #FFFFFF;
-  }
-}
-¨
-
-
-button:active{
-  -webkit-box-shadow: inset 10px 10px 54px -17px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 10px 10px 54px -17px rgba(0,0,0,0.75);
-  box-shadow: inset 10px 10px 54px -17px rgba(0,0,0,0.75);
-}
-
-
-footer{
-  @include reset-mp;
-  color: rgba($color: #000000, $alpha: .5);
-  font-size: 0.9em;
-}
-
-.swipe-up{
-  position: absolute;
-  z-index: -3;
-  background-color: rgba($color: #000000, $alpha: 0);
-  width: 87vw;
-  height: 25vh;
-  top: 67%;
-  left: auto;
-  right: auto;
-}
-
-.install-prompt{
-  top:30vh;
- 
-}
-
-.apple-prompt-example {
-  max-width: 60vmin !important;
-}
-
-ol, ul {
-  padding-inline-start: 20px;
-}
-
-.title-container {
-  display: inline-flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-
-.promptClose{
-  z-index: 400000000000000000 !important;
+	// width: (100vmin - (414 / 32))
 }
