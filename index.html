@@ -9,10 +9,35 @@
     <title>Buratino Instruktino</title>
     <meta name="description" content="Få tillgång till Buratinos instruktionsbok genom denna applikationen!">
     <meta name="theme-color" content="#CB0000"/>
+    <meta name="apple-mobile-web-app-title" content="Buratino">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="manifest" href="manifest.json"></link>
-    <style> * { font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }</style>
-    <style> body {margin: 0;  overflow-x: hidden; overscroll-behavior: contain; margin-bottom: 1em;  overflow: scroll;} .everything{ -webkit-overflow-scrolling: touch;} </style>
+    <link rel="apple-touch-startup-image" href="/images/img/home-icon2k.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/img/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/images/img/apple-icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/images/img/apple-icon-256x256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/images/img/apple-icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/images/img/apple-icon-1024x1024.png">
+    <link rel="icon" sizes="192x192" type="image/png" href="/images/img/android-icon-192x192.png">
+    <link rel="icon" sizes="16x16" type="image/x-icon" href="/images/img/favicon.ico">
+    <link rel="icon" sizes="16x16" type="image/png" href="/images/img/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" type="image/png" href="/images/img/favicon-32x32.png">
+    <link rel="icon" sizes="96x96" type="image/png" href="/images/img/favicon-96x96.png">
+
+
+    <style> * { font-family: Helvetica Neue, Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }</style>
+    <style> body {margin: 0;  overflow-x: hidden; overscroll-behavior-y: contain;  width:100vw; margin-bottom: 1em; } .everything{ -webkit-overflow-scrolling: touch; width:100vw; }</style>
     <style>.long-button-big-text {font-style: normal; font-weight: bold; font-size: 20px; margin: 0; padding: 0; font-size: 36px !important; letter-spacing: 0.25rem; color: #FFFFFF; -webkit-filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35)) !important; filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.35)) !important; } @media screen and (min-width: 320px) { .long-button-big-text { font-size: calc(36px + 4 * ((100vw - 320px) / 680)) !important; } } @media screen and (min-width: 1000px) { .long-button-big-text { font-size: 40px !important; } }</style>
 </head>
 <body class="body">
@@ -58,8 +83,16 @@
                     <img src="img/support-icon.svg" class="tile-icon">
                     <h6 class="tile-subtitle">KONTAKT</h6>
                 </button>
+                <div class="swipe-up">
+                
+                </div>
             </div>
             <!--When clicking this button, the curtain rolls down-->
+            <!-- <picture >
+                <source srcset="img/halfCurtain.webp" type="image/webp">
+                <source srcset="img/halfCurtain.png" type="image/png">
+                <img src="img/halfCurtain.webp" alt="curtain edge" class="curtainEdge ">
+            </picture> -->
             <img src="img/halfCurtain.svg" alt="curtain edge" class="curtainEdge ">
             <button  class="long-button btn1"><p class="long-button-text" onclick="curtainAction()">START</p></button>
             <img src="img/bruh-string.svg" alt="curtain string" class="curtain-string">
@@ -67,30 +100,52 @@
             <!-- this is the overlay for showing the wifi password. -->
             <div class="wifi">
                 <div class="wifi-ovl overlay one hide">
-                    <h6>WIFI-LÖSENORD:</h6>
-                    <p>CooltLösenord123</p>
-                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose wifi-close">
+                    <div class="title-container">
+                        <img src="img/close-24px 2ex.svg" alt="close page" class="xclose wifi-close">
+                        <h6>WIFI-LÖSENORD:</h6>
+                    </div>
+                    
+                    <p>surfafritt</p>
                 </div>
                 <div class="ovlBackground wifi-close hide">
 
                 </div>
             </div>
-   
-        </div>
+            
+        </div> 
+        <!-- curtain end -->
         
         <!-- different non curtain pages -->
         <div  id="cover-image" class="start">
+            <div class="ovlBackground promptBackground">
+
+            </div>
+            <div class="overlay one hide install-prompt">
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose promptClose">
+                    <h5>Hejsan!</h5>
+                </div>
+                <p>För bästa upplevelsen, rekommenderar vi att ni installerar applikationen:</p>
+                <ol>
+                    <li>
+                        Se botten av skärmen och tryck på <img src="img/export.svg" alt="square icon with an arrow">
+                        
+                    </li>
+                    <br>
+                    <li>
+                        <p>Scrolla ner och tryck på </p> 
+                        <img src="img/appleInstall2.png" alt="Lägg till på hemskärmen" class="apple-prompt-example">
+                    </li>
+                </ol>
+            </div>
             <picture>
                 <source srcset="img/company-logo.webp" type="image/webp">
                 <source srcset="img/company-logo.png" type="image/png">
                 <img src="img/company-logo.png" alt="buratino">
             </picture>
-            <picture>
-                <source srcset="img/mask-logo.webp" type="image/webp">
-                <source srcset="img/mask-logo.png" type="image/png">
-                <img src="img/mask-logo.png" alt="masks">
-            </picture>
+            <img src="img/mask-logo.svg" alt="masks">
             <h5 class="start-prompt">Dra i snöret!</h5>
+            <footer><small>&copy;<script>document.write(new Date().getFullYear())</script> Viggo Fredriksson, Casper Hansen, Rony Majzoub</small></footer>
         </div>
         <div class="hide security">
             <div class="ovlBackground">
@@ -100,50 +155,65 @@
             <!-- add one two or three to every description page you make from top to bottom -->
             <div class="overlay one hide">
                 <!-- this is where the descriptions go -->
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <h6>ATT LÅSA OCH LARMA BURATINO</h6>
-                <p>Det viktigaste för oss när du hyr Buratino är att det är larmat och låst korrekt. Låset och larmet är det som skyddar vår verksamhet och gör att vi kan erbjuda sån fantastisk teknik som vi gör idag!
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <h6>ATT LÅSA OCH LARMA BURATINO</h6>
+                </div>
+                
+                <p>
+                    Det viktigaste för oss när du hyr Buratino är att det är larmat och låst korrekt. Låset och larmet är det som skyddar vår verksamhet och gör att vi kan erbjuda den fantastiska teknik som vi gör idag!
                     <br><br>
-                    Den som får nyckeln är ansvarig. Man kan inte gå hem tidigare på kvällen och ge nycklarna till en kompis som sedan inte “vet” hur man larmar på eller av samt låser.
+                    Den som får nyckeln är ansvarig. Det är inte okej att gå hem tidigare på kvällen och lämna nycklarna till en kompis som sedan inte vet hur man låser korrekt och inte kan sköta larmet.
                     <br><br>
-                    Är det inte korrekt larmat och låst gäller inte vår försäkring. Då är det du som bokat som är ansvarig.
+                    Är det inte korrekt larmat och låst gäller inte vår försäkring. Då är det du som hyr som är ansvarig.
                     <br><br>
+                </p>
+                <ul>
                     <li>För att larma av, håll larmbrickan snabbt mot Securitas loggan längst ner i högra hörnet på larmpanelen.</li>
-                    <br><br>
-                    <li>För att larma på, håll larmbrickan i flera sekunder mot loggan längst ner i högra hörnet på larmpanelen. Håll brickan stilla mot larmpanelen tills det står ”Påslag” på displayen.</li>
-                    <br><br>
-                    <p>Innan du larmar på. Lås nödutgång och ytterdörr. Dessa dörrar har 3 lås totalt. Nödutgången är i stora salen och ytterdörren är i entrén.</p>
-                    <br><br>
-                    <p>Alla fönster ska vara stängda och låsta. Kolla ALLA fönster, kök, stora salen, toaletter, hall.</p>
-                    <br><br>
-                    <p>Befinner ni er inte i lokalen skall det alltid vara LARMAT.</p>
-                    <br><br>
-                    <p>Om larmet skulle utlösas av misstag sms:a “Det var vi som utlöste larmet” till 0703288714.</p>
-                    <br><br>
-                    <p>OBS. Ring inte!</p>
-                    </p>
-                 
+                    <br>
+                    <li>För att larma på, håll larmbrickan stilla mot loggan längst ner i högra hörnet på larmpanelen tills det står “Påslag” på displayen. </li>
+                </ul>
+                <p>
+                    <br>
+                        Innan du larmar på. Lås nödutgång och ytterdörr. Dessa dörrar har sammanlagt tre lås. Nödutgången finns i stora salen och ytterdörren är i entrén.
+                        <br><br>
+                        Alla fönster ska vara stängda och låsta. Kolla samtliga fönster i, köket, stora salen, på toaletterna och i hallen.
+                        <br><br>
+                        Det ska alltid vara larmat då ni inte befinner er i lokalen
+                        <br><br>
+                        Om larmet skulle utlösas av misstag, skicka följande textmeddelande till 0703288714: “Det var vi som utlöste larmet”. Ring ej. 
+                </p>
             </div>
             <div class="overlay two hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                <div class="title-container"><img src="img/close-24px 2ex.svg" alt="close page" class="xclose"></div>
+                
                 <!-- this is where the descriptions go -->
-                <p>exempel två</p>
-            </div>
-            <div class="overlay three hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>exempel tre</p>
+                <p>
+                    Vi ser att du behöver hjälp. Innan du kontaktar oss vill vi bara se om detta kan vara en lösning på dina problem.
+                </p>
+                <ol>
+                    <li>Har du läst instruktionen för det du behöver hjälp med?</li>
+                    <br>
+                    <li>Har du kontrollerat att allt är korrekt påslaget?</li>
+                    <br>
+                    <li>Är du uppkopplad mot vårt WiFi för att t ex mixerbordet skall fungera?</li>
+                    <br>
+                    <li>Ingår det som inte fungerar i ert paket?</li>
+                    <br>
+                    <li>Har det fungerat tidigare under kvällen? Vad har ni ändrat på för att det inte skall fungera?</li>
+                </ol>
+                <p>
+                    <br>
+                    Tänk på att det kan tillkomma en utkörningsavgift om felet visar sig vara ett handhavandefel och om inget var trasigt.
+                    <br><br>
+                    Om detta inte löste era problem kan ni skicka ett sms med felbeskrivning till 0703288714. 
+                </p>
             </div>
             
-            <picture>
-                <source srcset="img/double-mask-logo(transparent).webp" type="image/webp">
-                <source srcset="img/double-mask-logo(transparent).png" type="image/png">
-                <img src="img/double-mask-logo(transparent).png" alt="masks">
-            </picture>
+            <img src="/img/double-mask-logo(transparent).svg" alt="masks">
             <div class="yt-wrapper">
-                <div class="yt-player" onclick="videos('1')" >
+                <div class="yt-player">
                     <div class="frame1"></div>
-                    <img src="img/thumbnail1.webp" alt="video thumbnail" class="thumbnail">
                 </div>
             </div>
             <!-- add btn1 etc to every button you make to make thewm correspond to the one two things -->
@@ -160,9 +230,12 @@
             </div>
 
             <div class="overlay one hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <h6>LJUD PÅ BURATINO</h6>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>LJUD PÅ BURATINO</h6>
+                </div>
+                
                 <p>Det är förbjudet att medtaga eget ljud till Buratino. All musik, både liveband och musik från dator, telefon, DJ-bord osv måste spelas från vår anläggning.
                     <br><br>
                     Om detta inte efterföljs har vi rätt att avbryta festen med omedelbar verkan.
@@ -180,20 +253,35 @@
                  
             </div>
             <div class="overlay two hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                <div class="title-container"><img src="img/close-24px 2ex.svg" alt="close page" class="xclose"></div>
+                
                 <!-- this is where the descriptions go -->
-                <p>oh god please help me</p>
+                <p>
+                    Vi ser att du behöver hjälp. Innan du kontaktar oss vill vi bara se om detta kan vara en lösning på dina problem.
+                </p>
+                <ol>
+                    <li>Har du läst instruktionen för det du behöver hjälp med?</li>
+                    <br>
+                    <li>Har du kontrollerat att allt är korrekt påslaget?</li>
+                    <br>
+                    <li>Är du uppkopplad mot vårt WiFi för att t ex mixerbordet skall fungera?</li>
+                    <br>
+                    <li>Ingår det som inte fungerar i ert paket?</li>
+                    <br>
+                    <li>Har det fungerat tidigare under kvällen? Vad har ni ändrat på för att det inte skall fungera?</li>
+                </ol>
+                <p>
+                    <br>
+                    Tänk på att det kan tillkomma en utkörningsavgift om felet visar sig vara ett handhavandefel och om inget var trasigt.
+                    <br><br>
+                    Om detta inte löste era problem kan ni skicka ett sms med felbeskrivning till 0703288714. 
+                </p>
             </div>
 
-            <picture>
-                <source srcset="img/double-mask-logo(transparent).webp" type="image/webp">
-                <source srcset="img/double-mask-logo(transparent).png" type="image/png">
-                <img src="img/double-mask-logo(transparent).png" alt="masks">
-            </picture>
+            <img src="/img/double-mask-logo(transparent).svg" alt="masks">
             <div class="yt-wrapper">
-                <div class="yt-player" onclick="videos('2')" >
+                <div class="yt-player">
                     <div class="frame2"></div>
-                    <img src="img/thumbnail1.webp" alt="video thumbnail">
                 </div>
             </div>
             <button class="redbox btn1">
@@ -213,32 +301,52 @@
             </div>
 
             <div class="overlay one hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <h6>LJUS PÅ BURATINO</h6>
-                <p>På höger sida om scenen (ni kollar mot scenen) finns ett vitt säkringsskåp. Alla brytare skall stå uppåt på hela skåpet. Dra upp en säkring i taget. drar ni upp dom för fort är risken stor att en huvudsäkring går.*
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>LJUS PÅ BURATINO</h6>
+                </div>
+                
+                <p>
+                    På scenens högra sida finns ett säkringsskåp. Samtliga strömbrytare i skåpet skall stå uppåt. Dra upp en säkring i taget. Ta det försiktigt. Om ni drar upp dem för fort är risken stor att en huvudsäkring går.*
                     <br><br>
-                    När detta är gjort startar lamporna i taket. Ni ställer sedan in ljuset med hjälp av touchskärmen som är på motsatt sida av scenen. 
+                    Om allt går rätt till ska lamporna i taket starta. Ljuset kan ni sedan ställa in med hjälp av touchskärmen som finns monterad på väggen på motsatt sida av scenen. 
                     <br><br>
-                    *Om huvudsäkringen går, Dra ner alla brytare igen. Gå till entrén / Baren. Där finns en röd dörr bakom bardisken. kolla så att alla säkringar bakom bardisken står rakt upp. När alla säkringar står rakt upp kan ni starta ljuset igen.
-                    </p>
+                    *Om huvudsäkringen går, dra ner alla brytare igen. Gå sedan till baren vid entrén. Bakom bardisken finns en röd dörr. Se till att alla säkringar bakom bardisken står rakt upp. När alla står rakt upp kan ljuset startas igen.
+
+                </p>
                  
             </div>
             <div class="overlay two hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                <div class="title-container"><img src="img/close-24px 2ex.svg" alt="close page" class="xclose"></div>
+                
                 <!-- this is where the descriptions go -->
-                <p>HJÄÄÄÄÄÄÄLP AAAAAAAAA</p>
+                <p>
+                    Vi ser att du behöver hjälp. Innan du kontaktar oss vill vi bara se om detta kan vara en lösning på dina problem.
+                </p>
+                <ol>
+                    <li>Har du läst instruktionen för det du behöver hjälp med?</li>
+                    <br>
+                    <li>Har du kontrollerat att allt är korrekt påslaget?</li>
+                    <br>
+                    <li>Är du uppkopplad mot vårt WiFi för att t ex mixerbordet skall fungera?</li>
+                    <br>
+                    <li>Ingår det som inte fungerar i ert paket?</li>
+                    <br>
+                    <li>Har det fungerat tidigare under kvällen? Vad har ni ändrat på för att det inte skall fungera?</li>
+                </ol>
+                <p>
+                    <br>
+                    Tänk på att det kan tillkomma en utkörningsavgift om felet visar sig vara ett handhavandefel och om inget var trasigt.
+                    <br><br>
+                    Om detta inte löste era problem kan ni skicka ett sms med felbeskrivning till 0703288714. 
+                </p>
             </div>
 
-            <picture>
-                <source srcset="img/double-mask-logo(transparent).webp" type="image/webp">
-                <source srcset="img/double-mask-logo(transparent).png" type="image/png">
-                <img src="img/double-mask-logo(transparent).png" alt="masks">
-            </picture>
+            <img src="/img/double-mask-logo(transparent).svg" alt="masks">
             <div class="yt-wrapper">
-                <div class="yt-player" onclick="videos('3')" >
+                <div class="yt-player" >
                     <div class="frame3"></div>
-                    <img src="img/thumbnail1.webp" alt="video thumbnail" class="thumbnail">
                 </div>
             </div>
             <button class="redbox btn1">
@@ -253,60 +361,103 @@
 
             </div>
             <div class="overlay one hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                <div class="title-container"><img src="img/close-24px 2ex.svg" alt="close page" class="xclose"></div>
+                
                 <!-- this is where the descriptions go -->
-                <p>Här kan du designa din egen 
-                    <br>
-                    planlösning för ditt event. 
-                    <br>
-                    Lägg ut borden såsom du vill ha
-                    <br> 
-                    dem och ta sedan en skärmdump!
-                    <br>
-                    <br>
-                    Tryck på knappen nedan för att börja!
+                <p>
+                    Här kan du designa din egen planlösning för ditt event. Lägg ut borden såsom du vill ha dem och ta sedan en skärmdump!
+                    <br><br>
+                    Tryck på knappen "öppna karta" nedan för att börja!
                 </p> 
             </div>
+            <div class="overlay map-message hide">
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <h5>Hej!</h5>
+                </div>
+                
+                <p>
+                    Tyvärr så finns inte denna funktion på 
+                    skrivbordsversionen av applikationen. 
+                    Försök istället komma åt applikationen på
+                    en mobil enhet eller läsplatta!
+                </p>
+            </div>
             <div class="overlay two hide map-ovl">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <h5>Kartsida</h5>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    
+                </div>
+                <h5 class="map-desc">Stora salen</h5>
+                
                 <h6 class="warning hide">OBS! Borden bör ha mer än 1 meters avstånd!</h6>
                 <h6 class="warning2 hide">Här kan man inte placera borden!</h6>
                 <img src="img/map.svg" alt="map of buratino " class="map">
+                <div class="map-message hide">
+                    <h5>Hej!</h5>
+                    <p>
+                        Tyvärr så finns inte denna funktion på 
+                        skrivbordsversionen av applikationen. 
+                        Försök istället komma åt applikationen på
+                        en mobil enhet eller läsplatta!
+                    </p>
+                </div>
+                <p>Ta en skärmdump för att spara din möblering!</p>
+                <p>
+                    <br>
+                    Runda bord: 120cm
+                    <br>
+                    Avlånga bord: 182x76 
+                    <br>
+                    8-10 pers per bord </p>
                 <div class="restricted table16"></div>
+                <div class="restricted table21"></div>
+                <div class="restricted table22"></div>
                 <!-- Here are all the tables -->
-                    <div class="table1 table"></div>
-                    <div class="table2 table" ></div>
-                    <div class="table3 table"></div>
-                    <div class="table4 table" ></div>
-                    <div class="table5 table" ></div>
-                    <div class="table6 table" ></div>
-                    <div class="table7 table" ></div>
-                    <div class="table8 table" ></div>
-                    <div class="table9 table" ></div>
-                    <div class="table10 table" ></div>
-                    <div class="table11 table" ></div>
-                    <div class="table12 table" ></div>
-                    <div class="table13 table" ></div>
-                    <div class="table14 table" ></div>
-                    <div class="table15 table" ></div>
+                    <div class="sqtable table1 table hide" id="1"></div>
+                    <div class="sqtable table2 table hide" id="2"></div>
+                    <div class="sqtable table3 table hide"id="3"></div>
+                    <div class="sqtable table4 table hide" id="4"></div>
+                    <div class="sqtable table5 table hide" id="5"></div>
+                    <div class="sqtable table6 table hide" id="6"></div>
+                    <div class="sqtable table7 table hide" id="7"></div>
+                    <div class="sqtable table8 table hide" id="8"></div>
+                    <div class="sqtable table9 table hide" id="9"></div>
+                    <div class="sqtable table10 table hide" id="10"></div>
+                    <div class="sqtable table11 table hide" id="11"></div>
+                    <div class="sqtable table12 table hide" id="12"></div>
+                    <div class="sqtable table13 table hide" id="13"></div>
+                    <div class="sqtable table14 table hide" id="14"></div>
+                    <div class="sqtable table15 table hide" id="15"></div>
+                    <!-- round tables -->
+                    <div class="rtable table17 table hide" id="17"></div>
+                    <div class="rtable table18 table hide" id="18"></div>
+                    <div class="rtable table19 table hide" id="19"></div>
+                    <div class="rtable table20 table hide" id="20"></div>
+                    
                 <!-- This is where the tables end -->
-                <div class="rotation-wrapper">
-                    <p class="rotator-caption">Rotera borden!</p>
-                    <div class=rotators>
-                        <div class="horizontal" onclick="rotationAdd()">
-                        </div>
-                        <div class="vertical" onclick="rotationRemove()">
-                        </div>
-                    </div>
+                <div class="operator-wrapper">
+                    <button class="toggler" onclick="rotationToggle()">
+                        <img src="img/rotate-icon.svg" alt="rotate">
+                        <p class="rotator-caption">Rotera borden!</p>
+                    </button>
+                    <button class="add-rect" onclick="plusMinus(2)">
+                        <img src="img/RectangularTableButton.svg" alt="">
+                        <p class="rotator-caption">Skapa avlångt bord!</p>
+                    </button>
+                    <button class="add-round" onclick="plusMinus(1)">
+                        <img src="img/RoundTableButton.svg" alt="">
+                        <p class="rotator-caption">Skapa runt bord!</p>
+                    </button>
+                    <button class="remove" onclick="plusMinus(0)">
+                        <img src="img/remove-icon.svg" alt="">
+                        <p class="rotator-caption">Radera valt bord!</p>
+                    </button>
+                    
                 </div>
             </div>
-            <picture>
-                <source srcset="img/double-mask-logo(transparent).webp" type="image/webp">
-                <source srcset="img/double-mask-logo(transparent).png" type="image/png">
-                <img src="img/double-mask-logo(transparent).png" alt="masks">
-            </picture>
+            <img src="/img/double-mask-logo(transparent).svg" alt="masks">
             <button class="redbox btn1">
                 <h6>INSTRUKTIONER</h6>
             </button>
@@ -320,32 +471,140 @@
             </div>
 
             <div class="overlay one hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>KLEAN</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>STÄDRUTINER</h6>
+                </div>
+                
+                <p>Boka städ via oss! Vi erbjuder följande för ett fastpris:
+                    Dammsugning och våttorkning av alla golvytor. Damma av och torka alla bänkytor,
+                    fönsterbrädor, dörrar, väggar och biostolar.
+                    Städning av toaletter, kylar, kök.
+                    Scenen och eventuella bi-ytor städas grundligt.
+                    Vi ansvarar inte för sopor, disk och att möbler återställs.
+                    <br><br>
+                    Vi hoppas att du som hyr här kommer få det supertrevligt! En stor grej när det gäller
+                    trivsel är att det känns städat och fräscht! Därför har vi gjort en lista som hjälper dig att
+                    lämna det snyggt till nästa hyresgäst så dom får det lika fint och bra som du har fått det
+                    <br><br>
+                    STORA SALEN
+                    
+                    <ul>
+                        <li>Dammsug hela salen, gäller även scen. Tänk på att man kanske får lyfta på
+                        tyger osv. Tänk på att det finns utrymmen bredvid scenen och i hörnen, under stolar och vid sidan av skåp.</li>
+                        <br>
+                        <li>Plocka bort allt skräp. burkar, tomma glas, dekoration osv. det kan ha rullat in under
+                        skåpen och bakom scen osv.</li>
+                        <br>
+                        <li>Våttorka scenen grundligt. Är det klibbigt kanske man får göra det två gånger.</li>
+                        <br>
+                        <li>Torka av fönsterbräda och räcken.</li>
+                        <br>
+                        <li>Använd skurmaskinen i korridor och HELA stora salen så allt verkligen försvinner från
+                        golven. Glöm inte tömma maskinen efter er.</li>
+                    </ul>
+                    <br>
+                    <p>HALL & KÖK</p>
+                    
+                    <ul>
+                        <li>Gör likadant som i stora salen, dammsug först. Sedan våttorkar ni ytor som är svåra att
+                        komma åt. tex köksgolv, hörnen, under barstolarna samt deras fotstöd osv.</li>
+                        <li>Torka av alla bänkytor.</li>
+                        <li>Gör rent kylen / kylarna efter er.</li>
+                        <li>Torka rent eventuella fotavtryck på väggar.</li>
+                        <li>Starta en maskin disk och se till att kaffekokare och andra kökstillbehör är rena.</li>
+                        <li>Gör rent spis osv efter er.</li>
+                        <li>Kör skurmaskinen på det svarta golvet. Ej inne i köket.</li>
+                    </ul>
+                    <br>
+                    <p>GARDEROB</p>
+                    
+                    <ul>
+                        <li>Dammsug golv våttorka för hand.</li>
+                    </ul>
+                    <br>
+                    <p>TOALETTER</p>
+                    
+                    <ul>
+                        <li>Tvätta toaletter och andra porslinsytor.</li>
+                        <li>Släng allt papper och skräp.</li>
+                        <li>Torka av väggar och gör rent urinoar.</li>
+                        <li>Fyll på med ”Lukta gott” tablett i urinoar.</li>
+                        <li>Våttorka golv och bakom toalett för hand noggrant.</li>
+                    </ul>
+                    </p>
                  
             </div>
             <div class="overlay two hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>Just testing to see if deploy works2</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>INSTRUKTIONER FÖR DISKMASKIN</h6>
+                </div>
+                
+                <p>FÖRBEREDELSE AV DISKMASKIN
+                    <br>
+                    <ol>
+                        <li>
+                            Vrid vredet längst till höger på maskinen till |. En grön lampa tänds.
+                            (Maskinen skall starta, vatten fylls på och värms upp. detta tar några minuter den fyller även upp diskmedel & torkmedel själv.)
+                        </li>
+                        <br>
+                        <li>
+                            När grön lampa nummer 2 lyser är maskinen uppe i arbetstemperatur. (går även att starta tidigare men garanterar ej ren disk)
+                        </li>
+                    </ol>
+                   <br>
+                   <p>START AV DISK</p>
+                   <ol>
+                    <li>Öppna luckan.</li> 
+                    <br>
+                    <li>Skjut in diskkorg med smutsdisk och stäng luckan. Skölj av eventuella matrester innan!</li> 
+                   <br>
+                    <li>Välj diskprogram.
+                        <br>
+                        |. = 2 min
+                        <br>
+                        ||. = 3 min
+                        <br>
+                        |||. = 4 min
+                    </li> 
+                   <br>
+                    <li> Vrid samma vred som du startade maskinen med ett halvt varv åt höger, till startsymbolen (återfjädrar) och en diskning påbörjas.</li>
+                   <br>
+                    <li>Upprepa upp till 7 diskar då vatten behöver bytas.</li> 
+                    </ol>
+                    <br>
+                   <p>EFTER AVSLUTAD DISK OCH VID BYTE AV VATTEN</p>
+                   <ol>
+                    <li>Öppna luckan och dra ut det runda, vita plaströret och stäng sedan luckan.</li> 
+                    <br>
+                    <li>Vrid vredet du startade maskinen med till vänster, till läge för urpumpning.</li> 
+                    <br>
+                    <li>När det är klart, sätt tillbaka plaströret.</li> 
+                    <br>
+                    <li>Om ni skall fortsätta diska, börja då om från punkt 1 i ”START AV DISK”. Annars, stäng av maskinen genom att ställa startvredet rakt upp.</li> 
+                    </ol>
+                   </p>
             </div>
             <div class="overlay three hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>TRASH MAN: I EAT GARBAGE</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>SOPHANTERING</h6>
+            </div>
+                
+                <p>OBS! Det är absolut förbjudet att slänga / lämna sopor vid
+                    kyrkans soprum. Sopor får ni ta med er hem eller slänga på en återvinningscentral. Buratino AB tillhandahåller ej egen sophantering.
+                    </p>
             </div>
 
-            <picture>
-                <source srcset="img/double-mask-logo(transparent).webp" type="image/webp">
-                <source srcset="img/double-mask-logo(transparent).png" type="image/png">
-                <img src="img/double-mask-logo(transparent).png" alt="masks">
-            </picture>
+            <img src="/img/double-mask-logo(transparent).svg" alt="masks">
             <h5>STÄDNING PÅ BURATINO</h5>
             <div class="yt-wrapper">
-                <div class="yt-player" onclick="videos('4')">
+                <div class="yt-player">
                     <div class="frame4"></div>
-                    <img src="img/thumbnail1.webp" alt="video thumbnail">
                 </div>
             </div>
             <button class="redbox btn1">
@@ -364,21 +623,53 @@
             </div>
 
             <div class="overlay one hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>TOUCH THE BROW WIRE IT GOES BROWN IN YOUR PANTS</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>VÅRA SÄKRINGSSKÅP</h6>
+                </div>
+                
+                <p>Som vilken fastighet som helst är våran lokal utrustad med flertalet säkringar. Huvudsäkringarna hittar du i vårt säkringsskåp som är placerat i det röda skåpet bakom bardisken. Som huvudregel skall alla säkringar stå rakt upp.
+                    <br><br>
+                    Dom 3 stora keramik-säkringarna som sitter under de två vita säkringsskåpen är till varmvattenberedaren. 
+                    <br><br>
+                    Det finns en undercentral på höger sida om scenen för ljus och ljud och en undercentral på vänster sida på scenen för allmän belysning och eluttag. Det är även en undercentral placerad bakom dörren vid entén till stora salen. Denna sköter en del uttag, värmepumpar och takbelysning.
+                    <br><br>
+                    Om en säkring har utlöst måste man ta reda på problemet varför den utlöst innan man slår upp den igen. tex, har ni kopplat in en elektrisk apparat i ett uttag och säkringen går? Koppla ur den igen och dra upp säkringen. Koppla sedan in eran elektriska apparat igen. Om säkringen går igen, använd inte den utrustning ni försöker koppla in. Den är troligen trasig eller drar för mycket ström för uttaget.
+                    <br><br>
+                    Ibland går säkringarna när man startar ljud och ljus. Detta händer för att startströmmen blir för stor. Det som har hänt är att ni har satt på utrustningen för snabbt efter varandra. Klicka på flikarna ljud eller ljus för att läsa om hur du skall sätta igång detta på ett korrekt sätt.
+                    <br><br>
+                    Om du är osäker på hur man slår på en säkring. Rådfråga alltid oss eller fråga en kunnig som är med er under ert evenemang.</p>
             </div>
             <div class="overlay two hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>OH FUCK SHIT HEEELPP MEEMEMEMEMEEEE AAAA</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                </div>
+                
+                <p>
+                    Vi ser att du behöver hjälp. Innan du kontaktar oss vill vi bara se om detta kan vara en lösning på dina problem.
+                </p>
+                <ol>
+                    <li>Har du läst instruktionen för det du behöver hjälp med?</li>
+                    <br>
+                    <li>Har du kontrollerat att allt är korrekt påslaget?</li>
+                    <br>
+                    <li>Är du uppkopplad mot vårt WiFi för att t ex mixerbordet skall fungera?</li>
+                    <br>
+                    <li>Ingår det som inte fungerar i ert paket?</li>
+                    <br>
+                    <li>Har det fungerat tidigare under kvällen? Vad har ni ändrat på för att det inte skall fungera?</li>
+                </ol>
+                <p>
+                    <br>
+                    Tänk på att det kan tillkomma en utkörningsavgift om felet visar sig vara ett handhavandefel och om inget var trasigt.
+                    <br><br>
+                    Om detta inte löste era problem kan ni skicka ett sms med felbeskrivning till 0703288714. 
+                </p>
             </div>
 
-            <picture>
-                <source srcset="img/double-mask-logo(transparent).webp" type="image/webp">
-                <source srcset="img/double-mask-logo(transparent).png" type="image/png">
-                <img src="img/double-mask-logo(transparent).png" alt="masks">
-            </picture>
+            <img src="/img/double-mask-logo(transparent).svg" alt="masks">
             <button class="redbox btn1">
                 <h6>Så här sköter du säkringarna</h6>
             </button>
@@ -392,29 +683,136 @@
             </div>
 
             <div class="overlay one hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <h6>BURATINO SILVER</h6>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>BURATINO SILVER</h6>
+                </div>
+                
                 <p>Ett perfekt paket för dig som vill ha föreläsning, samla ett par vänner för en middag eller kanske vill ha en teambuildningaktivitet utan dans och musik. I silverpaketet ingår alla utrymmen i teatern. Ni får tillgång till scenen, stora salen samt cafédelen med tillhörande kök och toaletter. Kaffekokare och bord för upp till 100 personer och över 90 stolar.</p>
             </div>
             <div class="overlay two hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <h6>BURATINO GULD</h6>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>BURATINO GULD</h6>
+                </div>
+                
                 <p>Det vanligaste paketet och det självklara valet för din fest! Detta paketet har allt du kan tänka dig för att få ditt kalas eller din fest att bli något över det vanliga. Utöver det som ingår i silverpaketet får du även tillgång till vår ljussystem där du helt fritt kan välja vilket ljus du vill ha. Du kan bland annat få discoljus, rökmaskin, middagsbelysning där väggarna skiftar i olika färger och mycket mer! Du får även tillgång till två stycken mikrofoner och vårt platsbyggda ljudsystem med tillhörande högtalare för att få den riktigt goa känslan på ljudet.</p>
             </div>
             <div class="overlay three hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <h6>BURATINO PREMIUM</h6>
-                <p>Här har du allt du kan tänka dig. Slå ihop Guld och Silver så har du bara början. Skall du ha en spelning, en teaterföreställning eller något annat som kräver en scen och publiken förväntar sig det bästa av det bästa? I Premium ingår en tekniker* för kvällens evenemang som ser till att allt flyter på. Dessa styr både ljud och ljus för er, är behjälplig med riggning samt vet hur allt skall mickas upp med mera. Teknikern anpassar även så att ni får era specifika färger och önskemål på olika typer av ljus så det kommer passa er. Vi tillhandahåller även allt runt omkring scenen såsom mikrofoner, line-boxar, gitarrförstärkare, medhörning, kablage, ljus och mycket mer!</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>BURATINO PREMIUM</h6>
+                </div>
+                
+                <p>Här har du allt du kan tänka dig. 
+                    Slå ihop Guld och Silver så har du bara början. 
+                    Skall du ha en spelning, en teaterföreställning 
+                    eller något annat som kräver en scen och publiken 
+                    förväntar sig det bästa av det bästa? I Premium 
+                    ingår en tekniker* för kvällens evenemang som 
+                    ser till att allt flyter på. Dessa styr både 
+                    ljud och ljus för er, är behjälplig med riggning 
+                    samt vet hur allt skall mickas upp med mera. 
+                    Teknikern anpassar även så att ni får era specifika 
+                    färger och önskemål på olika typer av ljus så 
+                    det kommer passa er. 
+                    Vi tillhandahåller även allt runt 
+                    omkring scenen såsom mikrofoner, line-boxar, 
+                    gitarrförstärkare, medhörning, kablage, 
+                    ljus och mycket mer!</p>
+                    <br>
+                    <br>
+                    <p>*Se hemsidan för mer information om tekniker. </p>
+            </div>
+            <div class="overlay four hide">
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>POSRLIN</h6>
+                </div>
+                
+                <p>Vi hyr ut porslin till 75 personer.</p> 
+                    <br>
+                    <p>I detta ingår följande:</p>
+                    <ul>
+                        <li>75 st Ölglas / Vattenglas</li>
+                        <li>75 st Vinglas</li>
+                        <li>75 st Muggar</li>
+                        <li>75 st Tallrikar</li>
+                        <li>75 st Assietter</li>
+                        <li>75 st Djupa skålar</li>
+                        <li>75 st Knivar</li>
+                        <li>75 st Gafflar</li>
+                        <li>75 st Stora skedar </li>
+                        <li>75 st Små skedar</li>
+                    </ul>
+                    <p>Pris: se hemsidan</p>
+            </div>
+            <div class="overlay five hide">
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>PROJEKTOR</h6>
+                </div>
+                
+                <p>
+                    Vi hyr ut projektor med duk. Den ljusstarka projektorn och fyra meter breda duken är utmärkta för filmvisning, bildspel, föreläsningar och presentationer. 
+                    <br>
+                    <br>
+                    Duken finner du monterad vid scenens öppning och kan enkelt hissas upp och ner med hjälp av en trådlös fjärrkontroll. 
+                    <br>
+                    <br>     
+                    Pris: Se hemsidan.
+                        
+                        
+                </p>
+            </div>
+            <div class="overlay six hide">
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                    <h6>STÄD</h6>
+                </div>
+                
+                <p>
+                    Boka städ via oss!
+                    <br>
+                    <br>
+                    Vi erbjuder följande till fastpris:
+                    <ul>
+                        <li>Dammsugning och våttorkning av alla golvytor.</li>
+                        <br>
+                        <li>Avtorkning och damning alla bänkytor, fönsterbrädor, dörrar, väggar och biostolar.</li>
+                        <br>
+                        <li>Städning av toaletter, kylar, kök.</li>
+                        <br>
+                        <li>Grundlig städning av scen och eventuella bi-ytor.</li>
+                        <br>
+                        <li>Vi ansvarar inte för sopor, disk eller att möbler återställs. </li>
+                    </ul>
+                    <br>
+                    <br>
+                </p>
+                <p>
+                    Pris: Se hemsidan.
+                </p>
             </div>
 
-            <picture>
-                <source srcset="img/double-mask-logo(transparent).webp" type="image/webp">
-                <source srcset="img/double-mask-logo(transparent).png" type="image/png">
-                <img src="img/double-mask-logo(transparent).png" alt="masks">
-            </picture>
+            <img src="/img/double-mask-logo(transparent).svg" alt="masks">
+            <h5>VÅRA TILLÄGG</h5>
+            <button class="redbox btn4">
+                <h6>PORSLIN</h6>
+            </button>
+            <button class="redbox btn5">
+                <h6>PROJEKTOR</h6>
+            </button>
+            <button class="redbox btn6">
+                <h6>STÄD</h6>
+            </button>
+            <h5>VAD INGÅR I DITT PAKET?</h5>
             <button class="redbox btn1">
                 <h6>BURATINO SILVER</h6>
             </button>
@@ -431,26 +829,59 @@
             </div>
 
             <div class="overlay one hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>Call thing idk man why do you  call its 2020 holy shit</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                </div>
+                
+                <p>
+                    <h6>Telefon</h6>
+                    <p>0703288714</p>
+                    <br>
+                    <br>
+                    <h6>Telefontider</h6>
+                    <p>Vardagar 10:00-18:00
+                    <br>
+                    Helger stängt
+                    <br>
+                    <br>
+                    Vid akuta ärenden, skicka sms</p>
+                </p>
             </div>
             <div class="overlay two hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>Mejl</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                </div>
+                
+                <p>
+                    <h6>Frågor</h6>
+                    <p>bokning@buratino.se</p>
+                    <br>
+                    <br>
+                    <h6>Faktura</h6>
+                    <p>faktura@buratino.se</p>
+                    <br>
+                    <br>
+                    <h6>Akuta ärenden</h6>
+                    <p>
+                        mattias@buratino.se
+                        <br>
+                        patrik@buratino.se
+                    </p>
+                </p>
+                
             </div>
             <div class="overlay three hide">
-                <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
-                <!-- this is where the descriptions go -->
-                <p>LARMAMAMAMAMAMAMAM</p>
+                <div class="title-container">
+                    <img src="img/close-24px 2ex.svg" alt="close page" class="xclose">
+                    <!-- this is where the descriptions go -->
+                </div>
+                
+                <p>Om larmet skulle utlösas av misstag, skicka följande textmeddelande till 0703288714: “Det var vi som utlöste larmet”. Ring ej.</p>
             </div>
 
-            <picture>
-                <source srcset="img/double-mask-logo(transparent).webp" type="image/webp">
-                <source srcset="img/double-mask-logo(transparent).png" type="image/png">
-                <img src="img/double-mask-logo(transparent).png" alt="masks">
-            </picture>
+            <img src="/img/double-mask-logo(transparent).svg" alt="masks">
             
             <button class="redbox btn1">
                 <h6>TELEFON</h6>
@@ -462,18 +893,22 @@
                 <h6>LARMKONTAKTER</h6>
             </button>
         </div>
+        
     </div>
 </body>
-
+<script src="js/detect.js"></script>
+<script src="js/desktopMessage.js"></script>
 <script src="js/buttonsAndCurtain.js" type="text/javascript"></script>
 <script src="js/overlays.js"></script>
 <script src="js/tables.js" defer></script>
+<script src="js/addRemove.js"></script>
 <script src="js/curtain.js"></script>
 <script src="js/videoInject.js"></script>
 <script src="js/pwaSpecifics.js"></script>
 <script src="js/manup.js"></script>
 <script src="/pwabuilder-sw.js"></script>
 <script type="module" src="/pwabuilder-sw-register.js"></script>
+
 <!-- <script src="js/inobounce.js"></script> -->
 </html>
 

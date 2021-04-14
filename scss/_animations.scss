@@ -4,7 +4,7 @@
     animation-duration: 500ms;
     // Preserve the effect of the animation at ending.
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: $cubicAnimation;
   }
 
 @keyframes slide-down {
@@ -25,13 +25,13 @@
   animation-duration: 500ms;
   // Preserve the effect of the animation at ending.
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: $cubicAnimation;
 }
 
 @keyframes slide-up {
 
   from {
-    transform: translateY(80vh);
+    transform: translateY(75vh);
   }
 
   to {
@@ -44,7 +44,7 @@
     animation-duration: 500ms;
     // Preserve the effect of the animation at ending.
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: $cubicAnimation;
      // This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping. 
     animation-delay: 500ms;
 }
@@ -64,7 +64,7 @@
   animation-duration: 500ms;
   // Preserve the effect of the animation at ending.
   animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: $cubicAnimation;
    // This hides the tiles until the curtain animation is finished, and then fades them in to avoid clipping. 
   animation-delay: 0ms;
 }
@@ -87,7 +87,7 @@
 
 .selected{
   // the filter property changes the color of the tables. Play with the hue rotate to find a desireable color
-  filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(330deg);
+  filter: brightness(0) saturate(100%) invert(13%) sepia(75%) saturate(5040%) hue-rotate(356deg) brightness(88%) contrast(117%);
 }
 
 
